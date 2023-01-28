@@ -3,4 +3,8 @@ export interface IPrimaryLayout {
     description?: string
     keywords?: string[]
     image?: string
+    render?: {
+        header: boolean
+        footer: boolean
+    }
 }

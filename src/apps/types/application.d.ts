@@ -5,22 +5,19 @@ export type GenericProps<T extends {}> = {
     [K in keyof T]: T[K]
 }
 
-export type GenericComponent<T extends {}> = React.FC<GenericProps<T>>
+export type GenericRFC<T extends {}> = React.FC<GenericProps<T>>
 
-export type CustomComponent<
+export type CustomRFC<
     ComponentProps extends {} = {},
     DefineGenericProps extends {} = {}
-> = GenericComponent<ComponentProps & DefineGenericProps>
+> = GenericRFC<ComponentProps & DefineGenericProps>
 
-export interface ApplicationGenericComponentProps {
+export interface AppRFCProps {
     className?: string
     children?: ReactNode
 }
 
-export type ApplicationComponent<Props extends {} = {}> = CustomComponent<
-    Props,
-    ApplicationGenericComponentProps
->
+export type AppRFC<Props extends {} = {}> = CustomRFC<Props, AppRFCProps>
 
 export type GetLayout = (_page: ReactElement) => ReactNode
 

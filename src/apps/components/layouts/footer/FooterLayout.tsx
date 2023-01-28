@@ -1,14 +1,25 @@
-import { type ApplicationComponent } from '@application/types'
+import { useTheme } from '@haneulchoi/contexts'
+import { classnames } from '@haneulchoi/functions'
+import { type AppRFC } from '@haneulchoi/types'
 
-const FooterLayout: ApplicationComponent = () => {
+const FooterLayout: AppRFC = () => {
+    const { theme } = useTheme()
+
     return (
-        <footer>
+        <footer
+            className={classnames(
+                'transition-smooth w-full',
+                theme === 'dark'
+                    ? 'bg-neutral-900 text-white/90'
+                    : 'bg-white text-neutral-800/90'
+            )}
+        >
             <div className="p-8 max-w-cutoff mx-auto">
-                <p className="text-center font-light text-sm text-neutral-500">
+                <p className="text-center font-light text-sm">
                     Made With Love By{' '}
-                    <code className="transition-smooth hover:text-neutral-900 cursor-pointer">
+                    <span className="font-poppins transition-smooth opacity-70 hover:opacity-100 cursor-pointer">
                         @HaneuLab
-                    </code>
+                    </span>
                 </p>
             </div>
         </footer>

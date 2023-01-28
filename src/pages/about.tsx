@@ -1,6 +1,6 @@
-import { type PageWithLayout } from '@application/types'
+import { type PageWithLayout } from '@haneulchoi/types'
 import { type GetServerSidePropsContext } from 'next'
-import { PrimaryLayout } from '@application/components/layouts'
+import { PrimaryLayout } from '@haneulchoi/components/layouts'
 
 const getServerSideProps = async (_: GetServerSidePropsContext) => {
     return { props: {} }
