@@ -23,16 +23,14 @@ const HomePage: PageWithLayout = () => {
                     <Image
                         src={BGDesktop}
                         alt=""
-                        className="opacity-10"
-                        width={1920}
+                        className="opacity-10 w-full"
                     />
                 </picture>
                 <picture className="block md:hidden w-full h-full absolute top-0 z-0">
                     <Image
                         src={BGMobile}
                         alt=""
-                        className="opacity-10"
-                        width={390}
+                        className="opacity-10 w-full"
                     />
                 </picture>
                 <section className="px-8 py-24 lg:py-28 relative z-10">
