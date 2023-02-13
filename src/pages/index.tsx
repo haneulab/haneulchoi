@@ -19,11 +19,21 @@ const HomePage: PageWithLayout = () => {
     return (
         <>
             <div className="h-screen w-full flex flex-col justify-center items-center relative">
-                <picture className="hidden md:block h-full absolute top-0 z-0">
-                    <Image src={BGDesktop} alt="" className="opacity-10" />
+                <picture className="hidden md:block w-full h-full absolute top-0 z-0">
+                    <Image
+                        src={BGDesktop}
+                        alt=""
+                        className="opacity-10"
+                        width={1920}
+                    />
                 </picture>
-                <picture className="block md:hidden h-full absolute top-0 z-0">
-                    <Image src={BGMobile} alt="" className="opacity-10" />
+                <picture className="block md:hidden w-full h-full absolute top-0 z-0">
+                    <Image
+                        src={BGMobile}
+                        alt=""
+                        className="opacity-10"
+                        width={390}
+                    />
                 </picture>
                 <section className="px-8 py-24 lg:py-28 relative z-10">
                     <article className="flex flex-col items-center">
