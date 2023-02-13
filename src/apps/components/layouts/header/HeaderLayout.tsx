@@ -18,7 +18,7 @@ const HeaderLayout: AppRFC = () => {
                 <h1 className="flex items-center">
                     <Link href={'/'}>
                         <a className="font-bold font-lato text-lg lg:text-xl">
-                            H.Lab
+                            Haneul Choi
                         </a>
                     </Link>
                 </h1>

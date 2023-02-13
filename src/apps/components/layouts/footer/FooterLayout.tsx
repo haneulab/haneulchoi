@@ -14,7 +14,7 @@ const FooterLayout: AppRFC = () => {
                     : 'bg-white text-neutral-800/90'
             )}
         >
-            <div className="p-8 max-w-cutoff mx-auto">
+            <div className="px-8 py-16 max-w-cutoff mx-auto">
                 <p className="text-center font-light text-sm">
                     Made With Love By{' '}
                     <span className="font-poppins transition-smooth opacity-70 hover:opacity-100 cursor-pointer">

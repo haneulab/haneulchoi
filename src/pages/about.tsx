@@ -7,7 +7,7 @@ const getServerSideProps = async (_: GetServerSidePropsContext) => {
 }
 
 const AboutPage: PageWithLayout = () => {
-    return <>AboutPage</>
+    return <></>
 }
 
 AboutPage.getLayout = (page) => {
