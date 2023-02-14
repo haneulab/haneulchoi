@@ -10,8 +10,10 @@ const HeaderLayout: AppRFC = () => {
     return (
         <header
             className={classnames(
-                'transition-smooth fixed top-0 z-40 w-full',
-                theme === 'dark' ? 'text-white' : 'text-neutral-900'
+                'transition-smooth fixed top-0 z-40 w-full backdrop-blur-sm',
+                theme === 'dark'
+                    ? 'bg-neutral-900/90 text-white'
+                    : 'bg-white/90 text-neutral-900'
             )}
         >
             <section className="p-4 w-full max-w-cutoff mx-auto flex justify-between items-center">
