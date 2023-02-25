@@ -1,9 +1,9 @@
 import { type IMetaLayout } from './MetaLayout.types'
 
 export const metaLayoutMock: IMetaLayout = {
-    title: 'Haneul Choi | Software Developer',
+    title: 'Haneul Choi | Software Developer & Mathematics Tutor',
     description:
-        'Hi, my name is Haneul Choi. I am a software developer based in California. Visit my portfolio page to learn about how you can work with me on your next software project.',
+        'Hi, my name is Haneul Choi. I am a software developer & mathematics tutor based in California. Visit my portfolio page to learn about how you can work with me on your next software project.',
     keywords: [
         'Haneul Choi',
         'haneulchoi',
@@ -18,6 +18,19 @@ export const metaLayoutMock: IMetaLayout = {
         'business websites',
         'ecommerce websites',
         'portfolio websites',
+        'software programs',
+        'Mathematics',
+        'mathematics',
+        'Computer Science',
+        'computer science',
+        'Math Tutor',
+        'math tutor',
+        'Computer Science Tutor',
+        'computer science tutor',
+        'SAT Math',
+        'sat math',
+        'SAT Tutor',
+        'sat tutor',
         'software programs',
         'university of california, davis',
         'University of California, Davis',

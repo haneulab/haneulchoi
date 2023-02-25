@@ -26,8 +26,8 @@ const HomePage: PageWithLayout = () => {
         <>
             <div className="h-screen flex flex-col justify-center items-center">
                 <section className="px-8 py-24 lg:py-28 w-full max-w-cutoff mx-auto">
-                    <article className="flex flex-col items-center mb-8">
-                        <picture className="block mb-2 max-w-[375px]">
+                    <article className="flex flex-col items-center mb-6">
+                        <picture className="block mb-2 max-w-[275px] md:max-w-[325px]">
                             <Image src={HaneulChoiAvatar} alt="" />
                         </picture>
                         <h2 className="mb-2 font-semibold font-lato text-2xl md:text-3xl lg:text-4xl">
@@ -38,14 +38,14 @@ const HomePage: PageWithLayout = () => {
                         </p>
                     </article>
                     <ul className="max-w-[500px] mx-auto flex flex-col px-8 gap-y-4 lg:flex-row lg:px-0 lg:gap-y-0 lg:gap-x-8 justify-center">
-                        <button className="w-full p-1 border-2 bg-blue-600 border-sky-500 text-white transition-smooth transform lg:hover:bg-blue-900 lg:hover:border-sky-900 overflow-hidden">
-                            <span className="w-full inline-flex items-center justify-center gap-x-4 px-6 py-3 font-medium font-poppins bg-sky-50/5 backdrop-blur-sm transition-smooth transform hover:scale-105">
+                        <button className="w-full p-1 border-2 bg-sky-600 border-sky-500 text-white transition-smooth transform lg:hover:bg-sky-900 lg:hover:border-sky-900 overflow-hidden">
+                            <span className="w-full inline-flex items-center justify-center gap-x-4 px-4 py-2 font-medium font-poppins bg-sky-50/5 backdrop-blur-sm transition-smooth transform hover:scale-105">
                                 <span>Tutor Page</span>
                                 <HiArrowRight />
                             </span>
                         </button>
-                        <button className="w-full p-1 border-2 bg-blue-600 border-sky-500 text-white transition-smooth transform lg:hover:bg-blue-900 lg:hover:border-sky-900 overflow-hidden">
-                            <span className="w-full inline-flex items-center justify-center gap-x-4 px-6 py-3 font-medium font-poppins bg-sky-50/5 backdrop-blur-sm transition-smooth transform hover:scale-105">
+                        <button className="w-full p-1 border-2 bg-sky-600 border-sky-500 text-white transition-smooth transform lg:hover:bg-sky-900 lg:hover:border-sky-900 overflow-hidden">
+                            <span className="w-full inline-flex items-center justify-center gap-x-4 px-4 py-2 font-medium font-poppins bg-sky-50/5 backdrop-blur-sm transition-smooth transform hover:scale-105">
                                 <span>Developer Page</span>
                                 <HiArrowRight />
                             </span>
@@ -56,7 +56,7 @@ const HomePage: PageWithLayout = () => {
             <div
                 className={classnames(
                     'min-h-screen bg-gradient-to-b from-transparent via-transparent',
-                    theme === 'dark' ? ' to-blue-900' : ' to-slate-100'
+                    theme === 'dark' ? ' to-neutral-800' : ' to-neutral-100'
                 )}
             >
                 <section className="px-8 py-16 w-full max-w-cutoff mx-auto flex flex-col gap-y-16 lg:gap-y-32">
@@ -157,7 +157,7 @@ const HomePage: PageWithLayout = () => {
                             projects that I worked on for myself and clients.{' '}
                             <a
                                 href="#"
-                                className="text-blue-500 transition-smooth hover:text-blue-600 text-base"
+                                className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500"
                             >
                                 Visit developer page to see more topics.
                             </a>
@@ -176,10 +176,10 @@ const HomePage: PageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Demo
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-purple-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-cyan-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Code
                                     </button>
                                 </div>
@@ -196,10 +196,10 @@ const HomePage: PageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Demo
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-purple-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-cyan-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Code
                                     </button>
                                 </div>
@@ -215,10 +215,10 @@ const HomePage: PageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Demo
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-purple-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-cyan-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Code
                                     </button>
                                 </div>
@@ -234,10 +234,10 @@ const HomePage: PageWithLayout = () => {
                                     Algorithms.
                                 </p>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Demo
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-purple-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-cyan-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Code
                                     </button>
                                 </div>
@@ -265,7 +265,7 @@ const HomePage: PageWithLayout = () => {
                             real-world applications are offered for tutoring.{' '}
                             <a
                                 href="#"
-                                className="text-blue-500 transition-smooth hover:text-blue-600 text-base"
+                                className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500 text-base"
                             >
                                 Visit tutor page to see more topics.
                             </a>
@@ -284,10 +284,10 @@ const HomePage: PageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Request
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-pink-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-emerald-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Syllabus
                                     </button>
                                 </div>
@@ -304,10 +304,10 @@ const HomePage: PageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Request
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-pink-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-emerald-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Syllabus
                                     </button>
                                 </div>
@@ -323,10 +323,10 @@ const HomePage: PageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Request
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-pink-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-emerald-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Syllabus
                                     </button>
                                 </div>
@@ -342,10 +342,10 @@ const HomePage: PageWithLayout = () => {
                                     Algorithms.
                                 </p>
                                 <div className="flex items-center gap-x-2">
-                                    <button className="text-sm px-3 py-2 bg-blue-600 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-sky-600 text-white font-medium transition-smooth hover:opacity-75">
                                         Request
                                     </button>
-                                    <button className="text-sm px-3 py-2 bg-pink-500 text-white font-medium transition-smooth hover:opacity-75">
+                                    <button className="text-sm px-3 py-2 bg-emerald-500 text-white font-medium transition-smooth hover:opacity-75">
                                         Syllabus
                                     </button>
                                 </div>
@@ -370,7 +370,7 @@ const HomePage: PageWithLayout = () => {
                             the{' '}
                             <a
                                 href=""
-                                className="text-blue-500 transition-smooth hover:text-blue-600"
+                                className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500 text-base"
                             >
                                 Frequently Asked Questions page.
                             </a>{' '}
