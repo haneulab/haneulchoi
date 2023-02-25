@@ -19,8 +19,8 @@ const HeaderLayout: AppRFC = () => {
             <section className="p-4 w-full max-w-cutoff mx-auto flex justify-between items-center">
                 <h1 className="flex items-center">
                     <Link href={'/'}>
-                        <a className="font-bold font-lato text-lg lg:text-xl">
-                            Haneul Choi
+                        <a className="font-bold font-poppins text-lg lg:text-xl">
+                            HC Studio
                         </a>
                     </Link>
                 </h1>

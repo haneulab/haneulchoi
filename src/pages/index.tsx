@@ -64,14 +64,18 @@ const HomePage: PageWithLayout = () => {
                         <h3 className="font-bold w-max mx-auto font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-8 lg:mb-12">
                             Quickly, This is me.
                         </h3>
-                        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-2xl mx-auto">
                             <div className="flex flex-col gap-8 lg:gap-12">
-                                <p className="flex flex-col">
+                                <p className="flex flex-col text-center items-center">
                                     <MdOutlineDevices className="text-2xl lg:text-4xl mb-1" />
                                     <strong className="font-medium font-lato text-lg lg:text-xl mb-2">
-                                        Software Development Interest
+                                        Software Development
                                     </strong>
-
+                                    <span className="inline-flex items-center justify-center gap-x-2 py-4">
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                    </span>
                                     <span className="font-nunito opacity-75">
                                         I became interested in software
                                         development since I decided to build my
@@ -79,18 +83,22 @@ const HomePage: PageWithLayout = () => {
                                         apps and other software programs that
                                         are either my own or clients&apos;
                                         projects.{' '}
-                                        <button className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500">
+                                        <button className="text-blue-500 font-medium transition-smooth hover:text-blue-400">
                                             Learn about the softwares that I
                                             build.
                                         </button>
                                     </span>
                                 </p>
-                                <p className="flex flex-col">
+                                <p className="flex flex-col text-center items-center">
                                     <FaChalkboardTeacher className="text-2xl lg:text-4xl mb-1" />
                                     <strong className="font-medium font-lato text-lg lg:text-xl mb-2">
-                                        Teaching Interest
+                                        Tutoring
                                     </strong>
-
+                                    <span className="inline-flex items-center justify-center gap-x-2 py-4">
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                    </span>
                                     <span className="font-nunito opacity-75">
                                         I started tutoring since 2017 teaching
                                         middle and highschool students in
@@ -99,19 +107,23 @@ const HomePage: PageWithLayout = () => {
                                         to teach more variety of students in
                                         mathematics and computer science as
                                         well.{' '}
-                                        <button className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500">
+                                        <button className="text-blue-500 font-medium transition-smooth hover:text-blue-400">
                                             Here is list of topics I tutor.
                                         </button>
                                     </span>
                                 </p>
                             </div>
                             <div className="flex flex-col gap-8 lg:gap-12">
-                                <p className="flex flex-col">
+                                <p className="flex flex-col text-center items-center">
                                     <MdLanguage className="text-2xl lg:text-4xl mb-1" />
                                     <strong className="font-medium font-lato text-lg lg:text-xl mb-2">
                                         Lanaguages & Cultures
                                     </strong>
-
+                                    <span className="inline-flex items-center justify-center gap-x-2 py-4">
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                    </span>
                                     <span className="font-nunito opacity-75">
                                         I am originally from Seoul, South Korea.
                                         I came to live in Orange County,
@@ -122,11 +134,16 @@ const HomePage: PageWithLayout = () => {
                                         language.
                                     </span>
                                 </p>
-                                <p className="flex flex-col">
+                                <p className="flex flex-col text-center items-center">
                                     <SlPlane className="text-2xl lg:text-4xl mb-1" />
                                     <strong className="font-medium font-lato text-lg lg:text-xl mb-2">
                                         Personal Hobbies
                                     </strong>
+                                    <span className="inline-flex items-center justify-center gap-x-2 py-4">
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                        <span className="w-2 h-2 rounded-full bg-sky-500" />
+                                    </span>
                                     <span className="font-nunito opacity-75">
                                         In my freetime, I enjoy inviting friends
                                         to cook & share food together in the
@@ -141,29 +158,21 @@ const HomePage: PageWithLayout = () => {
                     </article>
                     <article>
                         <h3 className="font-semibold font-poppins text-2xl md:text-3xl lg:text-4xl mb-2 lg:mb-3">
-                            Building Creative & Effective Softwares
+                            Creative & On-demand Softwares
                         </h3>
                         <p className="leading-7 lg:leading-8 lg:text-lg opacity-75 mb-8">
-                            I build softwares in 4 different categories. That is{' '}
-                            <strong>
-                                Web Applications, Software Programs, Software
-                                Packages, and GUI Games.
-                            </strong>{' '}
-                            One of the things that I do is{' '}
-                            <em className="font-medium">
-                                creative thinking and effective underlaying
-                            </em>{' '}
-                            of the project. Here, I list some of the previous
-                            projects that I worked on for myself and clients.{' '}
+                            Instead of building conventional & replicated
+                            softwares, I desire to build ones that are on-demand
+                            using creative thinking.{' '}
                             <a
                                 href="#"
-                                className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500"
+                                className="text-blue-500 transition-smooth hover:text-blue-400"
                             >
-                                Visit developer page to see more topics.
+                                Visit developer page for more information.
                             </a>
                         </p>
                         <ul className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <div>
                                     <h5 className="mb-2 font-semibold font-lato">
                                         Social Media Web Application
@@ -184,7 +193,7 @@ const HomePage: PageWithLayout = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <div>
                                     <h5 className="mb-2 font-semibold font-lato">
                                         File Data Extractor Program
@@ -204,7 +213,7 @@ const HomePage: PageWithLayout = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <div>
                                     <h5 className="mb-2 font-semibold font-lato">
                                         Reactify Component Library
@@ -223,7 +232,7 @@ const HomePage: PageWithLayout = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div>
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <h5 className="mb-2 font-semibold font-lato">
                                     2D Map Relocation Game
                                 </h5>
@@ -246,32 +255,23 @@ const HomePage: PageWithLayout = () => {
                     </article>
                     <article className="pb-16">
                         <h3 className="font-semibold font-poppins text-2xl md:text-3xl lg:text-4xl mb-2 lg:mb-3">
-                            Intuitive & Analytical Way of Learning Mathematics &
-                            Computer
+                            Practical & Effective Tutors
                         </h3>
                         <p className="leading-7 lg:leading-8 lg:text-lg opacity-75 mb-8">
-                            I tutor for more than 10 different topics in the
-                            field of{' '}
-                            <strong>mathematics and computer science.</strong>{' '}
-                            For mathematics, I tutor in{' '}
-                            <em>
-                                algebra, calculus, linear algebra, differential
-                                equations, and more.
-                            </em>{' '}
-                            For computer sciences, I teach introductory
-                            programming in (python or C), web programming, and
-                            data structures & implementations. Some of the
-                            related topics that I believe is useful in
-                            real-world applications are offered for tutoring.{' '}
+                            I do not encourage students to learn fast, but deep.
+                            It is my goal to help students fully accumulate the
+                            concepts once they learn so that they can always
+                            remember and apply into more advanced topics in the
+                            future.{' '}
                             <a
                                 href="#"
-                                className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500 text-base"
+                                className="text-blue-500 transition-smooth hover:text-blue-400"
                             >
-                                Visit tutor page to see more topics.
+                                Visit tutor page for more information.
                             </a>
                         </p>
                         <ul className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <div>
                                     <h5 className="mb-2 font-semibold font-lato">
                                         Introduction to Linear Algebra
@@ -292,7 +292,7 @@ const HomePage: PageWithLayout = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <div>
                                     <h5 className="mb-2 font-semibold font-lato">
                                         Applied Linear Algebra
@@ -312,7 +312,7 @@ const HomePage: PageWithLayout = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <div>
                                     <h5 className="mb-2 font-semibold font-lato">
                                         Introduction to Programming Python
@@ -331,7 +331,7 @@ const HomePage: PageWithLayout = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div>
+                            <div className="flex flex-col justify-between p-6 border transition-smooth hover:scale-105 opacity-90 hover:opacity-100 shadow-md shadow-transparent hover:shadow-gray-500/10 cursor-pointer">
                                 <h5 className="mb-2 font-semibold font-lato">
                                     Building Own Installable Py Package
                                 </h5>
@@ -361,10 +361,10 @@ const HomePage: PageWithLayout = () => {
             >
                 <section className="px-8 py-24 lg:py-32 w-full max-w-cutoff mx-auto flex flex-col gap-y-16 lg:gap-y-32">
                     <article className="max-w-2xl mx-auto">
-                        <h3 className="font-bold w-max mx-auto font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-8 lg:mb-12">
+                        <h3 className="font-bold w-max mx-auto font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6">
                             Q&A Time.
                         </h3>
-                        <p className="text-center px-8 font-nunito opacity-80 leading-7 lg:text-lg lg:leading-8 mb-16">
+                        <p className="text-center px-8 font-nunito opacity-80 leading-7 lg:text-lg lg:leading-8 mb-8">
                             If you have any questions that you think others
                             might possibly have asked before, you can check out
                             the{' '}
@@ -379,14 +379,19 @@ const HomePage: PageWithLayout = () => {
                             possible!
                         </p>
                         <form className="border-2">
-                            <section className="p-8 flex flex-col gap-y-6">
+                            <section className="p-6 flex flex-col gap-y-6">
                                 <div className="flex flex-col w-full gap-y-2">
                                     <label className="font-bold text-base font-lato">
                                         Your Name
                                     </label>
                                     <input
                                         type="text"
-                                        className="border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0 text-slate-800 px-4"
+                                        className={classnames(
+                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                            theme === 'dark'
+                                                ? 'bg-neutral-900'
+                                                : 'bg-white'
+                                        )}
                                     />
                                 </div>
                                 <div className="flex flex-col w-full gap-y-2">
@@ -394,8 +399,13 @@ const HomePage: PageWithLayout = () => {
                                         Your Email
                                     </label>
                                     <input
-                                        type="email"
-                                        className="border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0 text-slate-800 px-4"
+                                        type="text"
+                                        className={classnames(
+                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                            theme === 'dark'
+                                                ? 'bg-neutral-900'
+                                                : 'bg-white'
+                                        )}
                                     />
                                 </div>
                                 <div className="flex flex-col w-full gap-y-2">
@@ -404,7 +414,12 @@ const HomePage: PageWithLayout = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        className="border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0 text-slate-800 px-4"
+                                        className={classnames(
+                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                            theme === 'dark'
+                                                ? 'bg-neutral-900'
+                                                : 'bg-white'
+                                        )}
                                     />
                                 </div>
                                 <div className="flex flex-col w-full gap-y-2">
@@ -413,14 +428,19 @@ const HomePage: PageWithLayout = () => {
                                     </label>
                                     <textarea
                                         rows={4}
-                                        className="border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0 text-slate-800 px-4"
+                                        className={classnames(
+                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                            theme === 'dark'
+                                                ? 'bg-neutral-900'
+                                                : 'bg-white'
+                                        )}
                                     />
                                 </div>
                                 <div>
                                     <input
                                         type="submit"
                                         value="Send Message"
-                                        className="px-8 py-3 rounded-none text-white bg-blue-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
+                                        className="px-8 py-3 w-full sm:max-w-[275px] rounded-none text-white bg-sky-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
                                     />
                                 </div>
                             </section>
