@@ -412,7 +412,7 @@ const HomePage: PageWithLayout = () => {
                                         Message
                                     </label>
                                     <textarea
-                                        rows={6}
+                                        rows={4}
                                         className="border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0 text-slate-800 px-4"
                                     />
                                 </div>
@@ -420,7 +420,7 @@ const HomePage: PageWithLayout = () => {
                                     <input
                                         type="submit"
                                         value="Send Message"
-                                        className="px-8 py-3 bg-blue-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
+                                        className="px-8 py-3 rounded-none text-white bg-blue-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
                                     />
                                 </div>
                             </section>
