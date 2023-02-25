@@ -21,6 +21,7 @@
             "@haneulchoi/contexts": ["./apps/contexts/index.ts"],
             "@haneulchoi/hooks": ["./apps/hooks/index.ts"],
             "@haneulchoi/functions": ["./apps/functions/index.ts"],
+            "@haneulchoi/data": ["./apps/data/index.ts"],
             "@haneulchoi/components/layouts": [
                 "./apps/components/layouts/index.ts"
             ],
