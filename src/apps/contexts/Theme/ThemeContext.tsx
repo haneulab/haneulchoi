@@ -15,7 +15,7 @@ const ThemeContext = createContext<{
 export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({
     children,
 }) => {
-    const [theme, setTheme] = useState<ThemeOptions>('light')
+    const [theme, setTheme] = useState<ThemeOptions>('dark')
 
     function onThemeSwitch(_theme: ThemeOptions) {
         localStorage.setItem('theme', _theme)

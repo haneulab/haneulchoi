@@ -1,6 +1,4 @@
-import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si'
-
-import { CardView, type PageWithLayout } from '@haneulchoi/types'
+import { type PageWithLayout } from '@haneulchoi/types'
 import { type GetServerSidePropsContext } from 'next'
 
 import { PrimaryLayout } from '@haneulchoi/components/layouts'
@@ -9,10 +7,8 @@ import { classnames } from '@haneulchoi/functions'
 
 import Image from 'next/image'
 import HaneulChoiAvatar from 'public/haneulchoi_avatar.png'
-import { HiArrowRight } from 'react-icons/hi'
-import { MdOutlineDevices, MdLanguage } from 'react-icons/md'
-import { FaChalkboardTeacher } from 'react-icons/fa'
-import { SlPlane } from 'react-icons/sl'
+import { HiOutlineArrowDown, HiArrowRight } from 'react-icons/hi'
+import Link from 'next/link'
 const getServerSideProps = async (_: GetServerSidePropsContext) => {
     return { props: {} }
 }
@@ -24,36 +20,82 @@ const HomePage: PageWithLayout = () => {
 
     return (
         <>
-            <div className="h-screen flex flex-col justify-center items-center">
-                <section className="px-8 py-24 lg:py-28 w-full max-w-cutoff mx-auto">
+            <div className="h-screen flex flex-col justify-center items-center relative">
+                <div className="absolute bottom-8 w-max mx-auto flex justify-center items-center">
+                    <a
+                        href="#contact"
+                        className="inline-flex items-center justify-center gap-x-2 font-nunito font-light text-slate-500 transition-smooth hover:text-sky-500"
+                    >
+                        <span>
+                            {lang === 'en'
+                                ? 'Any questions? Contact me'
+                                : '질문이 있으신가요?'}
+                        </span>
+                        <HiOutlineArrowDown />
+                    </a>
+                </div>
+                <section className="px-8 py-24 lg:py-28 w-full max-w-cutoff mx-auto relative">
                     <article className="flex flex-col items-center mb-6">
                         <picture className="block mb-2 max-w-[275px] md:max-w-[325px]">
-                            <Image src={HaneulChoiAvatar} alt="" />
+                            <Image
+                                src={HaneulChoiAvatar}
+                                alt="Haneul Choi, Software Developer, Mathematics & Computer Science Tutor Image"
+                            />
                         </picture>
-                        <h2 className="mb-2 font-semibold font-lato text-2xl md:text-3xl lg:text-4xl">
-                            Hi, I am Haneul Choi.
+                        <h2 className="mb-2 font-semibold font-poppins text-2xl md:text-3xl lg:text-4xl">
+                            {lang === 'en'
+                                ? 'Hi, I am Haneul Choi.'
+                                : '안녕하세요, 최하늘입니다.'}
                         </h2>
-                        <p className="text-center px-8 leading-7 lg:text-lg lg:leading-8 font-nunito">
-                            I do software development & teaching for work.
+                        <p className="text-center px-8 leading-7 lg:text-lg lg:leading-8 font-lato">
+                            {lang === 'en'
+                                ? 'I am a software developer / tutor.'
+                                : '소프트웨어 개발 및 개인과외를 합니다.'}
                         </p>
                     </article>
                     <ul className="max-w-[500px] mx-auto flex flex-col px-8 gap-y-4 lg:flex-row lg:px-0 lg:gap-y-0 lg:gap-x-8 justify-center">
-                        <button className="w-full p-1 border-2 bg-sky-600 border-sky-500 text-white transition-smooth transform lg:hover:bg-sky-900 lg:hover:border-sky-900 overflow-hidden">
-                            <span className="w-full inline-flex items-center justify-center gap-x-4 px-4 py-2 font-medium font-poppins bg-sky-50/5 backdrop-blur-sm transition-smooth transform hover:scale-105">
-                                <span>Tutor Page</span>
-                                <HiArrowRight />
-                            </span>
-                        </button>
-                        <button className="w-full p-1 border-2 bg-sky-600 border-sky-500 text-white transition-smooth transform lg:hover:bg-sky-900 lg:hover:border-sky-900 overflow-hidden">
-                            <span className="w-full inline-flex items-center justify-center gap-x-4 px-4 py-2 font-medium font-poppins bg-sky-50/5 backdrop-blur-sm transition-smooth transform hover:scale-105">
-                                <span>Developer Page</span>
-                                <HiArrowRight />
-                            </span>
-                        </button>
+                        <Link href={'/tutor/home'}>
+                            <a
+                                className={classnames(
+                                    'w-full border-2 transition-smooth transform overflow-hidden',
+                                    theme === 'dark'
+                                        ? 'border-neutral-500/25 hover:border-neutral-300/90'
+                                        : 'border-neutral-700/25 hover:border-neutral-800/90'
+                                )}
+                            >
+                                <span className="w-full inline-flex px-3 py-2 items-center justify-center gap-x-4 font-light font-poppins transition-smooth transform hover:scale-105">
+                                    <span>
+                                        {lang === 'en'
+                                            ? 'Tutor Page'
+                                            : '과외 페이지로 가기'}
+                                    </span>
+                                    <HiArrowRight />
+                                </span>
+                            </a>
+                        </Link>
+                        <Link href={'/developer/home'}>
+                            <a
+                                className={classnames(
+                                    'w-full border-2 transition-smooth transform overflow-hidden',
+                                    theme === 'dark'
+                                        ? 'border-neutral-500/25 hover:border-neutral-300/90'
+                                        : 'border-neutral-700/25 hover:border-neutral-800/90'
+                                )}
+                            >
+                                <span className="w-full inline-flex px-3 py-2 items-center justify-center gap-x-4 font-light font-poppins transition-smooth transform hover:scale-105">
+                                    <span>
+                                        {lang === 'en'
+                                            ? 'Developer Page'
+                                            : '개발 페이지로 가기'}
+                                    </span>
+                                    <HiArrowRight />
+                                </span>
+                            </a>
+                        </Link>
                     </ul>
                 </section>
             </div>
-            <div
+            {/* <div
                 className={classnames(
                     'min-h-screen bg-gradient-to-b from-transparent via-transparent',
                     theme === 'dark' ? ' to-neutral-800' : ' to-neutral-100'
@@ -353,36 +395,43 @@ const HomePage: PageWithLayout = () => {
                         </ul>
                     </article>
                 </section>
-            </div>
+            </div> */}
             <div
                 className={classnames(
                     'bg-gradient-to-b from-transparent via-transparent'
                 )}
             >
-                <section className="px-8 py-24 lg:py-32 w-full max-w-cutoff mx-auto flex flex-col gap-y-16 lg:gap-y-32">
+                <section
+                    id="contact"
+                    className="px-8 py-24 lg:py-32 w-full max-w-cutoff mx-auto flex flex-col gap-y-16 lg:gap-y-32"
+                >
                     <article className="max-w-2xl mx-auto">
                         <h3 className="font-bold w-max mx-auto font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6">
                             Q&A Time.
                         </h3>
                         <p className="text-center px-8 font-nunito opacity-80 leading-7 lg:text-lg lg:leading-8 mb-8">
-                            If you have any questions that you think others
-                            might possibly have asked before, you can check out
-                            the{' '}
+                            {lang === 'en'
+                                ? 'If you have any questions that you think others might possibly have asked before, you can check out the'
+                                : '질문 및 문의가 있으시다면 아래에 기제하여 보내주시면 빠른시간내에 답변드리겠습니다.'}{' '}
                             <a
                                 href=""
                                 className="text-blue-400 opacity-100 font-medium transition-smooth hover:text-blue-500 text-base"
                             >
-                                Frequently Asked Questions page.
+                                {lang === 'en'
+                                    ? 'Frequently Asked Questions page.'
+                                    : '자주 물어보는 질문 페이지'}
                             </a>{' '}
-                            Otherwise, you can directly submit the question form
-                            below and I will get back to you as soon as
-                            possible!
+                            {lang === 'en'
+                                ? 'Otherwise, you can directly submit the question form below and I will get back to you as soon as possible!'
+                                : '를 보시면 자주 물어보시는 질문들이 있습니다.'}
                         </p>
                         <form className="border-2">
                             <section className="p-6 flex flex-col gap-y-6">
                                 <div className="flex flex-col w-full gap-y-2">
                                     <label className="font-bold text-base font-lato">
-                                        Your Name
+                                        {lang === 'en'
+                                            ? 'Your Name'
+                                            : '이름이 어떻게 되시나요?'}
                                     </label>
                                     <input
                                         type="text"
@@ -396,7 +445,9 @@ const HomePage: PageWithLayout = () => {
                                 </div>
                                 <div className="flex flex-col w-full gap-y-2">
                                     <label className="font-bold text-base font-lato">
-                                        Your Email
+                                        {lang === 'en'
+                                            ? 'Your Email'
+                                            : '어떤 이메일로 답변드릴까요?'}
                                     </label>
                                     <input
                                         type="text"
@@ -410,7 +461,9 @@ const HomePage: PageWithLayout = () => {
                                 </div>
                                 <div className="flex flex-col w-full gap-y-2">
                                     <label className="font-bold text-base font-lato">
-                                        Message Title
+                                        {lang === 'en'
+                                            ? 'Message Title'
+                                            : '메세지 제목'}
                                     </label>
                                     <input
                                         type="text"
@@ -424,7 +477,9 @@ const HomePage: PageWithLayout = () => {
                                 </div>
                                 <div className="flex flex-col w-full gap-y-2">
                                     <label className="font-bold text-base font-lato">
-                                        Message
+                                        {lang === 'en'
+                                            ? 'Message'
+                                            : '메세지 내용'}
                                     </label>
                                     <textarea
                                         rows={4}
@@ -439,7 +494,11 @@ const HomePage: PageWithLayout = () => {
                                 <div>
                                     <input
                                         type="submit"
-                                        value="Send Message"
+                                        value={
+                                            lang === 'en'
+                                                ? 'Send Message'
+                                                : '메세지 보내기'
+                                        }
                                         className="px-8 py-3 w-full sm:max-w-[275px] rounded-none text-white bg-sky-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
                                     />
                                 </div>

@@ -19,14 +19,15 @@ const HeaderLayout: AppRFC = () => {
             <section className="p-4 w-full max-w-cutoff mx-auto flex justify-between items-center">
                 <h1 className="flex items-center">
                     <Link href={'/'}>
-                        <a className="font-bold font-poppins text-lg lg:text-xl">
-                            HC Studio
+                        <a className="font-light font-mono italic text-base lg:text-lg transition-all hover:opacity-75">
+                            HC.Studio
                         </a>
                     </Link>
                 </h1>
                 <div className="flex items-center gap-x-4 lg:gap-x-6">
                     <ThemeButton />
                     <LanguageButton />
+                    {/* 
                     <button className="inline-flex flex-col lg:hidden gap-y-1.5">
                         <span
                             className={classnames(
@@ -53,6 +54,7 @@ const HeaderLayout: AppRFC = () => {
                             )}
                         />
                     </button>
+                    */}
                 </div>
             </section>
         </header>
