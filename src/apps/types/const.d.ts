@@ -10,3 +10,16 @@ export type ProjefctCard = {
     description: string
     repo: string
 }
+
+export type FormDataField = {
+    name: string
+    email: string
+    title: string
+    message: string
+}
+
+export type FormDataResponse = {
+    sentBy: string
+    sentTo: string
+    sentAt: string
+}
