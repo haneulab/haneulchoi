@@ -3,8 +3,11 @@ import { type AppRFC } from '@haneulchoi/types'
 import { FooterLayout } from '../footer'
 import { MetaLayout } from '../meta'
 import { HeaderLayout } from '../header'
+import { DeveloperHeaderLayout } from '../developer@header'
 import { useTheme } from '@haneulchoi/contexts'
 import { classnames } from '@haneulchoi/functions'
+import { useRoute } from '@haneulchoi/hooks'
+import { TutorHeaderLayout } from '../tutor@header'
 
 const PrimaryLayout: AppRFC<IPrimaryLayout> = ({
     children,
@@ -16,6 +19,7 @@ const PrimaryLayout: AppRFC<IPrimaryLayout> = ({
         footer: true,
     },
 }) => {
+    const { route } = useRoute()
     const { theme } = useTheme()
 
     return (
@@ -25,7 +29,17 @@ const PrimaryLayout: AppRFC<IPrimaryLayout> = ({
                 description={description}
                 keywords={keywords}
             />
-            {render.header && <HeaderLayout />}
+            {render.header ? (
+                route.includes('developer') ? (
+                    <DeveloperHeaderLayout />
+                ) : route.includes('tutor') ? (
+                    <TutorHeaderLayout />
+                ) : (
+                    <HeaderLayout />
+                )
+            ) : (
+                <HeaderLayout />
+            )}
             <main
                 className={classnames(
                     'transition-smooth relative',

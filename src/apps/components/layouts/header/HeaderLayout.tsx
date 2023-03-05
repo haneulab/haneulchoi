@@ -27,34 +27,6 @@ const HeaderLayout: AppRFC = () => {
                 <div className="flex items-center gap-x-4 lg:gap-x-6">
                     <ThemeButton />
                     <LanguageButton />
-                    {/* 
-                    <button className="inline-flex flex-col lg:hidden gap-y-1.5">
-                        <span
-                            className={classnames(
-                                'transition-smooth inline-block w-8 h-1 rounded-md bg-neutral-800',
-                                theme === 'dark'
-                                    ? 'bg-neutral-100'
-                                    : 'bg-neutral-800'
-                            )}
-                        />
-                        <span
-                            className={classnames(
-                                'transition-smooth inline-block w-8 h-1 rounded-md bg-neutral-800',
-                                theme === 'dark'
-                                    ? 'bg-neutral-100'
-                                    : 'bg-neutral-800'
-                            )}
-                        />
-                        <span
-                            className={classnames(
-                                'transition-smooth inline-block w-8 h-1 rounded-md bg-neutral-800',
-                                theme === 'dark'
-                                    ? 'bg-neutral-100'
-                                    : 'bg-neutral-800'
-                            )}
-                        />
-                    </button>
-                    */}
                 </div>
             </section>
         </header>

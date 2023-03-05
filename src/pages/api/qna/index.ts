@@ -34,7 +34,7 @@ const qnaFormHandler: NextApiHandler<
             //         status: 500,
             //         error: err.message,
             //     })
-            // }s
+            // }
             console.log('info ; ', info)
             return res.status(200).json({
                 sentAt: new Date().toISOString(),
