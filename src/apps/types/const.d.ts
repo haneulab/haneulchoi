@@ -1,14 +1,34 @@
-export type CardView =
-    | 'web applications'
-    | 'GUI games'
-    | 'software packages'
-    | 'software programs'
+type Language<T> = {
+    ko: T
+    en: T
+}
 
-export type ProjefctCard = {
-    type: CardView
-    name: string
-    description: string
-    repo: string
+export type ProjectType = 'web' | 'program' | 'package'
+
+export interface IProject {
+    type: ProjectType
+    title?: Language<string>
+    description?: Language<string>
+    urls: {
+        repository?: string
+        demo?: string
+    }
+    technologies?: string[]
+}
+
+export type SubjectType = 'mathematics' | 'computer science'
+
+export interface ITutor {
+    type: SubjectType
+    title?: Language<string>
+    description?: Language<string>
+    price: {
+        session: '$45/hour'
+        package: {
+            week: '$200/week'
+            month: '$725/month'
+        }
+    }
 }
 
 export type FormDataField = {

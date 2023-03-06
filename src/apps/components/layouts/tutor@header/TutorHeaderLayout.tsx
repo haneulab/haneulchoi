@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { LanguageButton, ThemeButton } from '@application/components/core'
 
 import { MdOutlineScreenshotMonitor, MdCode } from 'react-icons/md'
-import { TbPackageExport } from 'react-icons/tb'
 import { HiArrowLeft } from 'react-icons/hi'
 
 const TutorHeaderLayout: AppRFC = () => {
@@ -62,7 +61,9 @@ const TutorHeaderLayout: AppRFC = () => {
                             {' '}
                             <MdCode className="text-lg lg:text-xl" />
                             <span>
-                                {lang === 'en' ? 'Computer Science' : '컴퓨터 과학'}
+                                {lang === 'en'
+                                    ? 'Computer Science'
+                                    : '컴퓨터 과학'}
                             </span>
                         </button>
                     </ul>
@@ -70,7 +71,11 @@ const TutorHeaderLayout: AppRFC = () => {
                         <Link href={'/'}>
                             <a className="inline-flex items-center gap-x-1 text-xs lg:text-sm transition-smooth lg:hover:opacity-75 text-red-500">
                                 <HiArrowLeft />
-                                <span>{lang === "en" ? "Back to studio" : "돌아가기"}</span>
+                                <span>
+                                    {lang === 'en'
+                                        ? 'Back to studio'
+                                        : '돌아가기'}
+                                </span>
                             </a>
                         </Link>
                     </div>

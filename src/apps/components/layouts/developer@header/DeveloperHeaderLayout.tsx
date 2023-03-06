@@ -1,17 +1,28 @@
-import { type AppRFC } from '@haneulchoi/types'
+import { type ProjectType, type AppRFC } from '@haneulchoi/types'
 
+import Link from 'next/link'
 import { useLanguage, useTheme } from '@haneulchoi/contexts'
 import { classnames } from '@haneulchoi/functions'
-import Link from 'next/link'
 import { LanguageButton, ThemeButton } from '@application/components/core'
 
 import { MdOutlineScreenshotMonitor, MdCode } from 'react-icons/md'
 import { TbPackageExport } from 'react-icons/tb'
 import { HiArrowLeft } from 'react-icons/hi'
+import { useRoute } from '@haneulchoi/hooks'
 
 const DeveloperHeaderLayout: AppRFC = () => {
+    const { replace } = useRoute()
     const { lang } = useLanguage()
     const { theme } = useTheme()
+
+    async function onSetView(_view: ProjectType) {
+        await replace({
+            pathname: '/developer/home',
+            query: {
+                view: _view,
+            },
+        })
+    }
 
     return (
         <header className="transition-smooth fixed top-0 z-40 w-full backdrop-blur-sm">
@@ -46,6 +57,7 @@ const DeveloperHeaderLayout: AppRFC = () => {
                 <section className="px-4 py-2 w-full max-w-cutoff mx-auto flex justify-between items-center">
                     <ul className="flex justify-start items-center gap-x-4">
                         <button
+                            onClick={() => onSetView('web')}
                             className="inline-flex items-center gap-x-2 text-xs lg:text-sm font-nunito opacity-75 lg:hover:opacity-100 transition-smooth
                         "
                         >
@@ -54,6 +66,7 @@ const DeveloperHeaderLayout: AppRFC = () => {
                             <span>{lang === 'en' ? 'Web' : '웹'}</span>
                         </button>
                         <button
+                            onClick={() => onSetView('program')}
                             className="inline-flex items-center gap-x-2 text-xs lg:text-sm font-nunito opacity-75 lg:hover:opacity-100 transition-smooth
                         "
                         >
@@ -64,6 +77,7 @@ const DeveloperHeaderLayout: AppRFC = () => {
                             </span>
                         </button>
                         <button
+                            onClick={() => onSetView('package')}
                             className="inline-flex items-center gap-x-2 text-xs lg:text-sm font-nunito opacity-75 lg:hover:opacity-100 transition-smooth
                         "
                         >

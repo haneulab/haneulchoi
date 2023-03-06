@@ -1,8 +1,4 @@
-import {
-    FormDataResponse,
-    type FormDataField,
-    type PageWithLayout,
-} from '@haneulchoi/types'
+import { type FormDataField, type PageWithLayout } from '@haneulchoi/types'
 import { type GetServerSidePropsContext } from 'next'
 
 import { PrimaryLayout } from '@haneulchoi/components/layouts'
@@ -30,7 +26,7 @@ const HomePage: PageWithLayout = () => {
     const [formEmail, setFormEmail] = useState<string>('')
     const [formTitle, setFormTitle] = useState<string>('')
     const [formMessage, setFormMessage] = useState<string>('')
-    const [formSubmitted, setFormSubmitted] = useState<0 | 1 | -1>(0)
+    const [formSubmitted, setFormSubmitted] = useState<0 | 1 | -1 | -2>(0)
     const [formError, setFormError] = useState<string>('')
 
     const [showFormProgressSubmit, setShowFormProgressSubmit] =
@@ -56,6 +52,11 @@ const HomePage: PageWithLayout = () => {
         set: Dispatch<SetStateAction<string>>
     ) {
         set(e.target.value)
+    }
+
+    function onResetForm() {
+        setFormError('')
+        setFormSubmitted(0)
     }
 
     async function onContactFormSubmit(e: ChangeEvent<HTMLFormElement>) {
@@ -113,7 +114,6 @@ const HomePage: PageWithLayout = () => {
         const response = await fetch('/api/qna', {
             method: 'POST',
             headers: {
-                Accept: 'application/json, text/plain, */*',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
@@ -143,7 +143,7 @@ const HomePage: PageWithLayout = () => {
                 ? 'Error caught while sending email.'
                 : '메세지를 보내는 동안 에러가 발생했습니다.'
         )
-        setFormSubmitted(-1)
+        setFormSubmitted(-2)
     }
 
     return (
@@ -262,109 +262,146 @@ const HomePage: PageWithLayout = () => {
                                 ? 'Otherwise, you can directly submit the question form below and I will get back to you as soon as possible!'
                                 : '를 보시면 자주 물어보시는 질문들이 있습니다.'}
                         </p>
-                        <form
-                            className="border-2"
-                            onSubmit={onContactFormSubmit}
-                        >
-                            <section className="p-6 flex flex-col gap-y-6">
-                                <div className="flex flex-col w-full gap-y-2">
-                                    <label className="font-bold text-base font-lato">
-                                        {lang === 'en'
-                                            ? 'Your Name'
-                                            : '이름이 어떻게 되시나요?'}
-                                    </label>
-                                    <input
-                                        type="text"
-                                        value={formName}
-                                        onChange={(e) =>
-                                            onSetFormInput(e, setFormName)
-                                        }
-                                        className={classnames(
-                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
-                                            theme === 'dark'
-                                                ? 'bg-neutral-900'
-                                                : 'bg-white'
-                                        )}
-                                    />
-                                </div>
-                                <div className="flex flex-col w-full gap-y-2">
-                                    <label className="font-bold text-base font-lato">
-                                        {lang === 'en'
-                                            ? 'Your Email'
-                                            : '어떤 이메일로 답변드릴까요?'}
-                                    </label>
-                                    <input
-                                        type="text"
-                                        value={formEmail}
-                                        onChange={(e) =>
-                                            onSetFormInput(e, setFormEmail)
-                                        }
-                                        className={classnames(
-                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
-                                            theme === 'dark'
-                                                ? 'bg-neutral-900'
-                                                : 'bg-white'
-                                        )}
-                                    />
-                                </div>
-                                <div className="flex flex-col w-full gap-y-2">
-                                    <label className="font-bold text-base font-lato">
-                                        {lang === 'en'
-                                            ? 'Message Title'
-                                            : '메세지 제목'}
-                                    </label>
-                                    <input
-                                        type="text"
-                                        value={formTitle}
-                                        onChange={(e) =>
-                                            onSetFormInput(e, setFormTitle)
-                                        }
-                                        className={classnames(
-                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
-                                            theme === 'dark'
-                                                ? 'bg-neutral-900'
-                                                : 'bg-white'
-                                        )}
-                                    />
-                                </div>
-                                <div className="flex flex-col w-full gap-y-2">
-                                    <label className="font-bold text-base font-lato">
-                                        {lang === 'en'
-                                            ? 'Message'
-                                            : '메세지 내용'}
-                                    </label>
-                                    <textarea
-                                        rows={4}
-                                        value={formMessage}
-                                        onChange={(e) =>
-                                            onSetFormInput(e, setFormMessage)
-                                        }
-                                        className={classnames(
-                                            'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
-                                            theme === 'dark'
-                                                ? 'bg-neutral-900'
-                                                : 'bg-white'
-                                        )}
-                                    />
-                                </div>
-                                <div className="flex flex-col gap-y-2">
-                                    {formError && formSubmitted !== 1 && (
-                                        <p className="text-sm font-thin font-nunito mb-2 text-red-500">
+                        {formSubmitted === -2 ? (
+                            <>
+                                <div className="border-2 border-red-500/50">
+                                    <section className="p-6">
+                                        <p className="text-center mb-4">
                                             {formError}
                                         </p>
-                                    )}
-                                    <input
-                                        type="submit"
-                                        value={
-                                            lang === 'en'
-                                                ? 'Send Message'
-                                                : '메세지 보내기'
-                                        }
-                                        className="px-8 py-3 w-full sm:max-w-[275px] rounded-none text-white bg-sky-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
-                                    />
+                                        <div className="w-full flex justify-center items-center sm:max-w-sm mx-auto">
+                                            <button
+                                                onClick={onResetForm}
+                                                className="w-full text-center px-6 py-3 bg-neutral-900 text-white border-2 border-red-500/50 transition-smooth lg:hover:opacity-75"
+                                            >
+                                                {lang === 'en'
+                                                    ? 'Try again'
+                                                    : '다시 시도하기'}
+                                            </button>
+                                        </div>
+                                    </section>
                                 </div>
-                            </section>
-                        </form>
+                            </>
+                        ) : (
+                            <>
+                                <form
+                                    className="border-2"
+                                    onSubmit={onContactFormSubmit}
+                                >
+                                    <section className="p-6 flex flex-col gap-y-6">
+                                        <div className="flex flex-col w-full gap-y-2">
+                                            <label className="font-bold text-base font-lato">
+                                                {lang === 'en'
+                                                    ? 'Your Name'
+                                                    : '이름이 어떻게 되시나요?'}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formName}
+                                                onChange={(e) =>
+                                                    onSetFormInput(
+                                                        e,
+                                                        setFormName
+                                                    )
+                                                }
+                                                className={classnames(
+                                                    'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                                    theme === 'dark'
+                                                        ? 'bg-neutral-900'
+                                                        : 'bg-white'
+                                                )}
+                                            />
+                                        </div>
+                                        <div className="flex flex-col w-full gap-y-2">
+                                            <label className="font-bold text-base font-lato">
+                                                {lang === 'en'
+                                                    ? 'Your Email'
+                                                    : '어떤 이메일로 답변드릴까요?'}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formEmail}
+                                                onChange={(e) =>
+                                                    onSetFormInput(
+                                                        e,
+                                                        setFormEmail
+                                                    )
+                                                }
+                                                className={classnames(
+                                                    'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                                    theme === 'dark'
+                                                        ? 'bg-neutral-900'
+                                                        : 'bg-white'
+                                                )}
+                                            />
+                                        </div>
+                                        <div className="flex flex-col w-full gap-y-2">
+                                            <label className="font-bold text-base font-lato">
+                                                {lang === 'en'
+                                                    ? 'Message Title'
+                                                    : '메세지 제목'}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formTitle}
+                                                onChange={(e) =>
+                                                    onSetFormInput(
+                                                        e,
+                                                        setFormTitle
+                                                    )
+                                                }
+                                                className={classnames(
+                                                    'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                                    theme === 'dark'
+                                                        ? 'bg-neutral-900'
+                                                        : 'bg-white'
+                                                )}
+                                            />
+                                        </div>
+                                        <div className="flex flex-col w-full gap-y-2">
+                                            <label className="font-bold text-base font-lato">
+                                                {lang === 'en'
+                                                    ? 'Message'
+                                                    : '메세지 내용'}
+                                            </label>
+                                            <textarea
+                                                rows={4}
+                                                value={formMessage}
+                                                onChange={(e) =>
+                                                    onSetFormInput(
+                                                        e,
+                                                        setFormMessage
+                                                    )
+                                                }
+                                                className={classnames(
+                                                    'border-x-0 border-t-0 border-b pb-2 outline-none ring-none focus:outline-0 focus:border-b-blue-500 focus:border-b-2 focus:ring-0',
+                                                    theme === 'dark'
+                                                        ? 'bg-neutral-900'
+                                                        : 'bg-white'
+                                                )}
+                                            />
+                                        </div>
+                                        <div className="flex flex-col gap-y-2">
+                                            {formError &&
+                                                formSubmitted !== 1 && (
+                                                    <p className="text-sm font-thin font-nunito mb-2 text-red-500">
+                                                        {formError}
+                                                    </p>
+                                                )}
+                                            <input
+                                                type="submit"
+                                                value={
+                                                    lang === 'en'
+                                                        ? 'Send Message'
+                                                        : '메세지 보내기'
+                                                }
+                                                className="px-8 py-3 w-full sm:max-w-[275px] rounded-none text-white bg-sky-500 transition-smooth hover:opacity-80 cursor-pointer font-medium font-poppins"
+                                            />
+                                        </div>
+                                    </section>
+                                </form>
+                            </>
+                        )}
                     </article>
                 </section>
             </div>

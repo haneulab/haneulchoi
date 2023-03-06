@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const qnaFormHandler: NextApiHandler<
-    FormDataResponse | { status: number; error: string }
+    FormDataResponse | { error: string }
 > = async (req, res) => {
     const formData = req.body as unknown as FormDataField
 
@@ -15,8 +15,8 @@ const qnaFormHandler: NextApiHandler<
             port: 465,
             host: 'smtp.gmail.com',
             auth: {
-                user: process.env.NODEMAILER_AUTH_EMAIL,
-                pass: process.env.NODEMAILER_AUTH_PASSWORD,
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASSWORD,
             },
             secure: true,
         })
@@ -28,25 +28,20 @@ const qnaFormHandler: NextApiHandler<
             text: `${formData.title} : ${formData.message} - sent by ${formData.email}, ${formData.name}`,
         }
 
-        transporter.sendMail(mail, function (_err, info) {
-            // if (err) {
-            //     return res.status(500).json({
-            //         status: 500,
-            //         error: err.message,
-            //     })
-            // }
-            console.log('info ; ', info)
-            return res.status(200).json({
-                sentAt: new Date().toISOString(),
-                sentBy: formData.email,
-                sentTo: 'Haneul Choi Studio',
+        try {
+            await transporter.sendMail(mail)
+        } catch (error) {
+            console.log(error.message)
+
+            return res.status(500).json({
+                error: error.message,
             })
-        })
-        return
+        }
+
+        return res.status(200).json({ error: '' })
     }
 
     return res.status(500).json({
-        status: 500,
         error: 'The contact form data has not properly passed to the server.',
     })
 }
