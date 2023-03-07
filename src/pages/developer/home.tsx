@@ -12,8 +12,6 @@ import { classnames } from '@haneulchoi/functions'
 
 const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const { query } = ctx
-
-    console.log(query)
     return {
         props: {
             view: query.view ? query.view : ('web' as ProjectType),
@@ -74,16 +72,21 @@ const DeveloperHomePage: PageWithLayout<{ view: ProjectType }> = ({ view }) => {
                         {Projects.filter(
                             (project) => project.type === view
                         ).map((project, idx) => (
-                            <div key={idx} className="p-6 border w-full">
-                                <h4 className="font-medium text-lg lg:text-xl font-poppins mb-1">
-                                    {project.title[lang]}
-                                </h4>
-                                <p className="text-sm font-light font-lato opacity-75 mb-3">
-                                    {project.technologies.join(', ')}
-                                </p>
-                                <p className="leading-7 font-nunito mb-6">
-                                    {project.description[lang]}
-                                </p>
+                            <div
+                                key={idx}
+                                className="p-6 border w-full flex flex-col flex-grow justify-between"
+                            >
+                                <div>
+                                    <h4 className="font-medium text-lg lg:text-xl font-poppins mb-1">
+                                        {project.title[lang]}
+                                    </h4>
+                                    <p className="text-sm font-light font-lato opacity-75 mb-3">
+                                        {project.technologies.join(', ')}
+                                    </p>
+                                    <p className="leading-7 font-nunito mb-6">
+                                        {project.description[lang]}
+                                    </p>
+                                </div>
                                 <div className="w-full flex flex-col gap-y-3">
                                     {project.urls.demo && (
                                         <a

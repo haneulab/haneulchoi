@@ -12,7 +12,7 @@ const Projects: IProject[] = [
             ko: '김밥 요리를 즐겨하는 하늘님의 김밤 말아볼까 웹사이트.',
         },
         urls: {
-            demo: 'https://maraboca.vercel.com',
+            demo: 'https://maraboca.vercel.app',
             repository: null,
         },
         technologies: [
