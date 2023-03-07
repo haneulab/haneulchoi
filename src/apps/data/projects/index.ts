@@ -4,6 +4,31 @@ const Projects: IProject[] = [
     {
         type: 'web',
         title: {
+            en: 'Maraboca',
+            ko: '말아볼까',
+        },
+        description: {
+            en: 'A Korean food tasting place dedicated for various Kimbap dishes.',
+            ko: '김밥 요리를 즐겨하는 하늘님의 김밤 말아볼까 웹사이트.',
+        },
+        urls: {
+            demo: 'https://maraboca.vercel.com',
+            repository: null,
+        },
+        technologies: [
+            'TypeScript',
+            'Node',
+            'TailwindCSS',
+            'React',
+            'NextJS',
+            'Git',
+            'Github',
+            'Vercel',
+        ],
+    },
+    {
+        type: 'web',
+        title: {
             en: 'Yuchan Shukudo',
             ko: '유찬 쇼쿠도',
         },
