@@ -1,0 +1,19 @@
+{
+  "extends": [
+    /* NEXT LINTING */
+    "next",
+    "next/core-web-vitals",
+    /* ESLINT */
+    "eslint:recommended",
+    /* PLUGINS */
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "prefer-const": "error",
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
+  }
+}
