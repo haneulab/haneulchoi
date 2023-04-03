@@ -37,10 +37,10 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,500&display=swap"
                         rel="stylesheet"
                     />
-                    <meta name="msapplication-TileColor" content="#da532c" />
-                    <meta name="theme-color" content="#ffffff" />
+                    <meta name="msapplication-TileColor" content="#FF7373" />
+                    <meta name="theme-color" content="#eeeeee" />
                 </Head>
-                <body className="relative w-full font-nunito bg-dwhite text-dblack">
+                <body className="relative w-full font-nunito bg-grayWhite text-normalDark">
                     <Main />
                     <NextScript />
                 </body>
