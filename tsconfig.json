@@ -17,14 +17,14 @@
         "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-            "@app/components/*": ["./components/*"],
-            "@app/contexts/*": ["./contexts/*"],
-            "@app/hooks/*": ["./hooks/*"],
-            "@app/utils/*": ["./utils/*"],
-            "@app/middlewares/*": ["./middlewares/*"],
-            "@app/libs/*": ["./libs/*"],
-            "@app/styles/*": ["./styles/*"],
-            "@app/public/*": ["./public/*"]
+            "@studio/components/*": ["./components/*"],
+            "@studio/contexts/*": ["./contexts/*"],
+            "@studio/hooks/*": ["./hooks/*"],
+            "@studio/utils/*": ["./utils/*"],
+            "@studio/middlewares/*": ["./middlewares/*"],
+            "@studio/libs/*": ["./libs/*"],
+            "@studio/styles/*": ["./styles/*"],
+            "@studio/public/*": ["./public/*"]
         },
         "incremental": true
     },
