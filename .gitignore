@@ -1,0 +1,10 @@
+.next
+.vercel
+
+.env.local
+.env
+
+.npmrc
+.yarnrc
+
+node_modules
