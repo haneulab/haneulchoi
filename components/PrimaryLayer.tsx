@@ -50,7 +50,7 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
                 />
 
                 <title>
-                    Haneul Choi | Studio -{' '}
+                    Haneul Choi Studio -{' '}
                     {router.pathname !== '/'
                         ? `${router.pathname.replace('/', '')}`
                         : '@haneulchoistudio'}

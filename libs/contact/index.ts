@@ -85,7 +85,7 @@ export function createContactContent(content: ContactField): SendMailOptions {
         attachments: [
             {
                 filename: 'email_logo.png',
-                path: 'public/email_logo.png',
+                path: process.cwd() + '/public/email_logo.png',
                 cid: uniqueCID,
             },
         ],
