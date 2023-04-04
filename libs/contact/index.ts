@@ -1,6 +1,7 @@
 import { SendMailOptions } from 'nodemailer'
 import type { ContactField } from 'studio'
 import { v4 as uuid } from 'uuid'
+import path from 'path'
 
 export function createContactContent(content: ContactField): SendMailOptions {
     const uniqueCID = uuid()
@@ -85,7 +86,7 @@ export function createContactContent(content: ContactField): SendMailOptions {
         attachments: [
             {
                 filename: 'email_logo.png',
-                path: process.cwd() + '/public/email_logo.png',
+                path: path.join(process.cwd(), 'public', 'email_logo.png'),
                 cid: uniqueCID,
             },
         ],
