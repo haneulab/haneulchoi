@@ -7,12 +7,16 @@ const PackageSection = dynamic(
     () => import('@studio/components/PackageSection')
 )
 const BlogSection = dynamic(() => import('@studio/components/BlogSection'))
+const ContactSection = dynamic(
+    () => import('@studio/components/ContactSection')
+)
 const Index: StudioPage = () => {
     return (
         <div className="relative min-h-screen">
             <IntroSection />
             <PackageSection />
             <BlogSection />
+            <ContactSection />
         </div>
     )
 }

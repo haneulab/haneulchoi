@@ -24,4 +24,13 @@ declare module 'studio' {
     type ThemeStoreProvider = (_props: {
         children: React.ReactNode
     }) => React.ReactNode
+
+    type ContactCategory = 'inquiry' | 'question'
+
+    type ContactField = {
+        name: string
+        email: string
+        category: ContactCategory
+        message: string
+    }
 }
