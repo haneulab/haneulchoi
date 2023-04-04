@@ -2,6 +2,7 @@ import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import dynamic from 'next/dynamic'
 
+const Image = dynamic(() => import('next/image'))
 const FaLongArrowAltRight = dynamic(() =>
     import('react-icons/fa').then((module) => module.FaLongArrowAltRight)
 )
@@ -18,7 +19,7 @@ const IntroSection = () => {
                 </h2>
                 <p className="font-base font-source flex flex-col gap-y-4 text-xl lg:text-2xl mb-8">
                     <span>
-                        I am a software developer, youtuber, and bloger.
+                        I am a software developer, youtuber, and blogger.
                     </span>
                     <span>
                         I build web applications & software packages, review on
@@ -39,10 +40,8 @@ const IntroSection = () => {
                     </button>
                     <button
                         className={classnames(
-                            'font-semibold text-lg border px-6 py-2 rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-all duration-[0.25s] lg:hover:opacity-75',
-                            theme === 'dark'
-                                ? ''
-                                : 'bg-white border-navyDark text-navyDark'
+                            'font-semibold text-lg border px-6 py-2 border-orangeRed text-orangeRed rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-all duration-[0.25s] lg:hover:opacity-75',
+                            theme === 'dark' ? '' : 'bg-white '
                         )}
                     >
                         <span>Software Packages</span>
@@ -52,7 +51,12 @@ const IntroSection = () => {
             </article>
             <article className="lg:col-span-6">
                 <picture className="w-full rounded-md overflow-hidden block drop-shadow-md">
-                    <img src="/profile.svg" alt="Haneul Choi Profile Image" />
+                    <Image
+                        width={500}
+                        height={500}
+                        src="/profile.svg"
+                        alt="Haneul Choi Profile Image"
+                    />
                 </picture>
             </article>
         </section>

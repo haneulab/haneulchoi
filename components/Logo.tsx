@@ -1,8 +1,14 @@
+import dynamic from 'next/dynamic'
+
+const Link = dynamic(() => import('next/link'))
+
 const Logo = () => {
     return (
-        <h1 className="text-lg lg:text-xl">
-            <span className="font-source font-light">HC</span>{' '}
-            <strong className="font-figtree font-medium">Studio</strong>
+        <h1 className="text-lg lg:text-xl transition-all lg:hover:opaicty-70">
+            <Link href={'/'}>
+                <span className="font-source font-light">HC</span>{' '}
+                <strong className="font-figtree font-medium">Studio</strong>
+            </Link>
         </h1>
     )
 }

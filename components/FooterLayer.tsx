@@ -18,7 +18,7 @@ const FooterLayer = () => {
     return (
         <footer
             className={classnames(
-                'w-full text-white',
+                'w-full text-white border-t border-normalGray/20',
                 theme === 'dark' ? 'bg-normalDark/90' : 'bg-grayDark'
             )}
         >

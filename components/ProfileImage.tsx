@@ -1,5 +1,8 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
+import dynamic from 'next/dynamic'
+
+const Image = dynamic(() => import('next/image'))
 
 const ProfileImage = () => {
     const { theme } = useTheme()
@@ -10,7 +13,12 @@ const ProfileImage = () => {
                 theme === 'dark' ? 'border-grayWhite' : 'border-navyDark'
             )}
         >
-            <img src="/profile.svg" alt="Haneul Choi | haneulchoistudio" />
+            <Image
+                width={50}
+                height={50}
+                src="/profile.svg"
+                alt="Haneul Choi | haneulchoistudio"
+            />
         </picture>
     )
 }

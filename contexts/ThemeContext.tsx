@@ -44,7 +44,7 @@ export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
                 className={classnames(
                     'relative w-full',
                     theme === 'dark'
-                        ? 'bg-grayDark text-white'
+                        ? 'bg-normalDark text-white'
                         : 'bg-white text-normalDark'
                 )}
             >
