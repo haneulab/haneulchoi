@@ -1,12 +1,14 @@
-import { useTheme } from '@studio/hooks/useTheme'
-import { classnames } from '@studio/utils/classnames'
 import dynamic from 'next/dynamic'
 import type { StudioPage } from 'studio'
 
 const PrimaryLayer = dynamic(() => import('@studio/components/PrimaryLayer'))
-
+const IntroSection = dynamic(() => import('@studio/components/IntroSection'))
 const Index: StudioPage = () => {
-    return <div className={classnames('relative min-h-screen')}>Hi</div>
+    return (
+        <div className="relative min-h-screen">
+            <IntroSection />
+        </div>
+    )
 }
 
 Index.getLayout = (page) => {
