@@ -1,3 +1,4 @@
+import { classnames } from '@studio/utils/classnames'
 import { createContext, useEffect, useState } from 'react'
 import type { ThemeStore } from 'studio'
 
@@ -9,9 +10,17 @@ export const ThemeContext = createContext<ThemeStore>({
 export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
     const [theme, setTheme] = useState<ThemeStore['theme']>('light')
 
-    function onChange(theme: ThemeStore['theme']): void {
-        localStorage.setItem('studio-theme', theme)
-        setTheme(theme)
+    function onChange(theme_: ThemeStore['theme']): void {
+        if (theme_) {
+            localStorage.setItem('studio-theme', theme_)
+            setTheme(theme_)
+        } else {
+            localStorage.setItem(
+                'studio-theme',
+                theme === 'dark' ? 'light' : 'dark'
+            )
+            setTheme(theme === 'dark' ? 'light' : 'dark')
+        }
     }
 
     function inIt(): void {
@@ -31,7 +40,16 @@ export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
 
     return (
         <ThemeContext.Provider value={{ theme, onChange }}>
-            {props.children}
+            <div
+                className={classnames(
+                    'relative w-full',
+                    theme === 'dark'
+                        ? 'bg-grayDark text-white'
+                        : 'bg-white text-normalDark'
+                )}
+            >
+                {props.children}
+            </div>
         </ThemeContext.Provider>
     )
 }
