@@ -42,7 +42,7 @@ const HeaderLayer = () => {
                 )}
             >
                 <section className="w-full max-w-cutoff mx-auto flex justify-between items-center">
-                    <div className="flex items-center gap-x-2 px-4 py-3 ">
+                    <div className="flex items-center gap-x-2 px-4 py-3 lg:px-0">
                         <ProfileImage />
                         <Logo />
                     </div>
