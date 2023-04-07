@@ -75,7 +75,7 @@ const ContactSection = () => {
                 <ContactSubmitLoading message={submitMessage} />
             )}
             <section className="px-8 lg:px-0 py-12 lg:py-16 max-w-cutoff mx-auto grid grid-cols-1">
-                <article className="mb-16">
+                <article className="mb-12">
                     <h3 className="w-full text-center mx-auto font-bold text-3xl md:text-4xl lg:text-5xl font-figtree flex flex-col gap-y-4 lg:gap-y-6 items-center mb-4">
                         Any Questions?
                     </h3>
@@ -87,7 +87,7 @@ const ContactSection = () => {
                 {isSubmitted !== 'submitted' && (
                     <>
                         {isSubmitted === 'failed' && error && (
-                            <p className="text-center mb-6 font-medium font-source text-pinkRed mt-2">
+                            <p className="text-center w-full max-w-lg mx-auto font-medium font-source text-pinkRed bg-pinkRed/10 border border-pinkRed/25 text-lg p-8 rounded-lg mb-4">
                                 {error} Please try again!
                             </p>
                         )}
@@ -197,7 +197,7 @@ const ContactSection = () => {
                     </>
                 )}
                 {isSubmitted === 'submitted' && (
-                    <p className="text-center font-medium font-source text-teal-500 text-xl mt-2">
+                    <p className="text-center w-full max-w-lg mx-auto font-medium font-source text-teal-500 bg-teal-500/10 border border-teal-500/25 text-lg p-8 rounded-lg">
                         Successfully sent your message!
                     </p>
                 )}

@@ -21,9 +21,18 @@ const ContactAPIHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         },
     })
 
+    const contentForClient = createContactContent(contactBody)
+    const contentForMe = {
+        ...createContactContent(contactBody),
+        to: 'haneulchoi.business@gmail.com',
+        from: `HaneulChoiStudio <haneulchoi.business@gmail.com>`,
+        replyTo: contactBody.email,
+    }
+
     try {
-        await t.sendMail(createContactContent(contactBody))
-        res.status(200).json({})
+        await t.sendMail(contentForClient)
+        await t.sendMail(contentForMe)
+        res.status(200).json(null)
     } catch (error) {
         console.error(error)
         res.status(404).end()

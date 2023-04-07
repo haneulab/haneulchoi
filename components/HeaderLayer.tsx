@@ -15,7 +15,7 @@ const DesktopMenu = dynamic(() => import('@studio/components/DesktopMenu'))
 
 const HeaderLayer = () => {
     const { theme } = useTheme()
-    const { isTop } = useScroll()
+    const { isTop, scrollDirection } = useScroll()
 
     const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false)
 
@@ -30,7 +30,7 @@ const HeaderLayer = () => {
         <>
             <header
                 className={classnames(
-                    'sticky top-0 left-0 z-40 w-full h-max backdrop-blur-md transition-all border-b shadow',
+                    'sticky top-0 left-0 z-40 w-full h-max backdrop-blur-md transition-all border-b shadow transform',
                     theme === 'dark'
                         ? 'bg-normalDark/95 text-white'
                         : 'bg-white/90 text-normalDark',
@@ -38,15 +38,26 @@ const HeaderLayer = () => {
                         ? 'border-transparent shadow-transparent'
                         : theme === 'dark'
                         ? 'border-normalDark shadow-navyDark/80'
-                        : 'border-normalDark/20 shadow-grayDark/20'
+                        : 'border-normalDark/20 shadow-grayDark/20',
+
+                    scrollDirection === 'down'
+                        ? '-translate-y-[150%] -top-[150%]'
+                        : '-top-0 -translate-y-0'
                 )}
             >
-                <section className="w-full max-w-cutoff mx-auto flex justify-between items-center">
-                    <div className="flex items-center gap-x-2 px-4 py-3 lg:px-0">
+                <section
+                    className={classnames(
+                        'w-full max-w-cutoff mx-auto flex justify-between items-center px-6 py-2 lg:py-4 relative z-10',
+                        theme === 'dark'
+                            ? 'bg-normalDark/95 text-white'
+                            : 'bg-white/90 text-normalDark'
+                    )}
+                >
+                    <div className="flex items-center gap-x-2 lg:px-0">
                         <ProfileImage />
                         <Logo />
                     </div>
-                    <nav className="flex items-center gap-x-3 lg:gap-x-6 px-4 py-3 ">
+                    <nav className="flex items-center gap-x-3 lg:gap-x-6 ">
                         <DesktopMenu />
                         <ThemeButton />
                         <MobileMenuButton
@@ -56,22 +67,21 @@ const HeaderLayer = () => {
                         />
                     </nav>
                 </section>
+                <aside
+                    className={classnames(
+                        'fixed w-full transform transition-all overflow-hidden z-0 shadow-md',
+                        showMobileMenu
+                            ? '-translate-y-0 top-[3.25rem]'
+                            : '-translate-y-[200%] -top-[200%] -mt-64 md:mt-0',
+
+                        theme === 'dark'
+                            ? 'bg-normalDark text-grayWhite'
+                            : 'bg-white text-normalDark'
+                    )}
+                >
+                    <MobileMenu showMobileMenu={showMobileMenu} />
+                </aside>
             </header>
-            <aside
-                className={classnames(
-                    'sticky w-full transform transition-all overflow-hidden z-30',
-                    showMobileMenu
-                        ? isTop
-                            ? '-top-0 -translate-y-0'
-                            : 'top-14 -translate-y-0'
-                        : '-top-full -translate-y-full -mt-60 md:-mt-0',
-                    theme === 'dark'
-                        ? 'bg-normalDark text-grayWhite'
-                        : 'bg-white text-normalDark'
-                )}
-            >
-                <MobileMenu showMobileMenu={showMobileMenu} />
-            </aside>
         </>
     )
 }

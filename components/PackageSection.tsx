@@ -26,7 +26,10 @@ const PackageSection = () => {
             <article className="mb-20 md:mb-24">
                 <h3 className="w-full text-center mx-auto font-bold text-3xl md:text-4xl lg:text-5xl font-figtree flex flex-col gap-y-4 lg:gap-y-6 items-center">
                     <TbPackages className="text-5xl md:text-6xl lg:text-7xl" />
-                    <span>Better Software, Better Products!</span>
+                    <span>
+                        <span className="inline-block">Better Software,</span>{' '}
+                        <span className="inline-block">Better Products.</span>
+                    </span>
                 </h3>
             </article>
             <article className="grid grid-cols-1 gap-20 md:grid-cols-2 w-full sm:w-max mx-auto mb-16">
