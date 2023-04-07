@@ -67,21 +67,21 @@ const HeaderLayer = () => {
                         />
                     </nav>
                 </section>
-                <aside
-                    className={classnames(
-                        'fixed w-full transform transition-all overflow-hidden z-0 shadow-md',
-                        showMobileMenu
-                            ? '-translate-y-0 top-[3.25rem]'
-                            : '-translate-y-[200%] -top-[200%] -mt-64 md:mt-0',
-
-                        theme === 'dark'
-                            ? 'bg-normalDark text-grayWhite'
-                            : 'bg-white text-normalDark'
-                    )}
-                >
-                    <MobileMenu showMobileMenu={showMobileMenu} />
-                </aside>
             </header>
+            <aside
+                className={classnames(
+                    'fixed w-full transform transition-all overflow-hidden z-0 shadow-md',
+                    showMobileMenu
+                        ? '-translate-y-0 top-[3.25rem]'
+                        : '-translate-y-[200%] -top-[200%] -mt-64 md:mt-0',
+
+                    theme === 'dark'
+                        ? 'bg-normalDark text-grayWhite'
+                        : 'bg-white text-normalDark'
+                )}
+            >
+                <MobileMenu showMobileMenu={showMobileMenu} />
+            </aside>
         </>
     )
 }
