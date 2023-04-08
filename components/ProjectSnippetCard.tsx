@@ -27,7 +27,7 @@ const ProjectSnippetcard = (props: IProjectSnippetCard) => {
             </picture>
             <div
                 className={classnames(
-                    'absolute bottom-0 z-20 w-full px-4 py-4 left-0 rounded-t-2xl shadow-md backdrop-blur-sm',
+                    'absolute bottom-0 z-20 w-full px-4 py-4 left-0 rounded-2xl shadow-md backdrop-blur-sm',
                     theme === 'dark'
                         ? 'bg-normalDark/90 text-white'
                         : 'bg-white text-grayDark'
@@ -39,7 +39,7 @@ const ProjectSnippetcard = (props: IProjectSnippetCard) => {
                 <p className="mb-2 text-center opacity-70">{props.slug}</p>
                 <ul className="flex flex-col gap-y-2 items-center w-full">
                     <a
-                        href={props.url.code}
+                        href={props.url.demo}
                         className={classnames(
                             'flex item-center gap-x-2 transition-smooth lg:hover:text-orangeRed'
                         )}
