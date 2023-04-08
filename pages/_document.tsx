@@ -40,7 +40,7 @@ class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#FF7373" />
                     <meta name="theme-color" content="#eeeeee" />
                 </Head>
-                <body className="relative w-full font-nunito bg-grayWhite text-normalDark font-source">
+                <body className="relative w-full font-nunito dark:bg-navyDark dark:text-white bg-white text-normalDark font-source">
                     <Main />
                     <NextScript />
                 </body>

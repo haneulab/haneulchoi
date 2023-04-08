@@ -1,11 +1,4 @@
-import dynamic from 'next/dynamic'
-
-const FaBars = dynamic(() =>
-    import('react-icons/fa').then((module) => module.FaBars)
-)
-const FaTimes = dynamic(() =>
-    import('react-icons/fa').then((module) => module.FaTimes)
-)
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 interface IMobileMenuButton {
     showMobileMenu: boolean

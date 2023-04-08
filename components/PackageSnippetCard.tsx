@@ -3,6 +3,7 @@ import type { Package } from 'studio'
 
 import { SiMdnwebdocs } from 'react-icons/si'
 import { SlSocialGithub } from 'react-icons/sl'
+import Image from 'next/image'
 
 type IPackageSnippetCard = Package
 
@@ -17,7 +18,12 @@ const PackageSnippetCard = (props: IPackageSnippetCard) => {
                         : 'shadow-blue-400/10 border-blue-200'
                 )}
             >
-                <img src={`${props.image}`} alt={`${props.name} Logo`} />
+                <Image
+                    width={500}
+                    height={500}
+                    src={`${props.image}`}
+                    alt={`${props.name} Logo`}
+                />
             </picture>
             <section
                 className={classnames(

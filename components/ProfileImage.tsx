@@ -1,8 +1,6 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
-import dynamic from 'next/dynamic'
-
-const Image = dynamic(() => import('next/image'))
+import Image from 'next/image'
 
 const ProfileImage = () => {
     const { theme } = useTheme()

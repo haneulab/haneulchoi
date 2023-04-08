@@ -1,11 +1,7 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
-import dynamic from 'next/dynamic'
-
-const Link = dynamic(() => import('next/link'))
-const IoIosArrowForward = dynamic(() =>
-    import('react-icons/io').then((module) => module.IoIosArrowForward)
-)
+import Link from 'next/link'
+import { IoIosArrowForward } from 'react-icons/io'
 
 export const AboutSubMenuComponent = () => {
     const { theme } = useTheme()

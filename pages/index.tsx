@@ -12,6 +12,9 @@ import type {
 
 const PrimaryLayer = dynamic(() => import('@studio/components/PrimaryLayer'))
 const IntroSection = dynamic(() => import('@studio/components/IntroSection'))
+const ProjectSection = dynamic(
+    () => import('@studio/components/ProjectSection')
+)
 const PackageSection = dynamic(
     () => import('@studio/components/PackageSection')
 )
@@ -30,6 +33,7 @@ const Index: StudioPage<PageProps> = (props: PageProps) => {
     return (
         <div className="relative min-h-screen">
             <IntroSection />
+            <ProjectSection projects={props.projects} />
             <PackageSection packages={props.packages} />
             {/* <BlogSection /> */}
             <ContactSection />

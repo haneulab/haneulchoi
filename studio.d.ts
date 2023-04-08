@@ -37,7 +37,8 @@ declare module 'studio' {
     /** Edge Config Data */
     type Project = {
         image?: string
-        id: string
+        id: number
+        type: string
         name: string
         description: string
         slug: string
@@ -47,7 +48,7 @@ declare module 'studio' {
 
     type Package = {
         image?: string
-        id: string
+        id: number
         type: string
         name: string
         description: string
@@ -63,7 +64,7 @@ declare module 'studio' {
 
     type Blog = {
         image?: string
-        id: string
+        id: number
         name: string
         slug: string
         description: string

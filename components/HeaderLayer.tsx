@@ -32,12 +32,12 @@ const HeaderLayer = () => {
                 className={classnames(
                     'sticky top-0 left-0 z-40 w-full h-max backdrop-blur-md transition-smooth border-b shadow transform',
                     theme === 'dark'
-                        ? 'bg-normalDark/95 text-white'
+                        ? 'bg-navyDark/95 text-white'
                         : 'bg-white/90 text-normalDark',
                     [showMobileMenu, isTop].some(Boolean)
                         ? 'border-transparent shadow-transparent'
                         : theme === 'dark'
-                        ? 'border-normalDark shadow-navyDark/80'
+                        ? 'border-navyDark shadow-navyDark/80'
                         : 'border-normalDark/20 shadow-grayDark/20',
 
                     scrollDirection === 'down'
@@ -67,7 +67,7 @@ const HeaderLayer = () => {
             </header>
             <aside
                 className={classnames(
-                    'fixed w-full transform transition-transform overflow-hidden z-20 shadow-md',
+                    'fixed w-full transform transition-transform overflow-hidden z-30 shadow-md',
                     showMobileMenu
                         ? '-translate-y-0 top-[3.25rem]'
                         : '-translate-y-[200%] -top-[200%] -mt-64 md:mt-0',

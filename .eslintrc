@@ -1,19 +1,27 @@
 {
-  "extends": [
-    /* NEXT LINTING */
-    "next",
-    "next/core-web-vitals",
-    /* ESLINT */
-    "eslint:recommended",
-    /* PLUGINS */
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
-  ],
-  "globals": {
-    "React": "readonly"
-  },
-  "rules": {
-    "prefer-const": "error",
-    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
-  }
+    "extends": [
+        /* NEXT LINTING */
+        "next",
+        "next/core-web-vitals",
+        /* ESLINT */
+        "eslint:recommended",
+        /* PLUGINS */
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
+    "globals": {
+        "React": "readonly"
+    },
+    "rules": {
+        "prefer-const": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
+            }
+        ]
+    }
 }

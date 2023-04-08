@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 
-const Head = dynamic(() => import('next/head'))
 const HeaderLayer = dynamic(() => import('@studio/components/HeaderLayer'))
 const FooterLayer = dynamic(() => import('@studio/components/FooterLayer'))
 
@@ -39,7 +39,7 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
 
                 <meta
                     property="og:title"
-                    content="Haneul Choi | Studio - @haneulchoistudio"
+                    content="Haneul Choi Studio - @haneulchoistudio"
                 />
 
                 <meta

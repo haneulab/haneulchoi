@@ -1,17 +1,9 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import dynamic from 'next/dynamic'
+import { TfiGithub, TfiInstagram, TfiLinkedin } from 'react-icons/tfi'
 
 const Logo = dynamic(() => import('@studio/components/Logo'))
-const TfiGithub = dynamic(() =>
-    import('react-icons/tfi').then((module) => module.TfiGithub)
-)
-const TfiInstagram = dynamic(() =>
-    import('react-icons/tfi').then((module) => module.TfiInstagram)
-)
-const TfiLinkedin = dynamic(() =>
-    import('react-icons/tfi').then((module) => module.TfiLinkedin)
-)
 
 const FooterLayer = () => {
     const { theme } = useTheme()

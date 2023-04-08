@@ -1,9 +1,4 @@
-import dynamic from 'next/dynamic'
-
-const TfiWrite = dynamic(() =>
-    import('react-icons/tfi').then((module) => module.TfiWrite)
-)
-
+import { TfiWrite } from 'react-icons/tfi'
 const BlogSection = () => {
     return (
         <section className="px-8 lg:px-0 py-12 lg:py-16 max-w-cutoff mx-auto grid grid-cols-1">

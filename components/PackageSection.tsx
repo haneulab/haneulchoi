@@ -1,9 +1,10 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import { Package } from 'studio'
-
-const Link = dynamic(() => import('next/link'))
+import { TbPackages } from 'react-icons/tb'
+import { FaLongArrowAltRight } from 'react-icons/fa'
 
 // const SlSocialGithub = dynamic(() =>
 //     import('react-icons/sl').then((module) => module.SlSocialGithub)
@@ -11,12 +12,7 @@ const Link = dynamic(() => import('next/link'))
 // const SlEye = dynamic(() =>
 //     import('react-icons/sl').then((module) => module.SlEye)
 // )
-const TbPackages = dynamic(() =>
-    import('react-icons/tb').then((module) => module.TbPackages)
-)
-const FaLongArrowAltRight = dynamic(() =>
-    import('react-icons/fa').then((module) => module.FaLongArrowAltRight)
-)
+
 const PackageSnippetCard = dynamic(
     () => import('@studio/components/PackageSnippetCard')
 )
@@ -39,11 +35,11 @@ const PackageSection = (props: IPackageSection) => {
                     </span>
                 </h3>
             </article>
-            <article className="grid grid-cols-1 gap-20 md:grid-cols-2 w-full sm:w-max mx-auto mb-16">
+            <ul className="grid grid-cols-1 gap-20 md:grid-cols-2 w-full sm:w-max mx-auto mb-16">
                 {props.packages.map((pkg, idx) => (
                     <PackageSnippetCard {...pkg} key={idx} />
                 ))}
-            </article>
+            </ul>
             <article>
                 <p
                     className={classnames(

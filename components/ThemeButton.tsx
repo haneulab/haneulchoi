@@ -1,14 +1,7 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
-import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
-
-const RiLightbulbLine = dynamic(() =>
-    import('react-icons/ri').then((module) => module.RiLightbulbLine)
-)
-const RiMoonLine = dynamic(() =>
-    import('react-icons/ri').then((module) => module.RiMoonLine)
-)
+import { RiMoonLine, RiLightbulbLine } from 'react-icons/ri'
 
 const ThemeButton = () => {
     const { theme, onChange } = useTheme()

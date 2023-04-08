@@ -1,11 +1,7 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
-import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
-
-const FaLongArrowAltLeft = dynamic(() =>
-    import('react-icons/fa').then((module) => module.FaLongArrowAltLeft)
-)
+import { FaLongArrowAltLeft } from 'react-icons/fa'
 
 interface IMobileSubMenu {
     text: string
@@ -41,7 +37,9 @@ const MobileSubMenu = (props: IMobileSubMenu) => {
                         ? theme === 'dark'
                             ? 'bg-black/25 text-white'
                             : 'bg-grayDark text-white'
-                        : ''
+                        : theme === 'dark'
+                        ? 'bg-navyDark'
+                        : 'bg-white'
                 )}
             >
                 <span className="font-medium text-lg font-figtree">

@@ -1,12 +1,8 @@
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
-import dynamic from 'next/dynamic'
-
-const Image = dynamic(() => import('next/image'))
-const Link = dynamic(() => import('next/link'))
-const FaLongArrowAltRight = dynamic(() =>
-    import('react-icons/fa').then((module) => module.FaLongArrowAltRight)
-)
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const IntroSection = () => {
     const { theme } = useTheme()
@@ -53,12 +49,13 @@ const IntroSection = () => {
                 </ul>
             </article>
             <article className="lg:col-span-6">
-                <picture className="w-full rounded-md overflow-hidden block drop-shadow-md">
+                <picture className="w-full overflow-hidden block drop-shadow-md">
                     <Image
                         width={500}
                         height={500}
                         src="/profile.svg"
                         alt="Haneul Choi Profile Image"
+                        className="rounded-xl"
                     />
                 </picture>
             </article>
