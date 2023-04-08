@@ -13,7 +13,7 @@ export const AboutSubMenuComponent = () => {
     return (
         <div
             className={classnames(
-                'p-6 border-b transition-all duration-[0.25s]',
+                'p-6 border-b transition-smooth',
                 theme === 'dark' ? 'border-black/25' : 'border-normalDark/10'
             )}
         >

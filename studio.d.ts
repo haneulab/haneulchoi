@@ -33,4 +33,40 @@ declare module 'studio' {
         category: ContactCategory
         message: string
     }
+
+    /** Edge Config Data */
+    type Project = {
+        image?: string
+        id: string
+        name: string
+        description: string
+        slug: string
+        stacks: string[]
+        url: { demo?: string; code?: string }
+    }
+
+    type Package = {
+        image?: string
+        id: string
+        type: string
+        name: string
+        description: string
+        slug: string
+        requiredPeerPackages: string[]
+        url: { docs?: string; code?: string }
+    }
+
+    type BlogContentURL = {
+        href: string
+        name: string
+    }
+
+    type Blog = {
+        image?: string
+        id: string
+        name: string
+        slug: string
+        description: string
+        urls: BlogContentURL[]
+    }
 }

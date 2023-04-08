@@ -31,7 +31,7 @@ const IntroSection = () => {
                     <Link
                         href={'/project'}
                         className={classnames(
-                            ' font-semibold text-lg border px-6 py-2 rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-all duration-[0.25s] lg:hover:opacity-75',
+                            ' font-semibold text-lg border px-6 py-2 rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-smooth lg:hover:opacity-75',
                             theme === 'dark'
                                 ? 'bg-white text-navyDark border-grayWhite'
                                 : 'bg-navyDark text-white border-grayDark'
@@ -43,7 +43,7 @@ const IntroSection = () => {
                     <Link
                         href={'/package'}
                         className={classnames(
-                            'font-semibold text-lg border px-6 py-2 border-orangeRed text-orangeRed rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-all duration-[0.25s] lg:hover:opacity-75',
+                            'font-semibold text-lg border px-6 py-2 border-orangeRed text-orangeRed rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-smooth lg:hover:opacity-75',
                             theme === 'dark' ? '' : 'bg-white '
                         )}
                     >

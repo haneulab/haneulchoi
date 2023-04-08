@@ -141,10 +141,10 @@ const ContactSection = () => {
                                         }
                                         type="button"
                                         className={classnames(
-                                            'px-6 py-2 rounded-lg border-2 font-medium font-figtree text-lg transition-all',
+                                            'px-6 py-2 rounded-lg border-2 font-medium font-figtree text-lg transition-smooth',
                                             category === 'question'
                                                 ? 'opacity-100 border-teal-400 text-teal-400'
-                                                : 'opacity-60'
+                                                : 'opacity-60 lg:hover:opacity-100'
                                         )}
                                     >
                                         Question
@@ -153,10 +153,10 @@ const ContactSection = () => {
                                         onClick={() => onSetCategory('inquiry')}
                                         type="button"
                                         className={classnames(
-                                            'px-6 py-2 rounded-lg border-2 font-medium font-figtree text-lg transition-all',
+                                            'px-6 py-2 rounded-lg border-2 font-medium font-figtree text-lg transition-smooth',
                                             category === 'inquiry'
                                                 ? 'opacity-100 border-teal-400 text-teal-400'
-                                                : 'opacity-60'
+                                                : 'opacity-60 lg:hover:opacity-100'
                                         )}
                                     >
                                         Inquiry
@@ -189,7 +189,7 @@ const ContactSection = () => {
                                     <input
                                         type="submit"
                                         value="Send Message"
-                                        className="px-8 py-3 rounded-xl text-center bg-teal-500 font-semibold font-figtree text-white text-lg w-full"
+                                        className="px-8 py-3 rounded-xl text-center bg-teal-500 font-semibold font-figtree text-white text-lg w-full transition-smooth lg:hover:opacity-70"
                                     />
                                 </section>
                             )}

@@ -36,7 +36,7 @@ const MobileSubMenu = (props: IMobileSubMenu) => {
             <button
                 onClick={showSubMenu ? onHideSubMenu : onShowSubMenu}
                 className={classnames(
-                    'flex justify-between px-6 py-4 transition-all duration-[0.25s]',
+                    'flex justify-between px-6 py-4 transition-smooth',
                     showSubMenu
                         ? theme === 'dark'
                             ? 'bg-black/25 text-white'

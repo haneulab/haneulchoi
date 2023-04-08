@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
 
 const Head = dynamic(() => import('next/head'))
 const HeaderLayer = dynamic(() => import('@studio/components/HeaderLayer'))
@@ -11,7 +10,6 @@ interface IPrimaryLayer {
 }
 
 const PrimaryLayer = (props: IPrimaryLayer) => {
-    const router = useRouter()
     return (
         <>
             <Head>
@@ -49,12 +47,7 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
                     content="Hi, I am Haneul Choi, a freelancing software developer based in Davis, California. I build web applications & software packages. I love cooking & taking pictures of beautiful nature!"
                 />
 
-                <title>
-                    Haneul Choi Studio -{' '}
-                    {router.pathname !== '/'
-                        ? `${router.pathname.replace('/', '')}`
-                        : '@haneulchoistudio'}
-                </title>
+                <title>Haneul Choi Studio - @haneulchoistudio</title>
             </Head>
             {props.announcementComponent && props.announcementComponent}
             <HeaderLayer />

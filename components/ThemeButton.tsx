@@ -26,7 +26,7 @@ const ThemeButton = () => {
         <button
             onClick={() => onChange()}
             className={classnames(
-                'flex items-center justify-center text-2xl transition-all lg:hover:opacity-70 transform duration-[0.25s]',
+                'flex items-center justify-center text-2xl transition-smooth lg:hover:opacity-70 transform',
                 changed ? 'scale-125 opacity-0' : 'scale-100 opacity-100',
                 theme === 'dark' ? 'text-white' : 'text-normalDark'
             )}

@@ -33,19 +33,19 @@ const FooterLayer = () => {
                     <ul className="flex items-center gap-x-3 lg:gap-x-4">
                         <a
                             href="https://github.com/haneulchoistudio"
-                            className="transition-all transform lg:hover:opacity-70 lg:hover:scale-110"
+                            className="transition-smooth transform lg:hover:opacity-70 lg:hover:scale-110"
                         >
                             <TfiGithub className="text-xl lg:text-2xl" />
                         </a>
                         <a
                             href="https://instagram.com/__sky__e"
-                            className="transition-all transform lg:hover:opacity-70 lg:hover:scale-110"
+                            className="transition-smooth transform lg:hover:opacity-70 lg:hover:scale-110"
                         >
                             <TfiInstagram className="text-xl lg:text-2xl" />
                         </a>
                         <a
                             href="https://linkedin.com/in/haneulab"
-                            className="transition-all transform lg:hover:opacity-70 lg:hover:scale-110"
+                            className="transition-smooth transform lg:hover:opacity-70 lg:hover:scale-110"
                         >
                             <TfiLinkedin className="text-xl lg:text-2xl" />
                         </a>
@@ -58,14 +58,14 @@ const FooterLayer = () => {
                     <div className="flex items-center gap-x-1">
                         <a
                             href="#"
-                            className="text-orangeRed transition-all lg:hover:text-normalRed"
+                            className="text-orangeRed transition-smooth lg:hover:text-normalRed"
                         >
                             Privacy
                         </a>
                         <span className="text-orangeRed">&</span>
                         <a
                             href="#"
-                            className="text-orangeRed transition-all lg:hover:text-normalRed"
+                            className="text-orangeRed transition-smooth lg:hover:text-normalRed"
                         >
                             Content Terms
                         </a>

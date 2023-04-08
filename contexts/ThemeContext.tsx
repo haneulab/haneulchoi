@@ -42,7 +42,7 @@ export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
         <ThemeContext.Provider value={{ theme, onChange }}>
             <div
                 className={classnames(
-                    'relative w-full',
+                    'relative w-full transition-smooth',
                     theme === 'dark'
                         ? 'bg-normalDark text-white'
                         : 'bg-white text-normalDark'

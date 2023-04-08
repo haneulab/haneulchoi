@@ -46,7 +46,7 @@ const MobileMenu = (props: IMobileMenu) => {
     return (
         <section
             className={classnames(
-                'w-full transition-all duration-[0.25s] overflow-hidden transform md:hidden'
+                'w-full transition-smooth overflow-hidden transform md:hidden'
             )}
         >
             <ul className="grid grid-cols-1 w-full">

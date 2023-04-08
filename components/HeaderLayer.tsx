@@ -30,7 +30,7 @@ const HeaderLayer = () => {
         <>
             <header
                 className={classnames(
-                    'sticky top-0 left-0 z-40 w-full h-max backdrop-blur-md transition-all border-b shadow transform',
+                    'sticky top-0 left-0 z-40 w-full h-max backdrop-blur-md transition-smooth border-b shadow transform',
                     theme === 'dark'
                         ? 'bg-normalDark/95 text-white'
                         : 'bg-white/90 text-normalDark',
@@ -47,10 +47,7 @@ const HeaderLayer = () => {
             >
                 <section
                     className={classnames(
-                        'w-full max-w-cutoff mx-auto flex justify-between items-center px-6 py-2 lg:py-4 relative z-10',
-                        theme === 'dark'
-                            ? 'bg-normalDark/95 text-white'
-                            : 'bg-white/90 text-normalDark'
+                        'w-full max-w-cutoff mx-auto flex justify-between items-center px-6 py-2 lg:py-4 lg:px-0 relative z-10'
                     )}
                 >
                     <div className="flex items-center gap-x-2 lg:px-0">
@@ -70,14 +67,18 @@ const HeaderLayer = () => {
             </header>
             <aside
                 className={classnames(
-                    'fixed w-full transform transition-all overflow-hidden z-0 shadow-md',
+                    'fixed w-full transform transition-transform overflow-hidden z-20 shadow-md',
                     showMobileMenu
                         ? '-translate-y-0 top-[3.25rem]'
                         : '-translate-y-[200%] -top-[200%] -mt-64 md:mt-0',
 
                     theme === 'dark'
                         ? 'bg-normalDark text-grayWhite'
-                        : 'bg-white text-normalDark'
+                        : 'bg-white text-normalDark',
+
+                    scrollDirection === 'down'
+                        ? '-translate-y-[150%] -top-[150%]'
+                        : '-top-0 -translate-y-0'
                 )}
             >
                 <MobileMenu showMobileMenu={showMobileMenu} />

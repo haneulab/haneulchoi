@@ -24,6 +24,9 @@ module.exports = {
                 source: ['Source Sans Pro', 'sans-serif'],
                 figtree: ['Figtree', 'sans-serif'],
             },
+            transitionProperty: {
+                smooth: 'all 0.35s ease-in cubic-bezier(0.39, 0.575, 0.565, 1)',
+            },
         },
     },
     plugins: [require('@tailwindcss/forms')],
