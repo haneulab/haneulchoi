@@ -10,17 +10,40 @@ const FooterLayer = () => {
     return (
         <footer
             className={classnames(
-                'w-full text-white border-t border-normalGray/20',
-                theme === 'dark' ? 'bg-normalDark/90' : 'bg-grayDark'
+                'w-full border-t',
+                theme === 'dark'
+                    ? 'bg-themeDarkLight/90 border-themeLightDark/25'
+                    : 'bg-themeLightDark/5'
             )}
         >
-            <section className="px-6 lg:px-0 py-16 w-full max-w-cutoff mx-auto">
+            <section className="px-8 2xl:px-0 py-16 w-full max-w-cutoff mx-auto">
                 <div className="flex justify-center md:justify-start mb-2 md:mb-3 items-center gap-x-4 lg:gap-x-6">
-                    <Logo />
+                    <Logo alwaysShow />
                     <ul className="flex items-center gap-x-2">
-                        <span className="block w-[2.5px] h-[2.5px] bg-white rounded-full" />
-                        <span className="block w-[2.5px] h-[2.5px] bg-white rounded-full" />
-                        <span className="block w-[2.5px] h-[2.5px] bg-white rounded-full" />
+                        <span
+                            className={classnames(
+                                'block w-[2.5px] h-[2.5px] rounded-full',
+                                theme === 'dark'
+                                    ? 'bg-themeLightDark'
+                                    : 'bg-themeDarkLight'
+                            )}
+                        />
+                        <span
+                            className={classnames(
+                                'block w-[2.5px] h-[2.5px] rounded-full',
+                                theme === 'dark'
+                                    ? 'bg-themeLightDark'
+                                    : 'bg-themeDarkLight'
+                            )}
+                        />
+                        <span
+                            className={classnames(
+                                'block w-[2.5px] h-[2.5px] rounded-full',
+                                theme === 'dark'
+                                    ? 'bg-themeLightDark'
+                                    : 'bg-themeDarkLight'
+                            )}
+                        />
                     </ul>
                     <ul className="flex items-center gap-x-3 lg:gap-x-4">
                         <a
@@ -44,7 +67,7 @@ const FooterLayer = () => {
                     </ul>
                 </div>
                 <div className="flex items-center gap-x-2 justify-center md:justify-start text-xs lg:text-sm text-grayWhite/50">
-                    <h3 className="text-center font-medium font-figtree">
+                    <h3 className="text-center font-medium font-h">
                         &copy; Haneul Choi Studio 2023
                     </h3>
                     <div className="flex items-center gap-x-1">

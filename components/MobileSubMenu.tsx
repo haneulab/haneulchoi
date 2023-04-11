@@ -35,16 +35,14 @@ const MobileSubMenu = (props: IMobileSubMenu) => {
                     'flex justify-between px-6 py-4 transition-smooth',
                     showSubMenu
                         ? theme === 'dark'
-                            ? 'bg-black/25 text-white'
-                            : 'bg-grayDark text-white'
+                            ? 'bg-themeDarkLight text-themeLightDark'
+                            : 'bg-themeLightDark text-themeLight'
                         : theme === 'dark'
-                        ? 'bg-navyDark'
-                        : 'bg-white'
+                        ? 'bg-themeDark text-themeLight'
+                        : 'bg-themeLight text-themeDark'
                 )}
             >
-                <span className="font-medium text-lg font-figtree">
-                    {props.text}
-                </span>
+                <span className="font-medium text-lg font-h">{props.text}</span>
                 <span>
                     <FaLongArrowAltLeft
                         className={classnames(

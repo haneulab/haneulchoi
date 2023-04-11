@@ -16,11 +16,22 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
                 <meta
                     name="keywords"
                     content={[
+                        'Haneul Choi Studio',
+                        'haneulchoistudio',
+                        '@haneulchoistudio',
                         'Haneul Choi',
                         'HaneulChoi',
+                        'Web Application',
                         'Software Developer',
                         'Web Developer',
                         'Freelancing Software Developer',
+                        'Business',
+                        'Business Website',
+                        'Startups',
+                        'Startup Application',
+                        'Ecommerce',
+                        'E-commerce',
+                        'Ecommerce Web Application',
                         'TypeScript',
                         'React',
                         'NextJs',
@@ -33,21 +44,24 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
                 />
                 <meta
                     property="og:description"
-                    content="Hi, I am Haneul Choi, a freelancing software developer based in Davis, California. I build web applications & software packages. I love cooking & taking pictures of beautiful nature!"
+                    content="Haneul Choi Studio provides web design, development, and maintenance services for individuals, entrepreneurs, and companies for their business success."
                 />
-                <meta property="og:image" content="/og_logo.png" />
+                <meta
+                    property="og:image"
+                    content="/haneulchoistudio_open_graphic.png"
+                />
 
                 <meta
                     property="og:title"
-                    content="Haneul Choi Studio - @haneulchoistudio"
+                    content="Haneul Choi Studio | Web Services & Development"
                 />
 
                 <meta
                     name="description"
-                    content="Hi, I am Haneul Choi, a freelancing software developer based in Davis, California. I build web applications & software packages. I love cooking & taking pictures of beautiful nature!"
+                    content="Haneul Choi Studio provides web design, development, and maintenance services for individuals, entrepreneurs, and companies for their business success."
                 />
 
-                <title>Haneul Choi Studio - @haneulchoistudio</title>
+                <title>Haneul Choi Studio | Web Services & Development</title>
             </Head>
             {props.announcementComponent && props.announcementComponent}
             <HeaderLayer />

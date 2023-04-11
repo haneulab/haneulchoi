@@ -10,16 +10,18 @@ export const AboutSubMenuComponent = () => {
         <div
             className={classnames(
                 'p-6 border-b transition-smooth',
-                theme === 'dark' ? 'border-black/25' : 'border-normalDark/10'
+                theme === 'dark'
+                    ? 'border-themeDarkLight/25'
+                    : 'border-themeLightDark/25'
             )}
         >
-            <p className="mb-3 text-lg leading-7 font-source font-medium opacity-80">
+            <p className="mb-3 text-lg leading-7 font-p font-medium opacity-80">
                 Learn about who I am, where I am from, and what I like to do in
                 both work & personal life.
             </p>
             <Link
                 href={'/about'}
-                className="flex items-center gap-x-2 font-medium font-figtree text-orangeRed"
+                className="flex items-center gap-x-2 font-medium font-h text-orangeRed"
             >
                 <span>About Page</span>
                 <IoIosArrowForward className="text-xl" />

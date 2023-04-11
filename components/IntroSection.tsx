@@ -8,13 +8,13 @@ const IntroSection = () => {
     const { theme } = useTheme()
 
     return (
-        <section className="px-8 lg:px-0 py-12 lg:py-16 max-w-cutoff mx-auto grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+        <section className="px-8 2xl:px-0 py-12 lg:py-16 max-w-cutoff mx-auto grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
             <article className="lg:col-span-6 flex flex-col justify-center">
-                <h2 className="font-bold font-figtree text-4xl md:text-5xl lg:text-6xl flex flex-col gap-y-1 mb-8">
+                <h2 className="font-bold font-h text-4xl md:text-5xl lg:text-6xl flex flex-col gap-y-1 mb-8">
                     <span>Hi There!</span>
                     <span>I&apos;m Haneul Choi.</span>
                 </h2>
-                <p className="font-base font-source flex flex-col gap-y-4 text-xl lg:text-2xl mb-8">
+                <p className="font-p flex flex-col gap-y-4 text-xl lg:text-2xl mb-8 opacity-75">
                     <span>
                         I am a software developer, youtuber, and blogger.
                     </span>
@@ -27,10 +27,10 @@ const IntroSection = () => {
                     <Link
                         href={'/project'}
                         className={classnames(
-                            ' font-semibold text-lg border px-6 py-2 rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-smooth lg:hover:opacity-75',
+                            ' font-semibold font-h text-lg border px-6 py-2 rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-smooth lg:hover:opacity-75',
                             theme === 'dark'
-                                ? 'bg-white text-navyDark border-grayWhite'
-                                : 'bg-navyDark text-white border-grayDark'
+                                ? 'bg-themeLight text-themeDark border-themeLight'
+                                : 'bg-themeDark text-themeLight border-themeDark'
                         )}
                     >
                         <span>See My Projects</span>
@@ -39,8 +39,10 @@ const IntroSection = () => {
                     <Link
                         href={'/package'}
                         className={classnames(
-                            'font-semibold text-lg border px-6 py-2 border-orangeRed text-orangeRed rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-smooth lg:hover:opacity-75',
-                            theme === 'dark' ? '' : 'bg-white '
+                            'font-semibold font-h text-lg border px-6 py-2 rounded-md w-full lg:w-max flex justify-between items-center gap-x-4 transition-smooth lg:hover:opacity-75',
+                            theme === 'dark'
+                                ? 'bg-themeDark border-themeDarkLight'
+                                : 'bg-themeLight border-themeLightDark'
                         )}
                     >
                         <span>Software Packages</span>
@@ -55,7 +57,9 @@ const IntroSection = () => {
                         height={500}
                         src="/profile.svg"
                         alt="Haneul Choi Profile Image"
-                        className="rounded-xl"
+                        className={`rounded-xl ${
+                            theme === 'dark' ? 'grayscale' : ''
+                        }`}
                     />
                 </picture>
             </article>

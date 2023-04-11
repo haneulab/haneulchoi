@@ -14,7 +14,7 @@ const DesktopMenu = () => {
                 <Link
                     href={route.href}
                     key={idx}
-                    className="font-medium font-figtree transition-all duration-[0.25s] lg:hover:opacity-70"
+                    className="font-h text-lg transition-all duration-[0.25s] lg:hover:opacity-70"
                 >
                     {route.text}
                 </Link>

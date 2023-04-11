@@ -33,10 +33,6 @@ const Index: StudioPage<PageProps> = (props: PageProps) => {
     return (
         <div className="relative min-h-screen">
             <IntroSection />
-            <ProjectSection projects={props.projects} />
-            <PackageSection packages={props.packages} />
-            {/* <BlogSection /> */}
-            <ContactSection />
         </div>
     )
 }

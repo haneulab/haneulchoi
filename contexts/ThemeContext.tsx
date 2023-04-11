@@ -44,8 +44,8 @@ export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
                 className={classnames(
                     'relative w-full transition-smooth',
                     theme === 'dark'
-                        ? 'bg-navyDark text-white'
-                        : 'bg-white text-navyDark'
+                        ? 'bg-themeDark text-themeLight'
+                        : 'bg-themeLight text-themeDark'
                 )}
             >
                 {props.children}
