@@ -32,7 +32,7 @@ const MobileNav = (props: IMobileNav) => {
                               ? 'border-themeDarkLight/50 shadow-themeLightDark/10'
                               : 'border-themeLightDark/25 shadow-themeLightDark/10',
                       ].join(' ')
-                    : 'translate-y-full -top-full border-transparent bg-transparent',
+                    : '-translate-y-full -top-full border-transparent bg-transparent',
                 theme === 'dark' ? ' bg-themeDark' : ' bg-themeLight'
             )}
         >
