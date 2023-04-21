@@ -1,11 +1,22 @@
-import dynamic from 'next/dynamic'
+/**
+ * @brief
+ * --- IMPORTS STATEMENTS ----
+ */
 import Head from 'next/head'
 
+/**
+ * @brief
+ * --- INTERFACE STATEMENTS ----
+ */
 interface IPrimaryLayer {
     children: React.ReactNode
     announcementComponent?: React.ReactNode
 }
 
+/**
+ * @brief
+ * --- COMPONENT STATEMENTS ----
+ */
 const PrimaryLayer = (props: IPrimaryLayer) => {
     return (
         <>

@@ -1,10 +1,19 @@
+/**
+ * @brief
+ * --- IMPORTS STATEMENTS ----
+ */
 import dynamic from 'next/dynamic'
 import type { StudioPage } from 'studio'
 import NotFoundImage from 'public/404.png'
+import Image from 'next/image'
+import Link from 'next/link'
+import Head from 'next/head'
 
-const Image = dynamic(() => import('next/image'))
-const Link = dynamic(() => import('next/link'))
-const Head = dynamic(() => import('next/head'))
+/**
+ * @brief
+ * --- DYNAMIC IMPORTS STATEMENTS ----
+ */
+
 const FooterLayer = dynamic(
     () => import('@studio/components/layers/FooterLayer')
 )
@@ -23,12 +32,12 @@ const NotFound: StudioPage = () => {
                             alt="Haneul Choi Studio | Page Not Found"
                         />
                     </picture>
-                    <h3 className="text-center font-bold font-figtree text-xl md:text-2xl lg:text-3xl mb-4">
+                    <h3 className="text-center font-bold font-h text-3xl mb-4 text-red-400">
                         404 | Page Not Found
                     </h3>
                     <Link
                         href={'/'}
-                        className="block w-max mx-auto text-normalRed font-medium font-source text-lg lg:text-xl transition-all lg:hover:opacity-70"
+                        className="block w-max mx-auto font-semibold font-p text-themeLightDark underline text-lg lg:text-xl transition-all lg:hover:opacity-70"
                     >
                         Back Home
                     </Link>

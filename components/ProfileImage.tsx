@@ -1,9 +1,17 @@
+/**
+ * @brief
+ * --- IMPORTS STATEMENTS ----
+ */
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import Image from 'next/image'
 import DarkModeLogo from 'public/haneulchoistudio_dark_logo.svg'
 import LightModeLogo from 'public/haneulchoistudio_light_logo.svg'
 
+/**
+ * @brief
+ * --- COMPONENT STATEMENTS ----
+ */
 const ProfileImage = () => {
     const { theme } = useTheme()
     return (

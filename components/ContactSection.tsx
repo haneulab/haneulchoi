@@ -1,13 +1,25 @@
+/**
+ * @brief
+ * --- IMPORTS STATEMENTS ----
+ */
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import type { ContactCategory } from 'studio'
 
+/**
+ * @brief
+ * --- DYNAMIC IMPORTS STATEMENTS ----
+ */
 const ContactSubmitLoading = dynamic(
     () => import('@studio/components/ContactSubmitLoading')
 )
 
+/**
+ * @brief
+ * --- COMPONENT STATEMENTS ----
+ */
 const ContactSection = () => {
     const { theme } = useTheme()
 

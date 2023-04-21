@@ -1,7 +1,16 @@
+/**
+ * @brief
+ * --- IMPORTS STATEMENTS ----
+ */
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import Link from 'next/link'
 import { MdOutlineMarkEmailUnread } from 'react-icons/md'
+
+/**
+ * @brief
+ * --- COMPONENT STATEMENTS ----
+ */
 const ContactButton = () => {
     const { theme } = useTheme()
 

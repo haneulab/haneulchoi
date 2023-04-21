@@ -1,19 +1,28 @@
+/**
+ * @brief
+ * --- IMPORTS STATEMENTS ----
+ */
 import { useTheme } from '@studio/hooks/useTheme'
 import { classnames } from '@studio/utils/classnames'
 import dynamic from 'next/dynamic'
 import { TfiGithub, TfiInstagram, TfiLinkedin } from 'react-icons/tfi'
 
+/**
+ * @brief
+ * --- DYNAMIC IMPORTS STATEMENTS ----
+ */
 const Logo = dynamic(() => import('@studio/components/Logo'))
 
+/**
+ * @brief
+ * --- COMPONENT STATEMENTS ----
+ */
 const FooterLayer = () => {
     const { theme } = useTheme()
     return (
         <footer
             className={classnames(
-                'w-full border-t',
-                theme === 'dark'
-                    ? 'bg-themeDarkLight/90 border-themeLightDark/25'
-                    : 'bg-themeLightDark/5'
+                'transition-smooth border bg-themeDarkLight/90 border-themeLightDark/25 text-themeLight'
             )}
         >
             <section className="px-8 2xl:px-0 py-16 w-full max-w-cutoff mx-auto">
@@ -22,7 +31,7 @@ const FooterLayer = () => {
                     <ul className="flex items-center gap-x-2">
                         <span
                             className={classnames(
-                                'block w-[2.5px] h-[2.5px] rounded-full',
+                                'block w-[2.5px] h-[2.5px] rounded-full bg-themeLightDark',
                                 theme === 'dark'
                                     ? 'bg-themeLightDark'
                                     : 'bg-themeDarkLight'
@@ -30,7 +39,7 @@ const FooterLayer = () => {
                         />
                         <span
                             className={classnames(
-                                'block w-[2.5px] h-[2.5px] rounded-full',
+                                'block w-[2.5px] h-[2.5px] rounded-full bg-themeLightDark',
                                 theme === 'dark'
                                     ? 'bg-themeLightDark'
                                     : 'bg-themeDarkLight'
@@ -38,7 +47,7 @@ const FooterLayer = () => {
                         />
                         <span
                             className={classnames(
-                                'block w-[2.5px] h-[2.5px] rounded-full',
+                                'block w-[2.5px] h-[2.5px] rounded-full bg-themeLightDark',
                                 theme === 'dark'
                                     ? 'bg-themeLightDark'
                                     : 'bg-themeDarkLight'

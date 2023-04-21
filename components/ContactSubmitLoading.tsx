@@ -1,7 +1,15 @@
+/**
+ * @brief
+ * --- INTERFACE STATEMENTS ----
+ */
 interface IContactSubmitLoading {
     message?: string
 }
 
+/**
+ * @brief
+ * --- COMPONENT STATEMENTS ----
+ */
 const ContactSubmitLoading = (props: IContactSubmitLoading) => {
     return (
         <aside className="fixed top-0 left-0 w-full z-50 bg-neutral-900/90 backdrop-blur-sm h-screen flex flex-col justify-center items-center">
