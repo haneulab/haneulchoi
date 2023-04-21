@@ -9,18 +9,22 @@ import type {
     StudioSSRContext,
     StudioSSRProps,
 } from 'studio'
+import { TbCodeDots } from 'react-icons/tb'
+import { VscFileCode } from 'react-icons/vsc'
+import { SiBloglovin } from 'react-icons/si'
+import { TfiEmail } from 'react-icons/tfi'
+const HeaderLayer = dynamic(
+    () => import('@studio/components/layers/HeaderLayer')
+)
+const FooterLayer = dynamic(
+    () => import('@studio/components/layers/FooterLayer')
+)
 
-const PrimaryLayer = dynamic(() => import('@studio/components/PrimaryLayer'))
-const IntroSection = dynamic(() => import('@studio/components/IntroSection'))
-const ProjectSection = dynamic(
-    () => import('@studio/components/ProjectSection')
+const PrimaryLayer = dynamic(
+    () => import('@studio/components/layers/PrimaryLayer')
 )
-const PackageSection = dynamic(
-    () => import('@studio/components/PackageSection')
-)
-// const BlogSection = dynamic(() => import('@studio/components/BlogSection'))
-const ContactSection = dynamic(
-    () => import('@studio/components/ContactSection')
+const PageParent = dynamic(
+    () => import('@studio/components/containers/PageParent')
 )
 
 interface PageProps {
@@ -31,9 +35,40 @@ interface PageProps {
 
 const Index: StudioPage<PageProps> = (props: PageProps) => {
     return (
-        <div className="relative min-h-screen">
-            <IntroSection />
-        </div>
+        <>
+            <HeaderLayer />
+            <PageParent className="justify-center items-center relative">
+                <article className="flex flex-col gap-y-4">
+                    <h2 className="font-h font-bold text-6xl md:text-7xl lg:text-8xl text-center">
+                        Welcome To
+                    </h2>
+                    <p className="font-p text-xl lg:text-2xl w-max mx-auto font-light text-themeLightDark">
+                        Haneul Choi Studio
+                    </p>
+                </article>
+            </PageParent>
+            <div className="sticky bottom-0 w-full lg:w-max mx-auto rounded-t-md shdaow bg-themeDarkLight text-themeLight">
+                <section className="max-w-cutoff mx-auto flex justify-between sm:justify-center lg:justify-start">
+                    <button className="flex flex-col items-center gap-y-1.5 p-6 text-sm lg:text-base transition-smooth lg:hover:opacity-100 opacity-80">
+                        <TbCodeDots size={22} />
+                        <span className="font-p font-medium">Projects</span>
+                    </button>
+                    <button className="flex flex-col items-center gap-y-1.5 p-6 text-sm lg:text-base transition-smooth lg:hover:opacity-100 opacity-80">
+                        <VscFileCode size={22} />
+                        <span className="font-p font-medium">Pacakges</span>
+                    </button>
+                    <button className="flex flex-col items-center gap-y-1.5 p-6 text-sm lg:text-base transition-smooth lg:hover:opacity-100 opacity-80">
+                        <SiBloglovin size={22} />
+                        <span className="font-p font-medium">Blogs</span>
+                    </button>
+                    <button className="flex flex-col items-center gap-y-1.5 p-6 text-sm lg:text-base transition-smooth lg:hover:opacity-100 opacity-75">
+                        <TfiEmail size={22} />
+                        <span className="font-p font-medium">Contact</span>
+                    </button>
+                </section>
+            </div>
+            <FooterLayer />
+        </>
     )
 }
 

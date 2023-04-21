@@ -5,7 +5,9 @@ import NotFoundImage from 'public/404.png'
 const Image = dynamic(() => import('next/image'))
 const Link = dynamic(() => import('next/link'))
 const Head = dynamic(() => import('next/head'))
-const FooterLayer = dynamic(() => import('@studio/components/FooterLayer'))
+const FooterLayer = dynamic(
+    () => import('@studio/components/layers/FooterLayer')
+)
 
 const NotFound: StudioPage = () => {
     return (

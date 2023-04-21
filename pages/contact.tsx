@@ -1,7 +1,9 @@
 import dynamic from 'next/dynamic'
 import type { StudioPage } from 'studio'
 
-const PrimaryLayer = dynamic(() => import('@studio/components/PrimaryLayer'))
+const PrimaryLayer = dynamic(
+    () => import('@studio/components/layers/PrimaryLayer')
+)
 const ContactSection = dynamic(
     () => import('@studio/components/ContactSection')
 )

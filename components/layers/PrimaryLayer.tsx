@@ -1,9 +1,6 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-const HeaderLayer = dynamic(() => import('@studio/components/HeaderLayer'))
-const FooterLayer = dynamic(() => import('@studio/components/FooterLayer'))
-
 interface IPrimaryLayer {
     children: React.ReactNode
     announcementComponent?: React.ReactNode
@@ -64,9 +61,7 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
                 <title>Haneul Choi Studio | Web Services & Development</title>
             </Head>
             {props.announcementComponent && props.announcementComponent}
-            <HeaderLayer />
             {props.children}
-            <FooterLayer />
         </>
     )
 }

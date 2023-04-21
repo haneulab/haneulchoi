@@ -17,8 +17,8 @@ module.exports = {
                 themeDarkLight: '#2B2B2B',
             },
             fontFamily: {
-                h: ['Tenor Sans', 'sans-serif'],
-                p: ['Archivo Narrow', 'sans-serif'],
+                h: ['Caveat', 'cursive'],
+                p: ['Abel', 'sans-serif'],
             },
             transitionProperty: {
                 smooth: 'all 0.35s ease-in cubic-bezier(0.39, 0.575, 0.565, 1)',
