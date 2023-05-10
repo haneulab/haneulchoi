@@ -19,7 +19,7 @@ const PageHero = (props: IPageHero) => {
                     <h3 className="font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center mb-6">
                         {props.title}
                     </h3>
-                    <p className="font-h font-medium text-base max-w-md mx-auto leading-7 lg:text-lg lg:leading-8 2xl:text-xl 2xl:leading-9 text-center opacity-50">
+                    <p className="font-e1 font-medium text-lg max-w-md mx-auto leading-7 2xl:text-xl 2xl:leading-9 text-center opacity-60">
                         {props.description}
                     </p>
                 </article>
@@ -29,7 +29,7 @@ const PageHero = (props: IPageHero) => {
                             <Link
                                 key={idx}
                                 href={link.href}
-                                className="text-base lg:text-lg font-medium font-p border-b pb-0.5 border-transparent transition-smooth text-themeDark lg:hover:text-themeDarkLight lg:hover:border-themeLightDark"
+                                className="text-base lg:text-lg font-medium font-p border-b-2 pb-0.5 border-transparent transition-smooth text-themeDark lg:hover:text-themeDarkLight/50 lg:hover:border-themeLightDark/50"
                             >
                                 {link.text}
                             </Link>

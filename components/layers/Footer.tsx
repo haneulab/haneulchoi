@@ -1,10 +1,3 @@
-/**
- * @brief
- * --- IMPORTS STATEMENTS ----
- */
-import { useTheme } from '@studio/hooks/useTheme'
-
-import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { TfiGithub, TfiInstagram, TfiLinkedin } from 'react-icons/tfi'
 
@@ -39,7 +32,7 @@ const Footer = () => {
         const timer = setTimeout(() => {
             setLinkAlert('')
             window.location.assign(href)
-        }, 1500)
+        }, 2000)
 
         return () => clearInterval(timer)
     }
@@ -50,21 +43,28 @@ const Footer = () => {
                 <p className="font-p text-sm text-themeDarkLight/75">
                     2023 &copy; All rights reserved
                 </p>
-                <ul className="flex items-center gap-x-4 text-lg lg:text-xl">
-                    {links.map((link, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() =>
-                                toSocial(
-                                    `Directing you to ${link.text} page...`,
-                                    link.href
-                                )
-                            }
-                        >
-                            {link.icon}
-                        </button>
-                    ))}
-                </ul>
+                {linkAlert ? (
+                    <p className="font-medium text-sm  lg:text-lg animate-bounce text-blue-500 font-e1">
+                        {linkAlert}
+                    </p>
+                ) : (
+                    <ul className="flex items-center gap-x-4 text-lg lg:text-xl">
+                        {links.map((link, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() =>
+                                    toSocial(
+                                        `Sending you to ${link.text} now.`,
+                                        link.href
+                                    )
+                                }
+                                className="transition-smooth transform lg:hover:scale-125 lg:hover:rotate-12 lg:hover:opacity-75"
+                            >
+                                {link.icon}
+                            </button>
+                        ))}
+                    </ul>
+                )}
             </section>
         </footer>
     )

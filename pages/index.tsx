@@ -1,4 +1,3 @@
-import { useTheme } from '@studio/hooks/useTheme'
 import type { StudioPage } from 'studio'
 import { UIUtility } from '@studio/utils'
 import dynamic from 'next/dynamic'
@@ -15,8 +14,6 @@ interface PageProps {
 }
 
 const IndexPage: StudioPage = (_props: PageProps) => {
-    const { theme } = useTheme()
-
     UIUtility
 
     return (
@@ -29,16 +26,16 @@ const IndexPage: StudioPage = (_props: PageProps) => {
                 >
                     <Header />
                     <PageHero
-                        title="Haneul Choi Studio."
+                        title="Haneul Choi Studio"
                         description="Hi, My name is Haneul Choi. I am a freelancing web developer based in California, USA."
                         links={[
                             {
-                                href: '/project',
-                                text: 'Projects',
+                                href: '/products',
+                                text: 'Products',
                             },
                             {
-                                href: '/contact',
-                                text: 'Contact',
+                                href: '/services',
+                                text: 'Services',
                             },
                         ]}
                     />
