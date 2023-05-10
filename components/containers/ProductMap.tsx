@@ -30,10 +30,10 @@ const ProductMap = (props: IProductMap) => {
     return (
         <div
             className={UIUtility.classnames(
-                'h-screen flex flex-col justify-center items-center bg-gradient-to-b w-full',
+                'h-screen flex flex-col justify-center items-center w-full',
                 props.background === 'dark'
-                    ? 'from-themeDark to-themeDark/90 text-themeLight'
-                    : 'from-themeLight to-themeLightDark/5 text-themeDark'
+                    ? 'bg-themeDark text-themeLight'
+                    : 'bg-themeLightDark/5 text-themeDark'
             )}
         >
             <section className="px-8 py-24 2xl:px-0 w-full max-w-cutoff mx-auto">
