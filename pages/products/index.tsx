@@ -38,6 +38,7 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                 >
                     <Header />
                     <PageHero
+                        background="dark"
                         title="Explore Products"
                         description="From a simple website to a more sophiscated full-stack web application"
                         links={[
@@ -60,6 +61,7 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                                     .relevantRoute,
                                 icon: productsIcons[product],
                             }}
+                            background="dark"
                         />
                     ))}
 
