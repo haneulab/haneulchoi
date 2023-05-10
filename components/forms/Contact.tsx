@@ -3,7 +3,7 @@
  * --- IMPORTS STATEMENTS ----
  */
 import { useTheme } from '@studio/hooks/useTheme'
-import { classnames } from '@studio/utils/classnames'
+import { UIUtility } from '@studio/utils'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import type { ContactCategory } from 'studio'
@@ -13,7 +13,7 @@ import type { ContactCategory } from 'studio'
  * --- DYNAMIC IMPORTS STATEMENTS ----
  */
 const ContactSubmitLoading = dynamic(
-    () => import('@studio/components/ContactSubmitLoading')
+    () => import('@studio/components/loaders/ContactSubmitLoading')
 )
 
 /**
@@ -119,7 +119,7 @@ const ContactSection = () => {
                                     type="text"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className={classnames(
+                                    className={UIUtility.classnames(
                                         'w-full rounded-lg border-2 font-p',
                                         name.trim().length >= 4
                                             ? 'border-teal-400'
@@ -139,7 +139,7 @@ const ContactSection = () => {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className={classnames(
+                                    className={UIUtility.classnames(
                                         'w-full rounded-lg border-2 font-p',
                                         email.trim().length >= 4
                                             ? 'border-teal-400'
@@ -161,7 +161,7 @@ const ContactSection = () => {
                                             onSetCategory('question')
                                         }
                                         type="button"
-                                        className={classnames(
+                                        className={UIUtility.classnames(
                                             'px-6 py-2 rounded-lg border-2 font-medium font-p text-lg transition-smooth',
                                             category === 'question'
                                                 ? 'opacity-100 border-teal-500 text-teal-500'
@@ -173,7 +173,7 @@ const ContactSection = () => {
                                     <button
                                         onClick={() => onSetCategory('inquiry')}
                                         type="button"
-                                        className={classnames(
+                                        className={UIUtility.classnames(
                                             'px-6 py-2 rounded-lg border-2 font-medium font-p text-lg transition-smooth',
                                             category === 'inquiry'
                                                 ? 'opacity-100 border-teal-500 text-teal-500'
@@ -196,7 +196,7 @@ const ContactSection = () => {
                                         onChange={(e) =>
                                             setMessage(e.target.value)
                                         }
-                                        className={classnames(
+                                        className={UIUtility.classnames(
                                             'w-full rounded-lg bg-grayWhite/10 border-2 font-source font-medium',
                                             message.trim().length >= 10
                                                 ? 'border-teal-400'

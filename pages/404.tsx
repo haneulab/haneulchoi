@@ -13,9 +13,7 @@ import Head from 'next/head'
  * @brief
  * --- DYNAMIC IMPORTS STATEMENTS ----
  */
-const FooterLayer = dynamic(
-    () => import('@studio/components/layers/FooterLayer')
-)
+const FooterLayer = dynamic(() => import('@studio/components/layers/Footer'))
 
 const NotFound: StudioPage = () => {
     return (

@@ -20,7 +20,7 @@
             "@studio/components/*": ["./components/*"],
             "@studio/contexts/*": ["./contexts/*"],
             "@studio/hooks/*": ["./hooks/*"],
-            "@studio/utils/*": ["./utils/*"],
+            "@studio/utils": ["./utils/index.ts"],
             "@studio/middlewares/*": ["./middlewares/*"],
             "@studio/libs/*": ["./libs/*"],
             "@studio/styles/*": ["./styles/*"],

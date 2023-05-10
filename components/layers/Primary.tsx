@@ -8,7 +8,7 @@ import Head from 'next/head'
  * @brief
  * --- INTERFACE STATEMENTS ----
  */
-interface IPrimaryLayer {
+interface IPrimary {
     children: React.ReactNode
     announcementComponent?: React.ReactNode
 }
@@ -17,7 +17,7 @@ interface IPrimaryLayer {
  * @brief
  * --- COMPONENT STATEMENTS ----
  */
-const PrimaryLayer = (props: IPrimaryLayer) => {
+const Primary = (props: IPrimary) => {
     return (
         <>
             <Head>
@@ -77,4 +77,4 @@ const PrimaryLayer = (props: IPrimaryLayer) => {
     )
 }
 
-export default PrimaryLayer
+export default Primary

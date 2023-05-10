@@ -1,106 +1,54 @@
-/**
- * @brief
- * --- IMPORTS STATEMENTS ----
- */
-import { edge } from '@studio/middlewares/vercel/edge'
-import dynamic from 'next/dynamic'
+import { useTheme } from '@studio/hooks/useTheme'
 import type { StudioPage } from 'studio'
-import { TbCodeDots } from 'react-icons/tb'
-import { VscFileCode } from 'react-icons/vsc'
-import { SiBloglovin } from 'react-icons/si'
-import { TfiEmail } from 'react-icons/tfi'
+import { UIUtility } from '@studio/utils'
+import dynamic from 'next/dynamic'
 
-/**
- * @brief
- * --- DYNAMIC IMPORTS STATEMENTS ----
- */
-const HeaderLayer = dynamic(
-    () => import('@studio/components/layers/HeaderLayer')
-)
-const FooterLayer = dynamic(
-    () => import('@studio/components/layers/FooterLayer')
-)
+// Layer
+const PrimaryLayer = dynamic(() => import('@studio/components/layers/Primary'))
+const Header = dynamic(() => import('@studio/components/layers/Header'))
+const Footer = dynamic(() => import('@studio/components/layers/Footer'))
+// Container
+const PageHero = dynamic(() => import('@studio/components/containers/PageHero'))
 
-const PrimaryLayer = dynamic(
-    () => import('@studio/components/layers/PrimaryLayer')
-)
-const PageParent = dynamic(
-    () => import('@studio/components/containers/PageParent')
-)
-const Nav = dynamic(() => import('@studio/components/navs/Nav'))
+interface PageProps {
+    _id: string
+}
 
-/**
- * @brief
- * --- COMPONENT STATEMENTS ----
- */
-const Index: StudioPage = () => {
+const IndexPage: StudioPage = (_props: PageProps) => {
+    const { theme } = useTheme()
+
+    UIUtility
+
     return (
         <>
-            <HeaderLayer />
-            <PageParent className="justify-center items-center relative">
-                <article className="flex flex-col gap-y-2">
-                    <h2 className="font-h font-bold text-7xl lg:text-8xl text-center">
-                        Welcome To
-                    </h2>
-                    <p className="font-h text-2xl lg:text-4xl w-max mx-auto font-light text-themeLightDark">
-                        Haneul Choi Studio
-                    </p>
-                </article>
-            </PageParent>
-            <Nav
-                items={[
-                    {
-                        href: '/projects',
-                        text: 'Projects',
-                        icon: <TbCodeDots size={22} />,
-                    },
-                    {
-                        href: '/packages',
-                        text: 'Packages',
-                        icon: <VscFileCode size={22} />,
-                    },
-                    {
-                        href: '/blogs',
-                        text: 'Blogs',
-                        icon: <SiBloglovin size={22} />,
-                    },
-                    {
-                        href: '/contact',
-                        text: 'Contact',
-                        icon: <TfiEmail size={22} />,
-                    },
-                ]}
-            />
-            <FooterLayer />
+            <PrimaryLayer>
+                <div
+                    className={UIUtility.classnames(
+                        'w-full min-h-screen flex flex-col items-center justify-between bg-transparent'
+                    )}
+                >
+                    <Header />
+                    <PageHero
+                        title="Haneul Choi Studio."
+                        description="Hi, My name is Haneul Choi. I am a freelancing web developer based in California, USA."
+                        links={[
+                            {
+                                href: '/project',
+                                text: 'Projects',
+                            },
+                            {
+                                href: '/contact',
+                                text: 'Contact',
+                            },
+                        ]}
+                    />
+
+                    <Footer />
+                </div>
+            </PrimaryLayer>
         </>
     )
 }
 
-Index.getLayout = (page) => {
-    return <PrimaryLayer>{page}</PrimaryLayer>
-}
-
-// export const getServerSideProps: StudioSSRProps = async (
-//     _context: StudioSSRContext
-// ) => {
-//     const data: PageProps = {
-//         projects: [],
-//         packages: [],
-//         blogs: [],
-//     }
-
-//     await Promise.all(
-//         Object.keys(data).map(async (key) => {
-//             data[key] = await edge(key as unknown as never)()
-//             console.log(
-//                 `\n\t[VercelEdgeConfig] Data <${key}> Succesfully Fetched At Route ["/"].\n`
-//             )
-//         })
-//     )
-
-//     return {
-//         props: data,
-//     }
-// }
-
-export default Index
+IndexPage.getLayout = (page) => page
+export default IndexPage

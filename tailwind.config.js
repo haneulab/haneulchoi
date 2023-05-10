@@ -17,8 +17,12 @@ module.exports = {
                 themeDarkLight: '#2B2B2B',
             },
             fontFamily: {
-                h: ['Caveat', 'cursive'],
-                p: ['Abel', 'sans-serif'],
+                h: ['Inter Tight', 'sans-serif'],
+                p: ['Cormorant', 'serif'],
+
+                e1: ['Indie Flower', 'cursive'],
+                e2: ['Francois One', 'snas-serif'],
+                e3: ['Handlee', 'cursive'],
             },
             transitionProperty: {
                 smooth: 'all 0.35s ease-in cubic-bezier(0.39, 0.575, 0.565, 1)',

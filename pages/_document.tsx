@@ -29,14 +29,15 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com"
                     />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
+
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@400;500;600;700&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Francois+One&family=Handlee&family=Indie+Flower&family=Inter+Tight:wght@300;400;500;600;700&display=swap"
                         rel="stylesheet"
                     />
                     <meta name="msapplication-TileColor" content="#FF7373" />
                     <meta name="theme-color" content="#eeeeee" />
                 </Head>
-                <body className="relative w-full h-full font-p bg-themeLight text-themeDark dark:bg-themeDark dark:text-themeLight">
+                <body className="relative w-full h-[100%] font-p bg-themeLight text-themeDark dark:bg-themeDark dark:text-themeLight">
                     <Main />
                     <NextScript />
                 </body>

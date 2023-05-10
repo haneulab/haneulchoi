@@ -3,7 +3,7 @@
  * --- IMPORTS STATEMENTS ----
  */
 import { useTheme } from '@studio/hooks/useTheme'
-import { classnames } from '@studio/utils/classnames'
+import { UIUtility } from '@studio/utils'
 import Link from 'next/link'
 import { MdOutlineMarkEmailUnread } from 'react-icons/md'
 
@@ -17,7 +17,7 @@ const ContactButton = () => {
     return (
         <Link
             href={'/contact'}
-            className={classnames(
+            className={UIUtility.classnames(
                 'flex items-center p-1.5 border rounded-full justify-center text-2xl transition-smooth lg:hover:opacity-70 transform',
 
                 theme === 'dark'
