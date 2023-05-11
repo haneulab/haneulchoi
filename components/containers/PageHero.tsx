@@ -16,6 +16,8 @@ interface IPageHero {
     warning?: boolean
 
     background?: BackgroundVariant
+
+    children?: React.ReactNode
 }
 
 const PageHero = (props: IPageHero) => {
@@ -31,7 +33,7 @@ const PageHero = (props: IPageHero) => {
             )}
         >
             <section className="p-8 2xl:px-0 w-full max-w-cutoff mx-auto">
-                <article className="mb-8">
+                <article>
                     <h3 className="font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center mb-6">
                         {props.title}
                     </h3>
@@ -44,35 +46,42 @@ const PageHero = (props: IPageHero) => {
                         {props.description}
                     </p>
                 </article>
-                <ul className="flex items-center justify-center gap-x-1">
-                    {props.links.map((link, idx) => (
-                        <>
-                            <Link
-                                key={idx}
-                                href={link.href}
-                                className={UIUtility.classnames(
-                                    'text-base lg:text-lg font-medium font-p border-b-2 pb-0.5 border-transparent transition-smooth ',
-                                    props.background === 'dark'
-                                        ? 'text-themeLight lg:hover:text-themeLightDark/75 lg:hover:border-themeLightDark/75'
-                                        : 'text-themeDark lg:hover:text-themeDarkLight/75 lg:hover:border-themeLight/75'
-                                )}
-                            >
-                                {link.text}
-                            </Link>
-                            {idx !== props.links.length - 1 && (
-                                <span
+                {props.links && props.links.length >= 1 && (
+                    <ul className="flex items-center justify-center gap-x-1 mt-8">
+                        {props.links.map((link, idx) => (
+                            <>
+                                <Link
+                                    key={idx}
+                                    href={link.href}
                                     className={UIUtility.classnames(
+                                        'text-base lg:text-lg font-medium font-p border-b-2 pb-0.5 border-transparent transition-smooth ',
                                         props.background === 'dark'
-                                            ? 'text-themeLightDark/50'
-                                            : 'text-themeDarkLight/50'
+                                            ? 'text-themeLight lg:hover:text-themeLightDark/75 lg:hover:border-themeLightDark/75'
+                                            : 'text-themeDark lg:hover:text-themeDarkLight/75 lg:hover:border-themeLight/75'
                                     )}
                                 >
-                                    /
-                                </span>
-                            )}
-                        </>
-                    ))}
-                </ul>
+                                    {link.text}
+                                </Link>
+                                {idx !== props.links.length - 1 && (
+                                    <span
+                                        className={UIUtility.classnames(
+                                            props.background === 'dark'
+                                                ? 'text-themeLightDark/50'
+                                                : 'text-themeDarkLight/50'
+                                        )}
+                                    >
+                                        /
+                                    </span>
+                                )}
+                            </>
+                        ))}
+                    </ul>
+                )}
+                {props.children && (
+                    <div className="mt-8 flex flex-col items-center">
+                        {props.children}
+                    </div>
+                )}
             </section>
         </main>
     )
