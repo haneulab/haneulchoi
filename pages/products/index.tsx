@@ -1,7 +1,7 @@
 import type { StudioPage } from 'studio'
 import { UIUtility } from '@studio/utils'
 import dynamic from 'next/dynamic'
-import { SiPagekit } from 'react-icons/si'
+import { TbUsers, TbQrcode, TbSettingsAutomation } from 'react-icons/tb'
 import { ProductUtility } from '@studio/utils'
 
 // Layer
@@ -22,9 +22,9 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
     const productsIcons: {
         [K in keyof typeof ProductUtility.products]: React.ReactNode
     } = {
-        'Portfolio Website': <SiPagekit />,
-        'Web Application': <SiPagekit />,
-        'Web Manager System': <SiPagekit />,
+        'Portfolio Website': <TbUsers size={22} />,
+        'Web Application': <TbQrcode size={22} />,
+        'Digital Manager System': <TbSettingsAutomation size={22} />,
     }
     const products = Object.keys(ProductUtility.products)
 

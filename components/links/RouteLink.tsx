@@ -12,10 +12,10 @@ const RouteLink = (props: IRouteLink) => {
         <Link
             href={props.href}
             className={UIUtility.classnames(
-                'capitalize font-e1 font-bold transform transition-smooth text-lg',
+                'capitalize font-e1 transform transition-smooth text-lg',
                 props.isCurrentRoute
-                    ? 'text-themeDark'
-                    : 'text-themeLightDark lg:hover:text-themeDarkLight'
+                    ? 'font-bold underline'
+                    : 'font-light text-themeDarkLight/75 lg:hover:text-themeDarkLight'
             )}
         >
             {props.text}

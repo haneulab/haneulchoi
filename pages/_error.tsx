@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 import type { StudioPage } from 'studio'
 import Head from 'next/head'
 import { UIUtility } from '@studio/utils'
+import { NextPageContext } from 'next'
 
 // Layer
 const PrimaryLayer = dynamic(() => import('@studio/components/layers/Primary'))
@@ -13,11 +14,15 @@ const Footer = dynamic(() => import('@studio/components/layers/Footer'))
 // Container
 const PageHero = dynamic(() => import('@studio/components/containers/PageHero'))
 
-const NotFound: StudioPage = () => {
+interface PageProps {
+    statusCode: string
+}
+
+const ErrorPage: StudioPage = (props: PageProps) => {
     return (
         <>
             <Head>
-                <title>Page Not Found | Haneul Choi Studio</title>
+                <title>Error {props.statusCode} | Haneul Choi Studio</title>
             </Head>
             <PrimaryLayer>
                 <div
@@ -26,8 +31,9 @@ const NotFound: StudioPage = () => {
                     )}
                 >
                     <PageHero
-                        title="Page Not Found"
-                        description="The page you requested is not found!"
+                        warning
+                        title={`Request Error : ${props.statusCode}`}
+                        description="The page you requested resulted in error."
                         links={[
                             {
                                 href: '/',
@@ -47,8 +53,17 @@ const NotFound: StudioPage = () => {
     )
 }
 
-NotFound.getLayout = (page) => {
+ErrorPage.getInitialProps = (context: NextPageContext) => {
+    const { res, err } = context
+    const statusCode = res ? res.statusCode : err ? err.statusCode : 404
+
+    return {
+        statusCode,
+    }
+}
+
+ErrorPage.getLayout = (page) => {
     return <>{page}</>
 }
 
-export default NotFound
+export default ErrorPage

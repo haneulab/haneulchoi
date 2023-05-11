@@ -13,10 +13,14 @@ interface IPageHero {
     description?: string
     links?: LinkProps[]
 
+    warning?: boolean
+
     background?: BackgroundVariant
 }
 
 const PageHero = (props: IPageHero) => {
+    const { warning } = props
+
     return (
         <main
             className={UIUtility.classnames(
@@ -31,7 +35,12 @@ const PageHero = (props: IPageHero) => {
                     <h3 className="font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center mb-6">
                         {props.title}
                     </h3>
-                    <p className="font-e1 font-medium text-lg max-w-md mx-auto leading-7 2xl:text-xl 2xl:leading-9 text-center opacity-75">
+                    <p
+                        className={UIUtility.classnames(
+                            'font-e1 font-medium text-lg max-w-md mx-auto leading-7 2xl:text-xl 2xl:leading-9 text-center opacity-75',
+                            warning && 'text-pink-500'
+                        )}
+                    >
                         {props.description}
                     </p>
                 </article>

@@ -18,11 +18,6 @@ interface Product {
 
     relevantFeatures: RelevantProductFeature[]
 }
-const productNames = [
-    'Portfolio Website',
-    'Web Application',
-    'Web Manager System',
-]
 
 class __Product_Utility__ {
     constructor(
@@ -30,7 +25,7 @@ class __Product_Utility__ {
             [
                 'Portfolio Website',
                 'Web Application',
-                'Web Manager System'
+                'Digital Manager System'
             ][number],
             Product
         >
@@ -53,7 +48,7 @@ const ProductUtility = new __Product_Utility__({
             'Do you need your portfolio website for your business or personal career interest? Your portfolio product will be based on the following features.',
         relevantRoute: {
             href: '/portfolio',
-            text: 'View Portfolios',
+            text: 'View Demo Portfolio',
             icon: null,
         },
         relevantFeatures: [
@@ -81,62 +76,44 @@ const ProductUtility = new __Product_Utility__({
     'Web Application': {
         title: 'Web Application',
         description:
-            'Do you need your portfolio website for your business or personal career interest? Your portfolio product will be based on the following features.',
+            'You have a great idea for application project, but do not know have coders in your team? I am here to become the coder of your team in your project.',
         relevantRoute: {
             href: '/portfolio',
-            text: 'View Portfolios',
+            text: 'View Demo Web App',
             icon: null,
         },
         relevantFeatures: [
             {
-                featureTitle: 'Customizability',
-                featureExplanation: `Since I hard-code every aspect of impleneting websites with coding, it is fully customizable. This means what
-                    you expect will be satisfiable.`,
+                featureTitle: 'MVP',
+                featureExplanation: `It is always good to start small and scale up. For this reason, I built MVPs (minimal viable products) to make your idea come in reality.`,
             },
             {
-                featureTitle: 'Responsiveness',
-                featureExplanation: `I take mobile-first-approach when I
-                    build websites. Therefore, your portfolio will have
-                    responsive in most of the exisiting devices out
-                    there.`,
+                featureTitle: 'Frontend & Backend',
+                featureExplanation: `Whether you need a minimal or strong backend, I can provide both frontend and full-stack web applications for your needs.`,
             },
             {
-                featureTitle: 'SEO',
-                featureExplanation: `In order to help your target audiences view your
-                    website, developers need to follow Search Engine Optimization
-                    strategies. I priotize SEO when I built
-                    clients websites.`,
+                featureTitle: 'Techstacks',
+                featureExplanation: `I use modern and high-featured tech-stacks such as TypeScript, React, NextJs, MongoDatabase, Firebase, Git, Github.`,
             },
         ],
     },
-    'Web Manager System': {
+    'Digital Manager System': {
         title: 'Digital Manager System',
         description:
-            'Do you need your portfolio website for your business or personal career interest? Your portfolio product will be based on the following features.',
+            'For businesses, it is important to keep track of incoming and outgoing informations & store them to retrieve whenever needed.',
         relevantRoute: {
             href: '/portfolio',
-            text: 'View Portfolios',
+            text: 'See Example App',
             icon: null,
         },
         relevantFeatures: [
             {
-                featureTitle: 'Customizability',
-                featureExplanation: `Since I hard-code every aspect of impleneting websites with coding, it is fully customizable. This means what
-                    you expect will be satisfiable.`,
+                featureTitle: 'NextReport',
+                featureExplanation: `From individual sales logistic to final summary of sales stored in the system, NextReport is a interface-friendly invoicing application that you can use with any devices with a browser.`,
             },
             {
-                featureTitle: 'Responsiveness',
-                featureExplanation: `I take mobile-first-approach when I
-                    build websites. Therefore, your portfolio will have
-                    responsive in most of the exisiting devices out
-                    there.`,
-            },
-            {
-                featureTitle: 'SEO',
-                featureExplanation: `In order to help your target audiences view your
-                    website, developers need to follow Search Engine Optimization
-                    strategies. I priotize SEO when I built
-                    clients websites.`,
+                featureTitle: 'NextStorage',
+                featureExplanation: `Store customers coming in to your business, keep in touch with them, and manage daily meeting schedules with them. NextStorage helps to store customer informations, contact, and schedule.`,
             },
         ],
     },

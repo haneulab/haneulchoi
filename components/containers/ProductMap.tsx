@@ -63,7 +63,7 @@ const ProductMap = (props: IProductMap) => {
                             href={relevantRoute.href}
                             className={UIUtility.classnames(
                                 'w-full p-0.5 border block rounded-md  transition-smooth ',
-                                props.background
+                                props.background === 'dark'
                                     ? 'border-themeLightDark/50 lg:hover:bg-themeLight lg:hover:text-themeDark'
                                     : 'border-themeDarkLight/50 lg:hover:bg-themeDark lg:hover:text-themeLight'
                             )}
@@ -83,7 +83,7 @@ const ProductMap = (props: IProductMap) => {
                                     'text-center text-transparent bg-clip-text bg-gradient-to-r  font-medium text-lg lg:text-xl 2xl:text-2xl font-h mb-2 lg:mb-4',
                                     props.background === 'dark'
                                         ? 'from-themeLight to-themeLight'
-                                        : 'from-themeDark via-themeLightDark to-themeDark'
+                                        : 'from-themeDarkLight  to-themeDarkLight'
                                 )}
                             >
                                 {feature.featureTitle}
