@@ -1,10 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
-import { AiOutlineMenu } from 'react-icons/ai'
 import { RouteUtility, UIUtility } from '@studio/utils'
 import { useState } from 'react'
-import { TbEyeglass, TbEyeglassOff } from 'react-icons/tb'
-import { TfiClose } from 'react-icons/tfi'
 
 // Nav
 const DesktopDirectory = dynamic(
