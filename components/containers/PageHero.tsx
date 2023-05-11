@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { UIUtility } from '@studio/utils'
+import Link from 'next/link'
 
 type BackgroundVariant = 'dark' | 'light'
 
@@ -9,6 +9,8 @@ interface LinkProps {
 }
 
 interface IPageHero {
+    image?: React.ReactNode
+
     title?: string
     description?: string
     links?: LinkProps[]
@@ -26,13 +28,14 @@ const PageHero = (props: IPageHero) => {
     return (
         <main
             className={UIUtility.classnames(
-                'h-screen w-full flex flex-col justify-center items-center',
+                'w-full flex flex-col justify-center items-center h-screen',
                 props.background === 'dark'
                     ? 'bg-themeDark text-themeLight'
                     : 'bg-themeLight text-themeDark'
             )}
         >
             <section className="p-8 2xl:px-0 w-full max-w-cutoff mx-auto">
+                {props.image && <div className="mb-8">{props.image}</div>}
                 <article>
                     <h3 className="font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center mb-6">
                         {props.title}

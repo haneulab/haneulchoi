@@ -14,8 +14,6 @@ interface PageProps {
 }
 
 const IndexPage: StudioPage = (_props: PageProps) => {
-    UIUtility
-
     return (
         <>
             <PrimaryLayer>
