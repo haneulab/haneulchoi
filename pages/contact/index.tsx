@@ -32,16 +32,17 @@ const ContactPage: StudioPage<PageProps> = (_props: PageProps) => {
     return (
         <>
             <PrimaryLayer>
-                <Header />
+                <Header variant="light" />
                 <PageHero
+                    background="light"
                     title="Please Contact Me."
                     description="If you have inquiries, questions, or any other matter that I should knowm, please contact me using the form below."
                 >
                     <HashDirect to="form" text="Fill Out Contact Form" />
                 </PageHero>
 
-                <Footer />
                 <Contact />
+                <Footer variant="light" />
             </PrimaryLayer>
         </>
     )

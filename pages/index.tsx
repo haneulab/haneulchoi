@@ -22,8 +22,9 @@ const IndexPage: StudioPage = (_props: PageProps) => {
                         'w-full min-h-screen flex flex-col items-center justify-between bg-transparent'
                     )}
                 >
-                    <Header />
+                    <Header variant="light" />
                     <PageHero
+                        background="light"
                         title="Haneul Choi Studio"
                         description="Hi, My name is Haneul Choi. I am a freelancing web developer based in California, USA."
                         links={[
@@ -38,7 +39,7 @@ const IndexPage: StudioPage = (_props: PageProps) => {
                         ]}
                     />
 
-                    <Footer />
+                    <Footer variant="light" />
                 </div>
             </PrimaryLayer>
         </>

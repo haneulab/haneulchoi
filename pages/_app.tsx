@@ -17,15 +17,15 @@ const Studio = (props: StudioProps) => {
     const getLayout = Component.getLayout || ((page) => page)
 
     return (
-        <ThemeContextProvider>
-            <AnimatePresence
-                mode="wait"
-                initial={false}
-                onExitComplete={() => window.scrollTo(0, 0)}
-            >
+        <AnimatePresence
+            mode="wait"
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+        >
+            <ThemeContextProvider>
                 {getLayout(<Component {...pageProps} key={router.asPath} />)}
-            </AnimatePresence>
-        </ThemeContextProvider>
+            </ThemeContextProvider>
+        </AnimatePresence>
     )
 }
 

@@ -36,9 +36,9 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                         'w-full min-h-screen flex flex-col items-center justify-between bg-transparent'
                     )}
                 >
-                    <Header />
+                    <Header variant="dark" />
                     <PageHero
-                        background="light"
+                        background="dark"
                         title="Explore Products"
                         description="From a simple website to a more sophiscated full-stack web application"
                         links={[
@@ -61,11 +61,11 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                                     .relevantRoute,
                                 icon: productsIcons[product],
                             }}
-                            background={idx % 2 === 0 ? 'light' : 'dark'}
+                            background={'dark'}
                         />
                     ))}
 
-                    <Footer />
+                    <Footer variant="dark" />
                 </div>
             </PrimaryLayer>
         </>

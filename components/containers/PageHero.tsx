@@ -75,7 +75,7 @@ const PageHero = (props: IPageHero) => {
                                     className={UIUtility.classnames(
                                         'text-base lg:text-lg font-medium font-p border-b-2 pb-0.5 border-transparent transition-smooth ',
                                         props.background === 'dark'
-                                            ? 'text-themeLight lg:hover:text-themeLightDark/75 lg:hover:border-themeLightDark/75'
+                                            ? 'text-pink-500 lg:hover:text-pink-400/75 lg:hover:border-pink-400/75'
                                             : 'text-themeDark lg:hover:text-themeDarkLight/75 lg:hover:border-themeLight/75'
                                     )}
                                 >
@@ -85,7 +85,7 @@ const PageHero = (props: IPageHero) => {
                                     <span
                                         className={UIUtility.classnames(
                                             props.background === 'dark'
-                                                ? 'text-themeLightDark/50'
+                                                ? 'text-pink-500/50'
                                                 : 'text-themeDarkLight/50'
                                         )}
                                     >

@@ -2,6 +2,10 @@ interface RelevantProductFeature {
     featureTitle: string
     featureExplanation?: string
     featureIcon?: React.ReactNode
+    featureLink?: {
+        href?: string
+        text?: string
+    }
 }
 
 interface RelevantProductRoute {
@@ -127,10 +131,18 @@ const ProductUtility = new __Product_Utility__({
             {
                 featureTitle: 'NextReport',
                 featureExplanation: `From individual sales logistic to final summary of sales stored in the system, NextReport is a interface-friendly invoicing application that you can use with any devices with a browser.`,
+                featureLink: {
+                    href: '/products/nextreport',
+                    text: 'Learn NextReport',
+                },
             },
             {
                 featureTitle: 'NextStorage',
                 featureExplanation: `Store customers coming in to your business, keep in touch with them, and manage daily meeting schedules with them. NextStorage helps to store customer informations, contact, and schedule.`,
+                featureLink: {
+                    href: '/products/nextstorage',
+                    text: 'Learn NextStorage',
+                },
             },
         ],
     },

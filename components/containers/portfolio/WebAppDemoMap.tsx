@@ -18,9 +18,12 @@ const WebAppDemoMap = () => {
                         style={{
                             lineHeight: '1.6',
                         }}
-                        className="font-h font-light opacity-75 text-lg lg:text-xl 2xl:text-2xl text-center"
+                        className="font-h font-light opacity-75 text-lg lg:text-xl 2xl:text-2xl text-center mb-8 lg:mb-10"
                     >
                         Let your idea come to reality.
+                    </p>
+                    <p className="p-8 bg-pink-500/10 border border-pink-500/25 text-pink-500 font-h lg:text-lg text-center">
+                        This section is currently not available.
                     </p>
                 </article>
             </section>

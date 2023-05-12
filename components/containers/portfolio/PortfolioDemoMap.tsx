@@ -57,7 +57,7 @@ const PortfolioDemoMap = () => {
                         </div>
                     </div>
                 </article>
-                <article className="lg:col-span-4 w-full h-full overflow-y-scroll">
+                <article className="lg:col-span-4 w-full">
                     <ul className="h-max flex flex-col gap-y-8">
                         <div className="p-6 rounded-lg bg-pink-500/5 border border-pink-500/25 text-pink-400 shadow-lg overflow-hidden transition-smooth lg:hover:bg-pink-500/10 cursor-pointer">
                             <h6 className="font-bold text-base lg:text-lg font-h mb-0.5">
@@ -66,7 +66,7 @@ const PortfolioDemoMap = () => {
                             <p className="font-light text-xs lg:text-sm font-h text-themeLight/75 mb-3">
                                 Local Japanese Restaurant
                             </p>
-                            <p className="text-themeLight font-h text-sm lg:text-base leading-7 mb-6">
+                            <p className="text-themeLight font-h text-sm lg:text-base leading-7 lg:leading-8 mb-6">
                                 Minimalistic 4-pages business websites built
                                 within one-week with fully customized contents
                                 including menu files and gallery.
@@ -90,7 +90,7 @@ const PortfolioDemoMap = () => {
                             <p className="font-light text-xs lg:text-sm font-h text-themeLight/75 mb-3">
                                 Profesisonal Personal Website
                             </p>
-                            <p className="text-themeLight font-h text-sm lg:text-base leading-7 mb-6">
+                            <p className="text-themeLight font-h text-sm lg:text-base leading-7 lg:leading-8 mb-6">
                                 Professional freelancing portfolio website for
                                 software developer, Haneul Choi, with minimal
                                 product, service, portfolio, about, contact
@@ -110,22 +110,23 @@ const PortfolioDemoMap = () => {
                         </div>
                         <div className="p-6 rounded-lg bg-pink-500/5 border border-pink-500/25 text-pink-400 shadow-lg overflow-hidden transition-smooth lg:hover:bg-pink-500/10 cursor-pointer">
                             <h6 className="font-bold text-base lg:text-lg font-h mb-0.5">
-                                Yuchan Shokudo
+                                Almond House
                             </h6>
                             <p className="font-light text-xs lg:text-sm font-h text-themeLight/75 mb-3">
-                                Local Japanese Restaurant
+                                Local Coffee Shop
                             </p>
-                            <p className="text-themeLight font-h text-sm lg:text-base leading-7 mb-6">
-                                Minimalistic 4-pages business websites built
-                                within one-week with fully customized contents
-                                including menu files and gallery.
+                            <p className="text-themeLight font-h text-sm lg:text-base leading-7 lg:leading-8 mb-6">
+                                Basic coffee shop website that consists of
+                                simple & precise menu, gallery, and contact
+                                pages and their contents.
                             </p>
                             <div>
                                 <a
-                                    href=""
+                                    href="https://haneulchoi.studio"
                                     target="_blank"
                                     referrerPolicy="no-referrer"
                                     className="w-full border border-pink-500 lg:border-pink-500/50 font-h px-6 p-3 rounded-lg lg:bg-themeDark/50 lg:text-pink-500/50 font-medium text-base text-center block transition-smooth lg:hover:text-themeLight lg:hover:bg-pink-500 lg:hover:border-pink-500"
+                                    rel="noreferrer"
                                 >
                                     View Demo
                                 </a>

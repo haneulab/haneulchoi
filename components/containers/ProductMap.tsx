@@ -7,6 +7,11 @@ interface ProductMapRelevantFeature {
     featureIcon?: React.ReactNode
     featureTitle: string
     featureExplanation: string
+
+    featureLink?: {
+        href?: string
+        text?: string
+    }
 }
 
 interface ProductMapRelevantRoute {
@@ -90,9 +95,9 @@ const ProductMap = (props: IProductMap) => {
                         </span>
                     </h3>
                     <ul className="flex items-center justify-center gap-x-4">
-                        <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-teal-400 animate-bounce " />
-                        <span className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="w-1 h-1 lg:w-2 lg:h-2 rounded-full bg-blue-400 animate-ping" />
+                        <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-pink-400 animate-bounce " />
+                        <span className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-pink-500 animate-pulse" />
+                        <span className="w-1 h-1 lg:w-2 lg:h-2 rounded-full bg-pink-400 animate-ping" />
                     </ul>
                     <article className="mx-auto max-w-lg flex flex-col gap-y-8 lg:gap-y-10">
                         {relevantFeatures.map((feature, idx) => (
@@ -117,6 +122,14 @@ const ProductMap = (props: IProductMap) => {
                                 >
                                     {feature.featureExplanation}
                                 </p>
+                                {feature.featureLink && (
+                                    <Link
+                                        href={feature.featureLink.href}
+                                        className="block mt-4 w-max mx-auto font-h font-semibold text-sm lg:text-base  px-8 py-3 border-b border-pink-500 text-pink-500 lg:hover:bg-pink-500 lg:hover:text-themeLight"
+                                    >
+                                        {feature.featureLink.text}
+                                    </Link>
+                                )}
                             </div>
                         ))}
                     </article>

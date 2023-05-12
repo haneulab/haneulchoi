@@ -34,12 +34,12 @@ const Footer = ({ variant = 'light' }: IFooter) => {
         },
 
         {
-            href: 'https://instagram/com/__sky__e',
+            href: 'https://instagram.com/__sky__e',
             text: 'Instagram',
             icon: <TfiInstagram />,
         },
         {
-            href: 'https://linkedin.com/in/haneulab',
+            href: 'https://linkedin.com/in/haneulab/',
             text: 'Linkedin',
             icon: <TfiLinkedin />,
         },
