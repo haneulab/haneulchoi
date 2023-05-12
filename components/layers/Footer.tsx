@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { TfiGithub, TfiInstagram, TfiLinkedin } from 'react-icons/tfi'
+import UIUtility from 'utils/ui'
 
 // Loader
 const FooterLinkDirectLoading = dynamic(
@@ -18,7 +19,13 @@ const FooterCopyRight = dynamic(
  * @brief
  * --- COMPONENT STATEMENTS ----
  */
-const Footer = () => {
+
+type ColorVariant = 'dark' | 'light'
+interface IFooter {
+    variant?: ColorVariant
+}
+
+const Footer = ({ variant = 'light' }: IFooter) => {
     const links = [
         {
             href: 'https://github.com/haneulchoistudio',
@@ -51,7 +58,14 @@ const Footer = () => {
     }
 
     return (
-        <footer className="fixed bottom-0 z-10 w-full h-max bg-themeLight">
+        <footer
+            className={UIUtility.classnames(
+                'fixed bottom-0 z-10 w-full h-max ',
+                variant === 'dark'
+                    ? 'bg-themeDark text-themeLight'
+                    : 'bg-themeLight text-themeDark '
+            )}
+        >
             <section className="p-4 lg:p-8 text-center flex justify-between items-center">
                 <FooterCopyRight year={2023} />
 

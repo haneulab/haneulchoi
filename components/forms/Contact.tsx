@@ -115,7 +115,7 @@ const ContactSection = () => {
                                 className="w-full max-w-lg mx-auto lg:p-8 lg:border rounded-xl flex flex-col gap-y-6"
                             >
                                 <section className="flex flex-col gap-y-2">
-                                    <label className="font-h font-semibold text-lg lg:text-xl">
+                                    <label className="font-h font-medium text-lg lg:text-xl">
                                         <span className="text-rose-500">*</span>
                                         Your name
                                     </label>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                                             setName(e.target.value)
                                         }
                                         className={UIUtility.classnames(
-                                            'w-full rounded-lg border-2 font-p',
+                                            'w-full rounded-lg border-2 font-e1',
                                             name.trim().length >= 4
                                                 ? 'border-teal-400'
                                                 : 'border-rose-500',
@@ -137,7 +137,7 @@ const ContactSection = () => {
                                     />
                                 </section>
                                 <section className="flex flex-col gap-y-2">
-                                    <label className="font-h font-semibold text-lg lg:text-xl">
+                                    <label className="font-h font-medium text-lg lg:text-xl">
                                         <span className="text-rose-500">*</span>
                                         Your email
                                     </label>
@@ -148,7 +148,7 @@ const ContactSection = () => {
                                             setEmail(e.target.value)
                                         }
                                         className={UIUtility.classnames(
-                                            'w-full rounded-lg border-2 font-p',
+                                            'w-full rounded-lg border-2 font-e1',
                                             email.trim().length >= 4
                                                 ? 'border-teal-400'
                                                 : 'border-rose-500',
@@ -159,7 +159,7 @@ const ContactSection = () => {
                                     />
                                 </section>
                                 <section className="flex flex-col gap-y-3">
-                                    <label className="font-h font-semibold text-lg lg:text-xl">
+                                    <label className="font-h font-medium text-lg lg:text-xl">
                                         <span className="text-rose-500">*</span>
                                         Message Category
                                     </label>
@@ -170,7 +170,7 @@ const ContactSection = () => {
                                             }
                                             type="button"
                                             className={UIUtility.classnames(
-                                                'px-6 py-2 rounded-lg border-2 font-medium font-p text-lg transition-smooth',
+                                                'px-6 py-2 rounded-lg border-2 font-medium font-e1 text-lg transition-smooth',
                                                 category === 'question'
                                                     ? 'opacity-100 border-teal-500 text-teal-500'
                                                     : 'opacity-60 lg:hover:opacity-100'
@@ -184,7 +184,7 @@ const ContactSection = () => {
                                             }
                                             type="button"
                                             className={UIUtility.classnames(
-                                                'px-6 py-2 rounded-lg border-2 font-medium font-p text-lg transition-smooth',
+                                                'px-6 py-2 rounded-lg border-2 font-medium font-e1 text-lg transition-smooth',
                                                 category === 'inquiry'
                                                     ? 'opacity-100 border-teal-500 text-teal-500'
                                                     : 'opacity-60 lg:hover:opacity-100'
@@ -196,7 +196,7 @@ const ContactSection = () => {
                                 </section>
                                 {category && (
                                     <section className="flex flex-col gap-y-2">
-                                        <label className="font-h font-semibold text-lg lg:text-xl capitalize">
+                                        <label className="font-h font-medium text-lg lg:text-xl capitalize">
                                             <span className="text-rose-500">
                                                 *
                                             </span>
@@ -209,7 +209,7 @@ const ContactSection = () => {
                                                 setMessage(e.target.value)
                                             }
                                             className={UIUtility.classnames(
-                                                'w-full rounded-lg bg-grayWhite/10 border-2 font-source font-medium',
+                                                'w-full font-e1 rounded-lg bg-grayWhite/10 border-2 font-source font-medium',
                                                 message.trim().length >= 10
                                                     ? 'border-teal-400'
                                                     : 'border-rose-500',

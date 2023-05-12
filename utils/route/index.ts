@@ -43,7 +43,7 @@ const RouteUtility = new __Route__Utility__({
         href: '/services',
     },
     portfolio: {
-        href: '/porfolio',
+        href: '/portfolio',
     },
     contact: {
         href: '/contact',

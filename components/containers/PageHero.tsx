@@ -11,8 +11,8 @@ interface LinkProps {
 interface IPageHero {
     image?: React.ReactNode
 
-    title?: string
-    description?: string
+    title?: string | React.ReactNode
+    description?: string | React.ReactNode
     links?: LinkProps[]
 
     warning?: boolean
