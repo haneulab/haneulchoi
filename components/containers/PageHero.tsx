@@ -35,9 +35,18 @@ const PageHero = (props: IPageHero) => {
             )}
         >
             <section className="p-8 2xl:px-0 w-full max-w-cutoff mx-auto">
-                {props.image && <div className="mb-8">{props.image}</div>}
+                {props.image && (
+                    <div className="mb-6 lg:mb-8 2xl:mb-10">{props.image}</div>
+                )}
                 <article>
-                    <h3 className="font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center mb-6">
+                    <h3
+                        className={UIUtility.classnames(
+                            'font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center',
+                            props.image
+                                ? 'mb-4 lg:mb-6 2xl:mb-8'
+                                : 'mb-6 lg:mb-8 2xl:mb-10'
+                        )}
+                    >
                         {props.title}
                     </h3>
                     <p
@@ -50,7 +59,14 @@ const PageHero = (props: IPageHero) => {
                     </p>
                 </article>
                 {props.links && props.links.length >= 1 && (
-                    <ul className="flex items-center justify-center gap-x-1 mt-8">
+                    <ul
+                        className={UIUtility.classnames(
+                            'flex items-center justify-center gap-x-1',
+                            props.image
+                                ? 'mt-6 lg:mt-8 2xl:mt-10'
+                                : ' mt-8 lg:mt-10 2xl:mt-12'
+                        )}
+                    >
                         {props.links.map((link, idx) => (
                             <>
                                 <Link
@@ -81,7 +97,14 @@ const PageHero = (props: IPageHero) => {
                     </ul>
                 )}
                 {props.children && (
-                    <div className="mt-8 flex flex-col items-center">
+                    <div
+                        className={UIUtility.classnames(
+                            'flex flex-col items-center',
+                            props.image
+                                ? 'mt-6 lg:mt-8 2xl:mt-10'
+                                : 'mt-8 lg:mt-10 2xl:mt-12'
+                        )}
+                    >
                         {props.children}
                     </div>
                 )}

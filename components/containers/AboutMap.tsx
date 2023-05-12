@@ -21,7 +21,7 @@ const AboutMap = (props: IAboutMap) => {
             id="learn-more"
             className="min-h-screen flex flex-col justify-center items-center py-24 border-t"
         >
-            <section className="p-8 2xl:px-0 w-full max-w-cutoff mx-auto flex flex-col items-center gap-y-32">
+            <section className="p-8 2xl:px-0 w-full max-w-cutoff mx-auto flex flex-col items-center gap-y-16 lg:gap-y-20 2xl:gap-y-24">
                 {contents.map((content, idx) => (
                     <article
                         key={idx}

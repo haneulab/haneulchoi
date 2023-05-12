@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
-import { RouteUtility, UIUtility } from '@studio/utils'
+import { UIUtility } from '@studio/utils'
 import { useState } from 'react'
 
 // Nav
@@ -14,9 +13,6 @@ const MobileDirectory = dynamic(
 const ViewMenu = dynamic(() => import('@studio/components/buttons/ViewMenu'))
 
 const Header = () => {
-    const router = useRouter()
-    const routes = Object.keys(RouteUtility.routes)
-
     const [viewNav, setViewNav] = useState<boolean>(false)
 
     function onViewNav() {
@@ -30,8 +26,10 @@ const Header = () => {
     return (
         <header
             className={UIUtility.classnames(
-                'fixed top-0 w-full backdrop-blur-sm z-10 h-max transition-smooth bg-themeLight/95 text-themeDarkLight ',
-                viewNav ? 'shadow-sm' : 'shadow-none'
+                'fixed top-0 w-full backdrop-blur-sm z-10 h-max transition-smooth ',
+                viewNav
+                    ? 'bg-themeDark/5 text-themeLight lg:bg-themeLight/95 lg:text-themeDarkLight'
+                    : 'shadow-none bg-themeLight/95 text-themeDarkLight'
             )}
         >
             <section className="px-8 py-4 text-center flex justify-center items-center">

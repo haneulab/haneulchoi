@@ -18,10 +18,10 @@ const MobileDirectory = ({ onHideNav, viewNav }: IMobileDirectory) => {
     return (
         <nav
             className={UIUtility.classnames(
-                'transition-smooth transform relative px-8 flex flex-col items-center gap-y-4 lg:hidden',
+                'transition-smooth transform relative px-8 flex flex-col items-center gap-y-4 lg:hidden border',
                 viewNav
-                    ? '-top-0 -translate-y-0'
-                    : '-top-full -translate-y-full -mt-72'
+                    ? '-top-0 -translate-y-0 bg-themeLight text-themeDark w-full py-6 rounded-lg overflow-hidden border-themeDark/10'
+                    : '-top-full -translate-y-full -mt-[18.5rem] border-transparent'
             )}
         >
             <div className="flex justify-end items-center">

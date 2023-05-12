@@ -32,7 +32,7 @@ const AboutPage: StudioPage = (_props: PageProps) => {
                         title="About Me"
                         description="I am a full-stack web developer, and I built portfolio websites, web applications, and web management systems."
                         image={
-                            <picture className="block mx-auto w-[80%] max-w-[225px] lg:w-[375px]">
+                            <picture className="block mx-auto max-w-[175px] sm:max-w-[225px] lg:w-[375px]">
                                 <Image
                                     src={AboutMeImage}
                                     alt={'Haneul Choi Studio | About'}

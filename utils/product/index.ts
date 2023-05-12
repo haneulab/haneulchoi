@@ -14,6 +14,11 @@ interface Product {
     title?: string
     description?: string
 
+    price?: {
+        from: number
+        to: number
+    }
+
     relevantRoute: RelevantProductRoute
 
     relevantFeatures: RelevantProductFeature[]
@@ -46,6 +51,10 @@ const ProductUtility = new __Product_Utility__({
         title: 'Portfolio Website',
         description:
             'Do you need your portfolio website for your business or personal career interest? Your portfolio product will be based on the following features.',
+        price: {
+            from: 500,
+            to: 2500,
+        },
         relevantRoute: {
             href: '/portfolio',
             text: 'View Demo Portfolio',
@@ -77,6 +86,10 @@ const ProductUtility = new __Product_Utility__({
         title: 'Web Application',
         description:
             'You have a great idea for application project, but do not know have coders in your team? I am here to become the coder of your team in your project.',
+        price: {
+            from: 1500,
+            to: 12500,
+        },
         relevantRoute: {
             href: '/portfolio',
             text: 'View Demo Web App',
@@ -101,6 +114,10 @@ const ProductUtility = new __Product_Utility__({
         title: 'Digital Manager System',
         description:
             'For businesses, it is important to keep track of incoming and outgoing informations & store them to retrieve whenever needed.',
+        price: {
+            from: 1750,
+            to: 3250,
+        },
         relevantRoute: {
             href: '/portfolio',
             text: 'See Example App',

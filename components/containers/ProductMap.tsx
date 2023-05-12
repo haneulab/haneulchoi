@@ -17,6 +17,10 @@ interface ProductMapRelevantRoute {
 
 interface IProductMap {
     title: string
+    price: {
+        from: number
+        to: number
+    }
     description: string
     relevantRoute: ProductMapRelevantRoute
     relevantFeatures: ProductMapRelevantFeature[]
@@ -25,12 +29,12 @@ interface IProductMap {
 }
 
 const ProductMap = (props: IProductMap) => {
-    const { title, description, relevantFeatures, relevantRoute } = props
+    const { title, description, price, relevantFeatures, relevantRoute } = props
 
     return (
         <div
             className={UIUtility.classnames(
-                'h-screen flex flex-col justify-center items-center w-full',
+                'min-h-screen flex flex-col justify-center items-center w-full',
                 props.background === 'dark'
                     ? 'bg-themeDark text-themeLight'
                     : 'bg-themeLightDark/5 text-themeDark'
@@ -75,32 +79,48 @@ const ProductMap = (props: IProductMap) => {
                         </Link>
                     </div>
                 </article>
-                <article className="mx-auto max-w-lg flex flex-col gap-y-8 lg:gap-y-10">
-                    {relevantFeatures.map((feature, idx) => (
-                        <div key={idx}>
-                            <h4
-                                className={UIUtility.classnames(
-                                    'text-center text-transparent bg-clip-text bg-gradient-to-r  font-medium text-lg lg:text-xl 2xl:text-2xl font-h mb-2 lg:mb-4',
-                                    props.background === 'dark'
-                                        ? 'from-themeLight to-themeLight'
-                                        : 'from-themeDarkLight  to-themeDarkLight'
-                                )}
-                            >
-                                {feature.featureTitle}
-                            </h4>
-                            <p
-                                className={UIUtility.classnames(
-                                    'text-center text-sm lg:text-base leading-6 lg:leading-7 font-h text-themeDarkLight/50',
-                                    props.background === 'dark'
-                                        ? 'text-themeLight/50'
-                                        : ' text-themeDarkLight/50'
-                                )}
-                            >
-                                {feature.featureExplanation}
-                            </p>
-                        </div>
-                    ))}
-                </article>
+                <div className="flex flex-col gap-y-12 lg:gap-y-14">
+                    <h3 className="w-full rounded-full font-h flex flex-col gap-y-1 items-center">
+                        <span className="lg:text-lg 2xl:text-xl text-pink-500">
+                            Price ranges from
+                        </span>
+                        <span className="text-lg lg:text-xl 2xl:text-2xl font-e2">
+                            <big className="font-bold">${price.from}.00</big> to{' '}
+                            <big className="font-bold">${price.to}.00</big>
+                        </span>
+                    </h3>
+                    <ul className="flex items-center justify-center gap-x-4">
+                        <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-teal-400 animate-bounce " />
+                        <span className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="w-1 h-1 lg:w-2 lg:h-2 rounded-full bg-blue-400 animate-ping" />
+                    </ul>
+                    <article className="mx-auto max-w-lg flex flex-col gap-y-8 lg:gap-y-10">
+                        {relevantFeatures.map((feature, idx) => (
+                            <div key={idx}>
+                                <h4
+                                    className={UIUtility.classnames(
+                                        'text-center text-transparent bg-clip-text bg-gradient-to-r  font-medium text-lg lg:text-xl 2xl:text-2xl font-h mb-2 lg:mb-4',
+                                        props.background === 'dark'
+                                            ? 'from-themeLight to-themeLight'
+                                            : 'from-themeDarkLight  to-themeDarkLight'
+                                    )}
+                                >
+                                    {feature.featureTitle}
+                                </h4>
+                                <p
+                                    className={UIUtility.classnames(
+                                        'text-center text-sm lg:text-base leading-6 lg:leading-7 font-h text-themeDarkLight/50',
+                                        props.background === 'dark'
+                                            ? 'text-themeLight/50'
+                                            : ' text-themeDarkLight/50'
+                                    )}
+                                >
+                                    {feature.featureExplanation}
+                                </p>
+                            </div>
+                        ))}
+                    </article>
+                </div>
             </section>
         </div>
     )
