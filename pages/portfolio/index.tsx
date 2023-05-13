@@ -34,36 +34,27 @@ const PortfolioPage: StudioPage = (_props: PageProps) => {
             >
                 <Header variant="dark" />
                 <PageHero
+                    gradient
                     background="dark"
-                    title={
-                        <>
-                            <span className="flex items-center gap-x-2 lg:gap-x-4 justify-center">
-                                <span>Haneul&apos;s</span>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-600">
-                                    Portfolio
-                                </span>
-                            </span>
-                        </>
-                    }
-                    description={
-                        <span>
-                            Explore my demo portfolio products that may match
-                            with your interest before working with me.
-                        </span>
-                    }
+                    title="Demo Portfolio"
+                    description="Explore my demo portfolio products that may match
+                    with your interest before working with me."
                 >
                     <ul className="w-full grid grid-cols-1 lg:grid-cols-3 gap-y-4 lg:gap-y-0 lg:gap-x-4 items-center max-w-2xl">
                         <HashDirect
+                            gradient
                             variant="dark"
                             to="demo_portfolio"
                             text="Portfolio Demo"
                         />
                         <HashDirect
+                            gradient
                             variant="dark"
                             to="demo_webapp"
                             text="Web App Demo"
                         />
                         <HashDirect
+                            gradient
                             variant="dark"
                             to="demo_webmanager"
                             text="Web Manager Demo"

@@ -31,7 +31,7 @@ const AboutUtility = new __About_Utility__([
     {
         title: 'Education Background',
         description:
-            'I have two associate degrees, natural sciences and mathematics, from Irvine Valley College. I am currently attending University of California majoring in B.S Cognitive Science.',
+            'I have two associate degrees, natural sciences and mathematics from Irvine Valley College. I am currently attending University of California majoring in B.S Cognitive Science.',
         tags: ['IVC', 'UCD', 'Math', 'Science', 'Cognition'],
 
         link: {

@@ -24,6 +24,7 @@ const IndexPage: StudioPage = (_props: PageProps) => {
                 >
                     <Header variant="light" />
                     <PageHero
+                        gradient
                         background="light"
                         title="Haneul Choi Studio"
                         description="Hi, My name is Haneul Choi. I am a freelancing web developer based in California, USA."

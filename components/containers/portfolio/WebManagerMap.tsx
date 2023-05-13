@@ -1,3 +1,9 @@
+import dynamic from 'next/dynamic'
+
+const ProductDirect = dynamic(
+    () => import('@studio/components/links/ProductDirect')
+)
+
 const WebManagerMap = () => {
     return (
         <div
@@ -24,12 +30,14 @@ const WebManagerMap = () => {
                         of data and make reports.
                     </p>
                     <div className="flex flex-col gap-y-4 w-full items-center max-w-lg mx-auto mb-6 2xl:mb-8">
-                        <button className="block w-full px-8 py-3 font-medium font-h text-lg lg:text-xl bg-pink-500/10 border border-pink-500/25 text-pink-500 transition-smooth rounded-md lg:hover:bg-pink-500 lg:hover:text-themeLight lg:hover:border-pink-500">
-                            NextReport
-                        </button>
-                        <button className="block w-full px-8 py-3 font-medium font-h text-lg lg:text-xl bg-pink-500/10 border border-pink-500/25 text-pink-500 transition-smooth rounded-md lg:hover:bg-pink-500 lg:hover:text-themeLight lg:hover:border-pink-500">
-                            NextStorage
-                        </button>
+                        <ProductDirect
+                            name="NextReport"
+                            href="/products/nextreport"
+                        />
+                        <ProductDirect
+                            name="NextStorage"
+                            href="/products/nextstorage"
+                        />
                     </div>
                     <div className="flex justify-center items-center">
                         <button className="font-h text-pink-50 font-light text-sm lg:text-base">

@@ -38,9 +38,10 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                 >
                     <Header variant="dark" />
                     <PageHero
+                        gradient
                         background="dark"
                         title="Explore Products"
-                        description="From a simple website to a more sophiscated full-stack web application"
+                        description="From a simple website to a more sophisticated full-stack web application"
                         links={[
                             {
                                 href: '/portfolio',

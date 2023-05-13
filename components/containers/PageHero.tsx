@@ -11,6 +11,8 @@ interface LinkProps {
 interface IPageHero {
     image?: React.ReactNode
 
+    gradient?: boolean
+
     title?: string | React.ReactNode
     description?: string | React.ReactNode
     links?: LinkProps[]
@@ -42,6 +44,10 @@ const PageHero = (props: IPageHero) => {
                     <h3
                         className={UIUtility.classnames(
                             'font-bold font-h text-3xl md:text-4xl lg:text-6xl text-center',
+                            props.gradient
+                                ? 'bg-gradient-to-r bg-clip-text text-transparent from-pink-500 via-fuchsia-500 to-pink-500'
+                                : '',
+
                             props.image
                                 ? 'mb-4 lg:mb-6 2xl:mb-8'
                                 : 'mb-6 lg:mb-8 2xl:mb-10'
@@ -52,7 +58,12 @@ const PageHero = (props: IPageHero) => {
                     <p
                         className={UIUtility.classnames(
                             'font-e1 font-medium text-lg max-w-md mx-auto leading-7 2xl:text-xl 2xl:leading-9 text-center opacity-75',
-                            warning && 'text-pink-500'
+                            warning && 'text-pink-500',
+                            props.gradient
+                                ? props.background === 'dark'
+                                    ? 'bg-gradient-to-r bg-clip-text text-transparent from-slate-100 via-slate-300 to-slate-100'
+                                    : 'bg-gradient-to-r bg-clip-text text-transparent from-slate-400 via-slate-600 to-slate-400'
+                                : ''
                         )}
                     >
                         {props.description}
@@ -73,7 +84,7 @@ const PageHero = (props: IPageHero) => {
                                     key={idx}
                                     href={link.href}
                                     className={UIUtility.classnames(
-                                        'text-base lg:text-lg font-medium font-p border-b-2 pb-0.5 border-transparent transition-smooth ',
+                                        'text-base lg:text-lg font-medium font-p border-b-2 pb-0.5 border-transparent transition-smooth',
                                         props.background === 'dark'
                                             ? 'text-pink-500 lg:hover:text-pink-400/75 lg:hover:border-pink-400/75'
                                             : 'text-themeDark lg:hover:text-themeDarkLight/75 lg:hover:border-themeLight/75'
