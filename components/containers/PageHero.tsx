@@ -28,13 +28,13 @@ const PageHero = (props: IPageHero) => {
     return (
         <main
             className={UIUtility.classnames(
-                'w-full flex flex-col justify-center items-center h-screen',
+                'w-full flex flex-col justify-center items-center min-h-screen',
                 props.background === 'dark'
                     ? 'bg-themeDark text-themeLight'
                     : 'bg-themeLight text-themeDark'
             )}
         >
-            <section className="p-8 2xl:px-0 w-full max-w-cutoff mx-auto">
+            <section className="p-8 py-16 lg:py-24 2xl:px-0 w-full max-w-cutoff mx-auto">
                 {props.image && (
                     <div className="mb-6 lg:mb-8 2xl:mb-10">{props.image}</div>
                 )}
