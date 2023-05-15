@@ -1,7 +1,6 @@
 import { AiOutlineExclamationCircle } from 'react-icons/ai'
 import { useState } from 'react'
 import UIUtility from 'utils/ui'
-import Link from 'next/link'
 
 interface IFeatureWhyImportant {
     feature: string

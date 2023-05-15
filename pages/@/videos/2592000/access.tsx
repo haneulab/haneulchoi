@@ -2,7 +2,6 @@ import type { StudioPage } from 'studio'
 import { UIUtility } from '@studio/utils'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 
 // Layer
 const PrimaryLayer = dynamic(() => import('@studio/components/layers/Primary'))
@@ -16,8 +15,6 @@ const ViewerAccess = dynamic(
 )
 
 const AboutPage: StudioPage = () => {
-    const router = useRouter()
-
     const [passcode, setPasscode] = useState<string>('')
     const [matchError, setMatchError] = useState<string>('')
     const [isChecking, setIsChecking] = useState<boolean>(false)
