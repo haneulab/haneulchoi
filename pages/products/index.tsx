@@ -2,7 +2,7 @@ import type { StudioPage } from 'studio'
 import { UIUtility } from '@studio/utils'
 import dynamic from 'next/dynamic'
 import { TbUsers, TbQrcode, TbSettingsAutomation } from 'react-icons/tb'
-import { ProductUtility } from '@studio/utils'
+import { Products } from '@studio/utils'
 
 // Layer
 const PrimaryLayer = dynamic(() => import('@studio/components/layers/Primary'))
@@ -11,7 +11,7 @@ const Footer = dynamic(() => import('@studio/components/layers/Footer'))
 // Container
 const PageHero = dynamic(() => import('@studio/components/containers/PageHero'))
 const ProductMap = dynamic(
-    () => import('@studio/components/containers/ProductMap')
+    () => import('@studio/components/containers/products/ProductMap')
 )
 
 interface PageProps {
@@ -20,13 +20,14 @@ interface PageProps {
 
 const ProductsPage: StudioPage = (_props: PageProps) => {
     const productsIcons: {
-        [K in keyof typeof ProductUtility.products]: React.ReactNode
+        [K in keyof typeof Products.products]: React.ReactNode
     } = {
-        'Portfolio Website': <TbUsers size={22} />,
-        'Web Application': <TbQrcode size={22} />,
-        'Digital Manager System': <TbSettingsAutomation size={22} />,
+        'Personal & Business': <TbUsers size={22} />,
+        'Web Applications': <TbQrcode size={22} />,
+        cManager: <TbSettingsAutomation size={22} />,
+        sReporter: <TbSettingsAutomation size={22} />,
     }
-    const products = Object.keys(ProductUtility.products)
+    const products = Object.keys(Products.products)
 
     return (
         <>
@@ -56,10 +57,9 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                     {products.map((product, idx) => (
                         <ProductMap
                             key={idx}
-                            {...ProductUtility.products[product]}
-                            relevantRoute={{
-                                ...ProductUtility.products[product]
-                                    .relevantRoute,
+                            {...Products.products[product]}
+                            directRoute={{
+                                ...Products.products[product].directRoute,
                                 icon: productsIcons[product],
                             }}
                             background={'dark'}

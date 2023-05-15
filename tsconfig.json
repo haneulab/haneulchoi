@@ -24,7 +24,8 @@
             "@studio/middlewares/*": ["./middlewares/*"],
             "@studio/libs/*": ["./libs/*"],
             "@studio/styles/*": ["./styles/*"],
-            "@studio/public/*": ["./public/*"]
+            "@studio/public/*": ["./public/*"],
+            "@studio/models/*": ["./models/*"]
         },
         "incremental": true
     },

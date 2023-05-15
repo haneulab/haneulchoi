@@ -34,40 +34,7 @@ declare module 'studio' {
         message: string
     }
 
-    /** Edge Config Data */
-    type Project = {
-        image?: string
-        id: number
-        type: string
-        name: string
-        description: string
-        slug: string
-        stacks: string[]
-        url: { demo?: string; code?: string }
-    }
-
-    type Package = {
-        image?: string
-        id: number
-        type: string
-        name: string
-        description: string
-        slug: string
-        requiredPeerPackages: string[]
-        url: { docs?: string; code?: string }
-    }
-
-    type BlogContentURL = {
-        href: string
-        name: string
-    }
-
-    type Blog = {
-        image?: string
-        id: number
-        name: string
-        slug: string
-        description: string
-        urls: BlogContentURL[]
-    }
+    type ColorLight = 'light'
+    type ColorDark = 'dark'
+    type ColorVariant = [ColorDark, ColorLight][number]
 }
