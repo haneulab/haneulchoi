@@ -26,7 +26,28 @@ const RATE_CHART: Record<BaseChargeRate, number> = {
     v3: 1.75,
 }
 
-class ComputeUniqueProduct {}
+class ComputeUniqueProduct {
+    public static chargeSection(howMany = 1): number {
+        return Number(UNIT_PRICE_CHART.section * howMany)
+    }
+    public static chargePage(howMany = 1): number {
+        const reduceToSectionUnit = 4 * howMany
+
+        return Number(UNIT_PRICE_CHART.section * reduceToSectionUnit)
+    }
+    public static chargeHosting(): number {
+        return Number(UNIT_PRICE_CHART.hosting * RATE_CHART.v1)
+    }
+    public static chargeDomain(): number {
+        return Number(UNIT_PRICE_CHART.domain * RATE_CHART.v1)
+    }
+    public static chargeMaintenance(): number {
+        return Number(UNIT_PRICE_CHART.maintenance * RATE_CHART.v1)
+    }
+    public static chargeAnnualMaintenance(): number {
+        return Number(ComputeVariableProduct.chargeMaintenance('v1') * 12)
+    }
+}
 class ComputeVariableProduct {
     public static chargeSection(howMany = 1): number {
         return Number(UNIT_PRICE_CHART.section * howMany)

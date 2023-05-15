@@ -36,7 +36,7 @@ const PortfolioPage: StudioPage = (_props: PageProps) => {
                 <PageHero
                     gradient
                     background="dark"
-                    title="Demo Portfolio"
+                    title="Experience Products"
                     description="Explore my demo portfolio products that may match
                     with your interest before working with me."
                 >

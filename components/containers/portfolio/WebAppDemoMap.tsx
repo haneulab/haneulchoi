@@ -18,7 +18,7 @@ const WebAppDemoMap = () => {
                         style={{
                             lineHeight: '1.6',
                         }}
-                        className="font-h font-light opacity-75 text-lg lg:text-xl 2xl:text-2xl text-center mb-8 lg:mb-10"
+                        className="font-e1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-600 opacity-75 text-lg lg:text-xl 2xl:text-2xl text-center mb-8 lg:mb-10"
                     >
                         Let your idea come to reality.
                     </p>

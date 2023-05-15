@@ -57,7 +57,7 @@ const PageHero = (props: IPageHero) => {
                     </h3>
                     <p
                         className={UIUtility.classnames(
-                            'font-e1 font-medium text-lg max-w-md mx-auto leading-7 2xl:text-xl 2xl:leading-9 text-center opacity-75',
+                            'font-e1 font-medium text-lg max-w-2xl mx-auto leading-7 2xl:text-xl 2xl:leading-9 text-center opacity-75',
                             warning && 'text-pink-500',
                             props.gradient
                                 ? props.background === 'dark'

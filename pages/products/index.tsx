@@ -23,7 +23,7 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
         [K in keyof typeof Products.products]: React.ReactNode
     } = {
         'Personal & Business': <TbUsers size={22} />,
-        'Web Applications': <TbQrcode size={22} />,
+        'Web Application': <TbQrcode size={22} />,
         cManager: <TbSettingsAutomation size={22} />,
         sReporter: <TbSettingsAutomation size={22} />,
     }
@@ -37,10 +37,10 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                         'w-full min-h-screen flex flex-col items-center justify-between bg-transparent'
                     )}
                 >
-                    <Header variant="dark" />
+                    <Header variant="light" />
                     <PageHero
                         gradient
-                        background="dark"
+                        background="light"
                         title="Explore Products"
                         description="From a simple website to a more sophisticated full-stack web application"
                         links={[
@@ -62,11 +62,11 @@ const ProductsPage: StudioPage = (_props: PageProps) => {
                                 ...Products.products[product].directRoute,
                                 icon: productsIcons[product],
                             }}
-                            background={'dark'}
+                            background={'light'}
                         />
                     ))}
 
-                    <Footer variant="dark" />
+                    <Footer variant="light" />
                 </div>
             </PrimaryLayer>
         </>

@@ -18,6 +18,19 @@ export type ProductStack = [
     StackGit
 ][number]
 type ProductStackOptions = ProductStack[]
+/** PRODUCT STATUS */
+type StatusPreparing = 'prepare'
+type StatusUnavailable = 'unavailable'
+type StatusPending = 'pending'
+type StatusBeta = 'beta'
+type StatusReleased = 'released'
+type ProductStatus = [
+    StatusBeta,
+    StatusPending,
+    StatusPreparing,
+    StatusReleased,
+    StatusUnavailable
+][number]
 /** PRODUCT SCHEMA */
 type ProductBaseInfo = {
     name: string
@@ -48,6 +61,7 @@ type VariableProductOption<T> = ProductBaseInfo & {
 }
 export type Product<T extends object = { __READEMD__?: string }> = {
     productType: ProductType
+    productStatus: ProductStatus
 } & ProductBaseInfo & {
         features: ProductFeatureInfo[]
     } & { directRoute: ProductDirectRouteInfo } & {

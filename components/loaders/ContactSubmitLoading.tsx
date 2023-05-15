@@ -19,7 +19,7 @@ const ContactSubmitLoading = (props: IContactSubmitLoading) => {
                         <span className="absolute top-0 left-0 w-[200px] h-[20px] bg-white" />
                         <span className="w-4/5 h-4/5 rounded-full block bg-white" />
                     </span>
-                    <p className="font-medium text-teal-500 text-center font-komain">
+                    <p className="font-medium text-teal-500 text-center font-e1 text-lg">
                         {props.message}
                     </p>
                 </article>
