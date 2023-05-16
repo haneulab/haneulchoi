@@ -1,5 +1,4 @@
 import { UniqueProduct, VariableProduct } from '@studio/models/product.model'
-import { ComputeProduct } from './compute'
 import PersonalBusinessProduct from './items/personal-business.product'
 import WebApplicationProduct from './items/web-application.product'
 import sReporterProduct from './items/s-reporter.product'

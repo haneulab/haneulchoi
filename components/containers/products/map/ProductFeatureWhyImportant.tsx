@@ -2,17 +2,17 @@ import { AiOutlineExclamationCircle } from 'react-icons/ai'
 import { useState } from 'react'
 import UIUtility from 'utils/ui'
 
-interface IFeatureWhyImportant {
+interface IProductFeatureWhyImportant {
     feature: string
     description: string
     whyImportant: string
 }
 
-const FeatureWhyImportant = ({
+const ProductFeatureWhyImportant = ({
     feature,
     description,
     whyImportant,
-}: IFeatureWhyImportant) => {
+}: IProductFeatureWhyImportant) => {
     const [showContent, setShowContent] = useState(false)
 
     return (
@@ -58,4 +58,4 @@ const FeatureWhyImportant = ({
     )
 }
 
-export default FeatureWhyImportant
+export default ProductFeatureWhyImportant

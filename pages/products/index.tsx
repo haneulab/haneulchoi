@@ -11,7 +11,7 @@ const Footer = dynamic(() => import('@studio/components/layers/Footer'))
 // Container
 const PageHero = dynamic(() => import('@studio/components/containers/PageHero'))
 const ProductMap = dynamic(
-    () => import('@studio/components/containers/products/ProductMap')
+    () => import('@studio/components/containers/products/map/ProductMap')
 )
 
 interface PageProps {
