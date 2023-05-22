@@ -17,15 +17,9 @@
         "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-            "@studio/components/*": ["./components/*"],
-            "@studio/contexts/*": ["./contexts/*"],
-            "@studio/hooks/*": ["./hooks/*"],
-            "@studio/utils": ["./utils/index.ts"],
-            "@studio/middlewares/*": ["./middlewares/*"],
-            "@studio/libs/*": ["./libs/*"],
-            "@studio/styles/*": ["./styles/*"],
-            "@studio/public/*": ["./public/*"],
-            "@studio/models/*": ["./models/*"]
+            "@shared-components/*": ["components/(shared)/*"],
+            "@helpers": ["helpers/index.ts"],
+            "@contexts/*": ["contexts/*"]
         },
         "incremental": true
     },

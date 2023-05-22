@@ -3,15 +3,15 @@
  * --- IMPORTS STATEMENTS ----
  */
 import '@studio/styles/index.css'
-import type { StudioProps } from 'studio'
-import { ThemeContextProvider } from '@studio/contexts/ThemeContext'
+import type { Props } from 'haneulchoistudio'
+import { ThemeContextProvider } from '@contexts/ThemeContext'
 import { AnimatePresence } from 'framer-motion'
 
 /**
  * @brief
  * --- COMPONENT STATEMENTS ----
  */
-const Studio = (props: StudioProps) => {
+const Studio = (props: Props) => {
     const { Component, pageProps, router } = props
 
     const getLayout = Component.getLayout || ((page) => page)

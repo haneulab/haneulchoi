@@ -2,9 +2,9 @@
  * @brief
  * --- IMPORTS STATEMENTS ----
  */
-import { UIUtility } from '@studio/utils'
+import { helper } from '@helpers'
 import { createContext, useEffect, useState } from 'react'
-import type { ThemeStore } from 'studio'
+import type { ThemeStore } from 'haneulchoistudio'
 
 export const ThemeContext = createContext<ThemeStore>({
     theme: 'light',
@@ -45,7 +45,7 @@ export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
     return (
         <ThemeContext.Provider value={{ theme, onChange }}>
             <div
-                className={UIUtility.classnames(
+                className={helper.classnames(
                     'relative w-full transition-smooth',
                     theme === 'dark'
                         ? 'bg-themeDark text-themeLight'
