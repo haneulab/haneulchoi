@@ -15,7 +15,7 @@ const MyClients = () => {
                 My Clients
             </h3>
             <p className="text-xl lg:text-2xl text-center leading-8 lg:leading-10 text-themeLight/75">
-                I have beenw working with clients from different industries
+                I have been working with clients from different industries
                 including entrepreneurs, business owners, corporates, and
                 individuals.
             </p>

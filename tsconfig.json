@@ -22,7 +22,8 @@
             "@about-components/*": ["components/(about)/*"],
             "@products-components/*": ["components/(products)/*"],
             "@helpers": ["helpers/index.ts"],
-            "@contexts/*": ["contexts/*"]
+            "@contexts/*": ["contexts/*"],
+            "@styles/*": ["styles/*"]
         },
         "incremental": true
     },

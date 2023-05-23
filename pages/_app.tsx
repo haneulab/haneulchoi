@@ -2,7 +2,7 @@
  * @brief
  * --- IMPORTS STATEMENTS ----
  */
-import '@studio/styles/index.css'
+import '@styles/index.css'
 import type { Props } from 'haneulchoistudio'
 import { ThemeContextProvider } from '@contexts/ThemeContext'
 import { AnimatePresence } from 'framer-motion'
