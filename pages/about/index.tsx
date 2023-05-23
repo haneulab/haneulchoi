@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 import type { Page } from 'haneulchoistudio'
 
+import { HiArrowRight } from 'react-icons/hi'
+
 // SHARED
 const Primary = dynamic(() => import('@shared-components/layers/Primary'))
 const Slider = dynamic(() => import('@shared-components/layers/Slider'))
@@ -15,6 +17,16 @@ const WihtColumn = dynamic(
 const WithScreen = dynamic(
     () => import('@shared-components/containers/WithScreen')
 )
+const ImageContent = dynamic(
+    () => import('@shared-components/containers/ImageContent')
+)
+
+// About
+const AboutMe = dynamic(() => import('@about-components/images/AboutMe'))
+const MyClients = dynamic(() => import('@about-components/images/MyClients'))
+const WorkCategories = dynamic(
+    () => import('@about-components/images/WorkCategories')
+)
 
 const AboutPage: Page = () => {
     return (
@@ -22,11 +34,37 @@ const AboutPage: Page = () => {
             <Slider header={<Header />} footer={<Footer />}>
                 <WithScreen
                     justify="center"
-                    className="bg-gradient-to-b from-themeDark via-themeDark to-themeDarkLight text-themeLight"
+                    className="bg-themeDarkLight text-themeLight"
                 >
                     <WithPadding>
-                        <WihtColumn align="center">
-                            <h3 className="font-bold text-4xl">AboutPage</h3>
+                        <WihtColumn align="center" className="max-w-xl mx-auto">
+                            <AboutMe />
+                        </WihtColumn>
+                    </WithPadding>
+                </WithScreen>
+                <WithScreen
+                    justify="center"
+                    className="bg-themeDarkLight text-themeLight"
+                >
+                    <WithPadding>
+                        <WihtColumn
+                            align="center"
+                            className="gap-y-4 max-w-2xl mx-auto"
+                        >
+                            <MyClients />
+                        </WihtColumn>
+                    </WithPadding>
+                </WithScreen>
+                <WithScreen
+                    justify="center"
+                    className="bg-gradient-to-b from-themeDarkLight via-themeDarkLight to-themeDark text-themeLight"
+                >
+                    <WithPadding>
+                        <WihtColumn
+                            align="center"
+                            className="max-w-2xl mx-auto"
+                        >
+                            <WorkCategories />
                         </WihtColumn>
                     </WithPadding>
                 </WithScreen>

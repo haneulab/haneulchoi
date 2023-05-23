@@ -19,6 +19,8 @@
         "paths": {
             "@shared-components/*": ["components/(shared)/*"],
             "@landing-components/*": ["components/(landing)/*"],
+            "@about-components/*": ["components/(about)/*"],
+            "@products-components/*": ["components/(products)/*"],
             "@helpers": ["helpers/index.ts"],
             "@contexts/*": ["contexts/*"]
         },

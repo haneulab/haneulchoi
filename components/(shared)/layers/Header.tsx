@@ -42,7 +42,7 @@ const Header = () => {
     ]
 
     return (
-        <header className="fixed top-0 z-40 w-full left-0 bg-themeDark/90 backdrop-blur-sm text-themeLight">
+        <header className="fixed top-0 z-40 w-full left-0 bg-themeDarkLight/90 backdrop-blur-sm text-themeLight">
             <section className="p-4 w-full mx-auto flex justify-between">
                 <Logo />
                 <MobileNavigation routes={routes} />

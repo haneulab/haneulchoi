@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Logo = () => {
     return (
-        <h1 className="font-bold font-h text-lg lg:text-xl bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-fuchsia-600">
+        <h1 className="w-[40px] h-[40px] rounded-md transform lg:hover:rotate-[360deg] transition-all duration-[0.15s] ease-in flex justify-center items-center bg-themeLight text-themeDark font-bold font-h text-lg lg:hover:bg-themeDark lg:hover:text-themeLight">
             <Link href={'/'}>HC</Link>
         </h1>
     )

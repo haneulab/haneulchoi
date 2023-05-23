@@ -9,7 +9,7 @@ const Slider = ({ header, children, footer }: ISlider) => {
     return (
         <div
             className={helper.classnames(
-                'w-full min-h-screen flex flex-col items-center justify-between relative bg-themeDark text-themeLight'
+                'w-full min-h-screen flex flex-col items-center justify-between relative bg-themeDarkLight text-themeLight'
             )}
         >
             {header && header}

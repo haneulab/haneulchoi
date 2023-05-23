@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 
 const Footer = () => {
-    const [showFooter, setShowFooter] = useState(true)
+    const [showFooter, setShowFooter] = useState(false)
 
     return (
         <>
@@ -19,8 +19,8 @@ const Footer = () => {
             {showFooter && (
                 <footer className="fixed bottom-0 z-40 w-full left-0 bg-themeDarkLight/5 backdrop-blur-md text-themeLightDark">
                     <section className="p-4 w-full mx-auto flex gap-4 justify-between items-end lg:items-end">
-                        <div className="flex flex-col gap-y-3 lg:gap-y-2">
-                            <p className="flex flex-col lg:flex-row items-start lg:items-center lg:gap-2 text-themeLight">
+                        <div className="flex flex-col gap-y-2">
+                            <p className="flex flex-col text-sm lg:text-base lg:flex-row items-start lg:items-center lg:gap-2 text-themeLight">
                                 &copy; All rights reserved
                             </p>
                             <ul className="flex items-center gap-x-4">

@@ -35,10 +35,10 @@ const MobileNavigation = ({ routes }: IMobileNavigation) => {
             </nav>
             <aside
                 className={helper.classnames(
-                    'z-40 fixed w-full left-0 h-max transform transition-all duration-[0.45s] ease-in-out bg-themeDark/95 backdrop-blur-md shadow-md shadow-themeLightDark/5',
+                    'z-40 fixed lg:hidden w-full left-0 h-max transform transition-all duration-[0.45s] ease-in-out  backdrop-blur-md border-b',
                     showNavigation
-                        ? '-translate-y-0 -top-0'
-                        : '-translate-y-full -top-full'
+                        ? '-translate-y-0 -top-0 border-themeLightDark/10 bg-[#222222]'
+                        : '-translate-y-full -top-full border-transparent bg-transparent'
                 )}
             >
                 <section className="p-4">

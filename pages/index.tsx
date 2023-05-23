@@ -15,16 +15,19 @@ const WihtColumn = dynamic(
 const WithScreen = dynamic(
     () => import('@shared-components/containers/WithScreen')
 )
-
-// LANDING
 const CatchyTitle = dynamic(
-    () => import('@landing-components/texts/CatchyTitle')
+    () => import('@shared-components/texts/CatchyTitle')
 )
 const CatchyParagraph = dynamic(
-    () => import('@landing-components/texts/CatchyParagraph')
+    () => import('@shared-components/texts/CatchyParagraph')
 )
-const MainButtonNavs = dynamic(
-    () => import('@landing-components/navs/MainButtonNavs')
+
+// LANDING
+const CatchyImage = dynamic(
+    () => import('@landing-components/images/CatchyImage')
+)
+const MainButtons = dynamic(
+    () => import('@landing-components/navs/MainButtons')
 )
 
 const IndexPage: Page = () => {
@@ -33,13 +36,14 @@ const IndexPage: Page = () => {
             <Slider header={<Header />} footer={<Footer />}>
                 <WithScreen
                     justify="center"
-                    className="bg-gradient-to-b from-themeDark via-themeDark to-themeDarkLight text-themeLight"
+                    className="bg-themeDarkLight text-themeLight"
                 >
                     <WithPadding>
                         <WihtColumn align="center">
-                            <CatchyTitle />
-                            <CatchyParagraph />
-                            <MainButtonNavs />
+                            <CatchyImage />
+                            <CatchyTitle title="Build Your Idea." />
+                            <CatchyParagraph message="From a simple landing page to a complex web applications." />
+                            <MainButtons />
                         </WihtColumn>
                     </WithPadding>
                 </WithScreen>
