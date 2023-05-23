@@ -20,16 +20,16 @@ const MobileNavigation = ({ routes }: IMobileNavigation) => {
 
     return (
         <>
-            <nav className="lg:hidden flex items-center gap-x-4 fixed right-4 z-50">
+            <nav className="lg:hidden flex items-center gap-x-4 fixed right-4 top-4 z-50">
                 <button
                     onClick={
                         showNavigation ? onHideNavigation : onShowNavigation
                     }
                 >
                     {showNavigation ? (
-                        <TfiClose size={22} />
+                        <TfiClose size={32} />
                     ) : (
-                        <BiMenu size={26} />
+                        <BiMenu size={32} />
                     )}
                 </button>
             </nav>

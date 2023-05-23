@@ -30,6 +30,17 @@ const ContactPage: Page = () => {
                         </WihtColumn>
                     </WithPadding>
                 </WithScreen>
+                <WithScreen
+                    screen="min-screen"
+                    justify="center"
+                    className="bg-gradient-to-b from-themeDark via-themeDark to-themeDarkLight text-themeLight"
+                >
+                    <WithPadding>
+                        <WihtColumn align="center">
+                            <h3 className="font-bold text-4xl">ContactPage</h3>
+                        </WihtColumn>
+                    </WithPadding>
+                </WithScreen>
             </Slider>
         </>
     )

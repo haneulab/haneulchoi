@@ -28,6 +28,7 @@ const AboutPage: Page = () => {
         <>
             <Slider header={<Header />} footer={<Footer />}>
                 <WithScreen
+                    screen="min-screen"
                     justify="center"
                     className="bg-themeDarkLight text-themeLight"
                 >
@@ -38,6 +39,7 @@ const AboutPage: Page = () => {
                     </WithPadding>
                 </WithScreen>
                 <WithScreen
+                    screen="min-screen"
                     justify="center"
                     className="bg-themeDarkLight text-themeLight"
                 >
@@ -51,6 +53,7 @@ const AboutPage: Page = () => {
                     </WithPadding>
                 </WithScreen>
                 <WithScreen
+                    screen="min-screen"
                     justify="center"
                     className="bg-gradient-to-b from-themeDarkLight via-themeDarkLight to-themeDark text-themeLight"
                 >
