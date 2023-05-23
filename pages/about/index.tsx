@@ -1,8 +1,6 @@
 import dynamic from 'next/dynamic'
 import type { Page } from 'haneulchoistudio'
 
-import { HiArrowRight } from 'react-icons/hi'
-
 // SHARED
 const Primary = dynamic(() => import('@shared-components/layers/Primary'))
 const Slider = dynamic(() => import('@shared-components/layers/Slider'))
