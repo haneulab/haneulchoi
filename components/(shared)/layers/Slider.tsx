@@ -1,6 +1,4 @@
 import { helper } from '@helpers'
-import dynamic from 'next/dynamic'
-
 interface ISlider {
     header?: React.ReactNode
     children: React.ReactNode
