@@ -15,9 +15,6 @@ const WihtColumn = dynamic(
 const WithScreen = dynamic(
     () => import('@shared-components/containers/WithScreen')
 )
-const ImageContent = dynamic(
-    () => import('@shared-components/containers/ImageContent')
-)
 
 // About
 const AboutMe = dynamic(() => import('@about-components/images/AboutMe'))
