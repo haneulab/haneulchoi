@@ -18,6 +18,7 @@
         "baseUrl": ".",
         "paths": {
             "@shared-components/*": ["components/(shared)/*"],
+            "@landing-components/*": ["components/(landing)/*"],
             "@helpers": ["helpers/index.ts"],
             "@contexts/*": ["contexts/*"]
         },

@@ -2,30 +2,63 @@
  * @brief
  * --- IMPORTS STATEMENTS ----
  */
-import dynamic from 'next/dynamic'
-import type { Page } from 'haneulchoistudio'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+import type { ErrorStatusCode, Page } from 'haneulchoistudio'
 import { helper } from '@helpers'
 import { NextPageContext } from 'next'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const Primary = dynamic(() => import('@shared-components/layers/Primary'))
+const Slider = dynamic(() => import('@shared-components/layers/Slider'))
+const WithPadding = dynamic(
+    () => import('@shared-components/layers/WithPadding')
+)
+const Header = dynamic(() => import('@shared-components/layers/Header'))
 const Footer = dynamic(() => import('@shared-components/layers/Footer'))
+const WihtColumn = dynamic(
+    () => import('@shared-components/containers/WithColumn')
+)
+const WithScreen = dynamic(
+    () => import('@shared-components/containers/WithScreen')
+)
 
-const ErrorPage: Page = () => {
+interface PageProps {
+    statusCode: ErrorStatusCode
+}
+
+const ErrorPage: Page = ({ statusCode }: PageProps) => {
+    const router = useRouter()
+
+    useEffect(() => {
+        router.replace({
+            pathname: `/_error`,
+        })
+    }, [])
+
     return (
         <>
             <Head>
-                <title>Page Error | Haneul Choi Studio</title>
+                <title>
+                    {helper.getErrors(statusCode)} - {statusCode} | Haneul Choi
+                    Studio
+                </title>
             </Head>
-            <Primary>
-                <div
-                    className={helper.classnames(
-                        'w-full min-h-screen flex flex-col items-center justify-between bg-transparent'
-                    )}
+            <Slider header={<Header />} footer={<Footer />}>
+                <WithScreen
+                    justify="center"
+                    className="bg-gradient-to-b from-themeDark via-themeDark to-themeDarkLight text-themeLight"
                 >
-                    <Footer />
-                </div>
-            </Primary>
+                    <WithPadding>
+                        <WihtColumn align="center">
+                            <h3 className="text-4xl text-pink-500">
+                                {helper.getErrors(statusCode)} | {statusCode}
+                            </h3>
+                        </WihtColumn>
+                    </WithPadding>
+                </WithScreen>
+            </Slider>
         </>
     )
 }
@@ -40,7 +73,7 @@ ErrorPage.getInitialProps = (context: NextPageContext) => {
 }
 
 ErrorPage.getLayout = (page) => {
-    return <>{page}</>
+    return <Primary>{page}</Primary>
 }
 
 export default ErrorPage

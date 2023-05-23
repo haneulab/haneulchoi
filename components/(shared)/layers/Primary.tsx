@@ -81,6 +81,7 @@ const Primary = (props: IPrimary) => {
                     stiffness: 260,
                     damping: 20,
                 }}
+                className="bg-th"
             >
                 {props.announcementComponent && props.announcementComponent}
                 {props.children}

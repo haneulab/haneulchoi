@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic'
 import type { Page } from 'haneulchoistudio'
+import dynamic from 'next/dynamic'
 
 // SHARED
 const Primary = dynamic(() => import('@shared-components/layers/Primary'))
@@ -16,18 +16,7 @@ const WithScreen = dynamic(
     () => import('@shared-components/containers/WithScreen')
 )
 
-// LANDING
-const CatchyTitle = dynamic(
-    () => import('@landing-components/texts/CatchyTitle')
-)
-const CatchyParagraph = dynamic(
-    () => import('@landing-components/texts/CatchyParagraph')
-)
-const MainButtonNavs = dynamic(
-    () => import('@landing-components/navs/MainButtonNavs')
-)
-
-const IndexPage: Page = () => {
+const ProductDetailPage: Page = () => {
     return (
         <>
             <Slider header={<Header />} footer={<Footer />}>
@@ -37,9 +26,9 @@ const IndexPage: Page = () => {
                 >
                     <WithPadding>
                         <WihtColumn align="center">
-                            <CatchyTitle />
-                            <CatchyParagraph />
-                            <MainButtonNavs />
+                            <h3 className="font-bold text-4xl">
+                                ProductDetailPage
+                            </h3>
                         </WihtColumn>
                     </WithPadding>
                 </WithScreen>
@@ -48,5 +37,5 @@ const IndexPage: Page = () => {
     )
 }
 
-IndexPage.getLayout = (page) => <Primary>{page}</Primary>
-export default IndexPage
+ProductDetailPage.getLayout = (page) => <Primary>{page}</Primary>
+export default ProductDetailPage
