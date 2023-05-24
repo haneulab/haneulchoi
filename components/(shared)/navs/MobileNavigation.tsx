@@ -37,7 +37,7 @@ const MobileNavigation = ({ routes }: IMobileNavigation) => {
                 className={helper.classnames(
                     'z-40 fixed lg:hidden w-full left-0 h-max transform transition-all duration-[0.45s] ease-in-out  backdrop-blur-md border-b',
                     showNavigation
-                        ? '-translate-y-0 -top-0 border-themeLightDark/10 bg-[#222222]'
+                        ? '-translate-y-0 -top-0 border-themeLightDark/10 bg-themeModal'
                         : '-translate-y-full -top-full border-transparent bg-transparent'
                 )}
             >

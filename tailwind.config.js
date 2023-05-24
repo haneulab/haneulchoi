@@ -13,8 +13,10 @@ module.exports = {
             colors: {
                 themeLight: '#F9F9F9',
                 themeLightDark: '#9D9D9D',
-                themeDark: '#100F0F',
-                themeDarkLight: '#2B2B2B',
+                themeDark: '#303841',
+                themeDarkLight: '#3A4750',
+
+                themeModal: '#222831',
             },
             fontFamily: {
                 h: ['Inter Tight', 'sans-serif'],
