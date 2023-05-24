@@ -7,6 +7,8 @@ import ProductsWebApplicationsImage from 'public/static/products_web_application
 import { HiArrowRight } from 'react-icons/hi'
 import { MdOutlineViewInAr } from 'react-icons/md'
 import { VscRequestChanges } from 'react-icons/vsc'
+import { AiOutlineHighlight } from 'react-icons/ai'
+import { BsCodeSlash, BsLightbulb } from 'react-icons/bs'
 // SHARED
 const Primary = dynamic(() => import('@shared-components/layers/Primary'))
 const Slider = dynamic(() => import('@shared-components/layers/Slider'))
@@ -63,7 +65,7 @@ const ProductsPage: Page = () => {
                 <WithScreen
                     screen="min-screen"
                     justify="start"
-                    className="bg-themeDarkLight text-themeLight relative"
+                    className="bg-gradient-to-b from-themeDarkLight via-themeDarkLight to-themeDark text-themeLight relative"
                 >
                     <WithPadding>
                         <WithGrids
@@ -113,7 +115,7 @@ const ProductsPage: Page = () => {
                             right={
                                 <>
                                     <ul className="flex flex-col justify-start gap-y-10">
-                                        <div className="bg-gradient-to-br bg-transparent">
+                                        <div className="">
                                             <div className="w-full h-full">
                                                 <div className="flex justify-between items-start lg:items-center mb-3">
                                                     <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
@@ -158,7 +160,7 @@ const ProductsPage: Page = () => {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="bg-gradient-to-br bg-transparent">
+                                        <div className="">
                                             <div className="w-full h-full">
                                                 <div className="flex justify-between items-start lg:items-center mb-3">
                                                     <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
@@ -202,7 +204,7 @@ const ProductsPage: Page = () => {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="bg-gradient-to-br bg-transparent">
+                                        <div className="">
                                             <div className="w-full h-full">
                                                 <div className="flex justify-between items-start lg:items-center mb-3">
                                                     <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
@@ -248,7 +250,7 @@ const ProductsPage: Page = () => {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="bg-gradient-to-br bg-transparent">
+                                        <div className="">
                                             <div className="w-full h-full">
                                                 <div className="flex justify-between items-start lg:items-center mb-3">
                                                     <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
@@ -298,7 +300,7 @@ const ProductsPage: Page = () => {
                 <WithScreen
                     screen="min-screen"
                     justify="start"
-                    className="bg-themeDarkLight text-themeLight relative"
+                    className="bg-gradient-to-b from-themeDark via-themeDark to-themeDarkLight text-themeLight relative"
                 >
                     <WithPadding>
                         <WithGrids
@@ -324,181 +326,50 @@ const ProductsPage: Page = () => {
                             left={
                                 <>
                                     <ul className="flex flex-col justify-start gap-y-10">
-                                        <div className="bg-gradient-to-br bg-transparent">
-                                            <div className="w-full h-full">
-                                                <div className="flex justify-between items-start lg:items-center mb-3">
-                                                    <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
-                                                        1. Modern & Responsive
-                                                        UI/UX Design
-                                                    </h4>
-                                                    <ul className="flex items-center gap-x-3 mt-2 lg:mt-0">
-                                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                                                        <span className="w-3 h-3 rounded-full bg-teal-400 animate-pulse" />
-                                                        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce" />
-                                                    </ul>
-                                                </div>
-
-                                                <p className="text-slate-300/75 font-h text-base lg:text-lg lg:leading-7 mb-6">
-                                                    Stop worrying about design
-                                                    complexity, I use
-                                                    mobile-first-approach to
-                                                    make your website responsive
-                                                    on mobile, tablet, and
-                                                    desktop devices.
-                                                </p>
-                                                <ul className="flex flex-col gap-y-4">
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Restaurant & Coffee
-                                                            Shops
-                                                        </span>
-                                                    </button>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Clinics & Academies
-                                                        </span>
-                                                    </button>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Personal Portfolios
-                                                        </span>
-                                                    </button>
-                                                </ul>
-                                            </div>
+                                        <div className="flex flex-col gap-y-4">
+                                            <BsLightbulb className="text-4xl lg:text-6xl 2xl:text-8x;" />
+                                            <h4 className="font-h text-xl lg:text-2xl">
+                                                Start From Ideation
+                                            </h4>
+                                            <p className="font-h font-light text-base lg:text-lg lg:leading-7 opacity-75">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Dignissimos placeat quod dicta
+                                                deserunt ipsa quaerat, qui, esse
+                                                maiores rerum hic expedita vero!
+                                                Voluptatibus atque excepturi
+                                                debitis est ad harum minima.
+                                            </p>
                                         </div>
-                                        <div className="bg-gradient-to-br bg-transparent">
-                                            <div className="w-full h-full">
-                                                <div className="flex justify-between items-start lg:items-center mb-3">
-                                                    <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
-                                                        2. Fully Customizable
-                                                        User Interface
-                                                    </h4>
-                                                    <ul className="flex items-center gap-x-3 mt-2 lg:mt-0">
-                                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                                                        <span className="w-3 h-3 rounded-full bg-teal-400 animate-pulse" />
-                                                        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce" />
-                                                    </ul>
-                                                </div>
-                                                <p className="text-slate-300/75 font-h text-base lg:text-lg lg:leading-7 mb-6">
-                                                    Because I implement the
-                                                    design from scratch without
-                                                    using third-party templates,
-                                                    your website will be fully
-                                                    customizable.
-                                                </p>
-                                                <ul className="flex flex-col gap-y-4">
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Custom Templates
-                                                        </span>
-                                                    </button>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Base 4-Pages
-                                                            Template
-                                                        </span>
-                                                    </button>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Base 6-Pages
-                                                            Template
-                                                        </span>
-                                                    </button>
-                                                </ul>
-                                            </div>
+                                        <div className="flex flex-col gap-y-4">
+                                            <AiOutlineHighlight className="text-4xl lg:text-6xl 2xl:text-8x;" />
+                                            <h4 className="font-h text-xl lg:text-2xl">
+                                                Sophisticated UX Research
+                                            </h4>
+                                            <p className="font-h font-light text-base lg:text-lg lg:leading-7 opacity-75">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Dignissimos placeat quod dicta
+                                                deserunt ipsa quaerat, qui, esse
+                                                maiores rerum hic expedita vero!
+                                                Voluptatibus atque excepturi
+                                                debitis est ad harum minima.
+                                            </p>
                                         </div>
-                                        <div className="bg-gradient-to-br bg-transparent">
-                                            <div className="w-full h-full">
-                                                <div className="flex justify-between items-start lg:items-center mb-3">
-                                                    <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
-                                                        3. Quickly Deliverable
-                                                        Services
-                                                    </h4>
-                                                    <ul className="flex items-center gap-x-3 mt-2 lg:mt-0">
-                                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                                                        <span className="w-3 h-3 rounded-full bg-teal-400 animate-pulse" />
-                                                        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce" />
-                                                    </ul>
-                                                </div>
-
-                                                <p className="text-slate-300/75 font-h text-base lg:text-lg lg:leading-7 mb-6">
-                                                    With a lot of past and
-                                                    ongoing project experiences,
-                                                    I efficiently distribute my
-                                                    time to deliver the initial
-                                                    content and maintenance
-                                                    services to my clients.
-                                                </p>
-                                                <ul className="flex flex-col gap-y-4">
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Design &
-                                                            Implementation
-                                                        </span>
-                                                    </button>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Maintenance Services
-                                                        </span>
-                                                    </button>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth  lg:hover:text-emerald-400">
-                                                        <HiArrowRight className="text-xl" />
-                                                        <span>
-                                                            Image & Video File
-                                                            Management
-                                                        </span>
-                                                    </button>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div className="bg-gradient-to-br bg-transparent">
-                                            <div className="w-full h-full">
-                                                <div className="flex justify-between items-start lg:items-center mb-3">
-                                                    <h4 className="text-xl lg:text-2xl font-medium font-h text-transparent lg:text-themeLight bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
-                                                        4. Affordable Price
-                                                        Rates
-                                                    </h4>
-                                                    <ul className="flex items-center gap-x-3 mt-2 lg:mt-0">
-                                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                                                        <span className="w-3 h-3 rounded-full bg-teal-400 animate-pulse" />
-                                                        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce" />
-                                                    </ul>
-                                                </div>
-
-                                                <p className="text-slate-300/75 font-h text-base lg:text-lg lg:leading-7 mb-6">
-                                                    Compared to other marketing
-                                                    agencies, I offer price
-                                                    rates based on exactly what
-                                                    features you need. You will
-                                                    only be charged for the
-                                                    features you need.
-                                                </p>
-                                                <ul className="flex flex-col items-center gap-y-4">
-                                                    <p className="font-h flex items-center gap-x-4">
-                                                        <span className="flex items-center gap-x-2">
-                                                            <span className="text-lg lg:text-xl">
-                                                                Price Starts
-                                                                From
-                                                            </span>
-                                                            <span className="text-xl lg:text-2xl font-bold px-3 py-1.5 rounded-md bg-themeLight text-themeDark">
-                                                                $975.00
-                                                            </span>
-                                                        </span>
-                                                    </p>
-                                                    <button className="font-h lg:text-lg flex items-center gap-x-4 transition-smooth text-emerald-400 underline">
-                                                        View All Pricing &
-                                                        Deliverables
-                                                    </button>
-                                                </ul>
-                                            </div>
+                                        <div className="flex flex-col gap-y-4">
+                                            <BsCodeSlash className="text-4xl lg:text-6xl 2xl:text-8x;" />
+                                            <h4 className="font-h text-xl lg:text-2xl">
+                                                Implementing Application
+                                            </h4>
+                                            <p className="font-h font-light text-base lg:text-lg lg:leading-7 opacity-75">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Dignissimos placeat quod dicta
+                                                deserunt ipsa quaerat, qui, esse
+                                                maiores rerum hic expedita vero!
+                                                Voluptatibus atque excepturi
+                                                debitis est ad harum minima.
+                                            </p>
                                         </div>
                                     </ul>
                                 </>
